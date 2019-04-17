@@ -21,7 +21,7 @@ const Copy = ({ value = '', ...rest }) =>
           <Hover>
             {({ hovered, bind }) => (
               <Flex
-                color="hsl(205, 30%, 70%)"
+                color="hsl(205, 30%, 70%)" /// abstract out
                 alignItems="center"
                 justifyContent="center"
                 opacity={hovered ? 1 : 0.5}

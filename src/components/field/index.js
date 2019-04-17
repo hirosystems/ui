@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex, Type, Input, Tooltip, Box } from '../../index'
 import { Copy } from '../copy'
-import { OpenInNewIcon } from 'mdi-react'
+import OpenInNewIcon from 'mdi-react/OpenInNewIcon'
 import { Hover } from 'react-powerplug'
 
 const Link = ({ value, text = 'View in Explorer', ...rest }) => (

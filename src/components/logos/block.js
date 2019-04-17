@@ -42,12 +42,11 @@ const BlockLogo = ({
       <Box
         is="svg"
         display="inline-block"
-        viewBox={`0 0 ${size
-          .toString()
-          .replace(/[^0-9]/g, '')} ${size.toString().replace(/[^0-9]/g, '')}`}
+        viewBox="0 0 24 24"
         fill="none"
         style={{
-          width: '100%'
+          width: '100%',
+          minWidth: '100%'
         }}
       >
         <Component />

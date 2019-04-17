@@ -1,7 +1,7 @@
 import React from 'react'
 import { Backdrop, Overlay } from 'reakit'
 import { Flex, Box, Card, Type } from '../../'
-import { CloseIcon } from 'mdi-react'
+import CloseIcon from 'mdi-react/CloseIcon'
 import { Hover, Active } from 'react-powerplug'
 
 const ModalContext = React.createContext()

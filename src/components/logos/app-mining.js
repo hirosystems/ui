@@ -3,7 +3,7 @@ import { Box } from '../primitives'
 import { computeSize } from './helper'
 import PropTypes from 'prop-types'
 
-const DefaultPaths = () => (
+const DefaultPaths = (props) => (
   <>
     <path
       d="M35.3828 16.9985H37.2344L33.1641 5.7251H31.2734L27.2031 16.9985H29.0234L30.0547 13.9517H34.3516L35.3828 16.9985ZM32.1797 7.6001H32.2266L33.9062 12.5454H30.5L32.1797 7.6001Z"
@@ -56,7 +56,7 @@ const DefaultPaths = () => (
   </>
 )
 
-const InvertedPaths = () => (
+const InvertedPaths = (props) => (
   <>
     <path
       d="M35.3828 16.9985H37.2344L33.1641 5.7251H31.2734L27.2031 16.9985H29.0234L30.0547 13.9517H34.3516L35.3828 16.9985ZM32.1797 7.6001H32.2266L33.9062 12.5454H30.5L32.1797 7.6001Z"

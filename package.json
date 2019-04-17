@@ -1,7 +1,7 @@
 {
   "name": "blockstack-ui",
   "description": "Blockstack UI components built with css-in-js and styled-system.",
-  "version": "0.0.73",
+  "version": "0.0.78",
   "author": "Blockstack Team",
   "bugs": {
     "url": "https://github.com/blockstack/blockstack-ui/issues"
@@ -13,28 +13,28 @@
     }
   ],
   "devDependencies": {
-    "@babel/cli": "^7.1.0",
-    "@babel/core": "^7.1.0",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/plugin-transform-regenerator": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-transform-regenerator": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
-    "@babel/runtime": "^7.1.0",
+    "@babel/runtime": "^7.3.4",
     "babel-core": "^7.0.0-bridge.0",
-    "bundlesize": "^0.17.0",
-    "codecov": "^3.0.0",
-    "codemirror": "^5.40.2",
+    "bundlesize": "^0.17.1",
+    "codecov": "^3.2.0",
+    "codemirror": "^5.44.0",
     "mdi-react": "^4.4.0",
     "mdx-go": "^2.0.0-29",
-    "prettier": "^1.14.3",
-    "prop-types": "^15.6.2",
-    "react": "^16.5.2",
+    "prettier": "^1.16.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.3",
     "react-codemirror2": "^5.1.0",
-    "react-dom": "^16.5.2",
+    "react-dom": "^16.8.3",
     "react-live": "^1.11.0",
-    "rimraf": "^2.6.2",
-    "styled-components": "^4.0.0"
+    "rimraf": "^2.6.3",
+    "styled-components": "^4.1.3"
   },
   "homepage": "https://github.com/blockstack/blockstack-ui",
   "keywords": [
@@ -71,18 +71,18 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "epitath": "^1.0.0-beta.1",
+    "epitath": "^1.0.0-beta.2",
     "html-tags": "^2.0.0",
-    "immer": "^1.7.4",
-    "mdi-react": "^4.4.0",
-    "polished": "^2.3.0",
+    "immer": "^2.1.0",
+    "mdi-react": "^5.2.0",
+    "polished": "^3.0.2",
     "react-copy-to-clipboard": "^5.0.1",
-    "react-powerplug": "^1.0.0-rc.1",
+    "react-powerplug": "^1.0.0",
     "react-spring": "^6.1.8",
-    "reakit": "^0.16.0-beta.0",
-    "regenerator-runtime": "^0.12.1",
+    "reakit": "^0.16.0",
+    "regenerator-runtime": "^0.13.1",
     "shortid": "^2.2.14",
-    "styled-system": "^3.1.6",
-    "system-components": "^3.0.1"
+    "styled-system": "^3.2.1",
+    "system-components": "^3.0.3"
   }
 }

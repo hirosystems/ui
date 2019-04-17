@@ -10,7 +10,6 @@ import {
 import { Type } from './components/typography'
 import { Button, Buttons } from './components/button'
 import { Card } from './components/card'
-import { Icons } from './icons'
 import { Input, Textarea } from './components/inputs'
 import { Tooltip } from './components/tooltip'
 import { theme } from './common/theme'
@@ -37,7 +36,6 @@ export {
   Button,
   Buttons,
   Card,
-  Icons,
   Input,
   Textarea,
   Tooltip,
