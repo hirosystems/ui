@@ -1,3 +1,10 @@
-docs
-site
-.idea
+node_modules
+tests
+demo
+src
+scripts
+stories
+.storybook
+.env
+.gitignore
+*.log

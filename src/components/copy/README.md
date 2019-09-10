@@ -1,5 +1,0 @@
-# Copy
-
-### Example
-
-### Props
