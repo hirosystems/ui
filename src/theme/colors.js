@@ -1,89 +1,41 @@
 const colors = {
-  transparent: 'transparent',
-  current: 'currentColor',
-  black: '#000000',
-  white: '#ffffff',
-  whiteAlpha: {
-    50: 'rgba(255, 255, 255, 0.04)',
-    100: 'rgba(255, 255, 255, 0.06)',
-    200: 'rgba(255, 255, 255, 0.08)',
-    300: 'rgba(255, 255, 255, 0.16)',
-    400: 'rgba(255, 255, 255, 0.24)',
-    500: 'rgba(255, 255, 255, 0.36)',
-    600: 'rgba(255, 255, 255, 0.48)',
-    700: 'rgba(255, 255, 255, 0.64)',
-    800: 'rgba(255, 255, 255, 0.80)',
-    900: 'rgba(255, 255, 255, 0.92)'
-  },
-  blackAlpha: {
-    50: 'rgba(0, 0, 0, 0.04)',
-    100: 'rgba(0, 0, 0, 0.06)',
-    200: 'rgba(0, 0, 0, 0.08)',
-    300: 'rgba(0, 0, 0, 0.16)',
-    400: 'rgba(0, 0, 0, 0.24)',
-    500: 'rgba(0, 0, 0, 0.36)',
-    600: 'rgba(0, 0, 0, 0.48)',
-    700: 'rgba(0, 0, 0, 0.64)',
-    800: 'rgba(0, 0, 0, 0.80)',
-    900: 'rgba(0, 0, 0, 0.92)'
-  },
-  gray: {
-    50: '#f7fafc',
-    100: '#edf2f7',
-    200: '#e2e8f0',
-    300: '#cbd5e0',
-    400: '#a0aec0',
-    500: '#718096',
-    600: '#4a5568',
-    700: '#2d3748',
-    800: '#1a202c',
-    900: '#171923'
-  },
-  indigo: Object.assign('#211f6d', {
-    5: '',
-    10: '',
-    20: '',
-    30: '',
-    40: '',
-    50: '',
-    60: '',
-    70: '',
-    80: '',
-    90: ''
+  transparent: "transparent",
+  current: "currentColor",
+  black: "#000000",
+  white: "#ffffff",
+  blue: Object.assign("#3700ff", {
+    50: "#f2f2ff",
+    100: "#e3e5ff",
+    150: "#D8DAF3",
+    200: "#c5ccff",
+    300: "#aab3ff",
+    900: "#5548ff",
+    hover: "#3100DC"
   }),
-  blue: Object.assign('#3700ff', {
-    5: '#f2f2ff',
-    10: '#e3e5ff',
-    20: '#c5ccff',
-    30: '#aab3ff',
-    40: '',
-    50: '',
-    60: '',
-    70: '',
-    80: '',
-    90: '#5548ff'
-  }),
-  ink: Object.assign('#0f1117', {
-    5: '#f4f4f5',
-    10: '#e7e7e8',
-    25: '#c8c8cc',
-    40: '#a7a7ad',
-    50: '',
-    60: '#6e727d',
-    70: '',
-    80: '',
-    90: '#27292e'
+  ink: Object.assign("#0f1117", {
+    50: "#f4f4f5",
+    100: "#e7e7e8",
+    250: "#c8c8cc",
+    400: "#a7a7ad",
+    600: "#6e727d",
+    900: "#27292e"
   }),
   darken: {
-    5: 'rgba(15, 17, 23, 0.05)',
-    10: 'rgba(15, 17, 23, 0.1)',
-    15: 'rgba(15, 17, 23, 0.15)'
+    50: "rgba(15, 17, 23, 0.05)",
+    100: "rgba(15, 17, 23, 0.1)",
+    150: "rgba(15, 17, 23, 0.15)"
   },
-  red: '#de0014',
-  green: '#00a73e',
-  orange: '#f7aa00',
-  cyan: '#00d4ff'
+  red: "#de0014",
+  green: "#00a73e",
+  orange: "#f7aa00",
+  cyan: "#00d4ff"
+};
 
-}
+colors.feedback = {
+  error: colors.red,
+  success: colors.green,
+  warning: colors.orange,
+  info: colors.cyan
+};
 
-export default colors
+export default colors;

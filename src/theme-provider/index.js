@@ -2,14 +2,16 @@ import { ThemeProvider as StyledComponentsThemeProvider } from "styled-component
 import React, { useContext } from "react";
 import theme from "../theme";
 
-export let ThemeContext = React.createContext({})
+export let ThemeContext = React.createContext(theme);
 
 const ThemeProvider = ({ theme, children }) => (
-  <StyledComponentsThemeProvider theme={theme}>{children}</StyledComponentsThemeProvider>
+  <StyledComponentsThemeProvider theme={theme}>
+    {children}
+  </StyledComponentsThemeProvider>
 );
 
 ThemeProvider.defaultProps = {
-  theme,
+  theme
 };
 
 const useTheme = () => {

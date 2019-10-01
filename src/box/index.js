@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import styled from 'styled-components'
+import styled from "styled-components";
 import {
   background,
   border,
@@ -11,19 +11,25 @@ import {
   shadow,
   space,
   typography,
-  compose
-} from 'styled-system'
-import extraConfig from './config'
+  textStyle,
+  colorStyle,
+  buttonStyle,
+  compose,
+  system
+} from "styled-system";
+import extraConfig from "./config";
 
 export const truncate = props => {
   if (props.isTruncated) {
     return {
-      overflow: 'hidden',
-      textOverflow: 'ellipsis',
-      whiteSpace: 'nowrap'
-    }
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap"
+    };
   }
-}
+};
+
+
 
 export const systemProps = compose(
   layout,
@@ -35,13 +41,15 @@ export const systemProps = compose(
   position,
   shadow,
   typography,
-  flexbox
-)
+  flexbox,
+  textStyle,
+  buttonStyle,
+  colorStyle
+);
 
 const Box = styled.div`
-  ${ systemProps };
-  ${ extraConfig };
-  
-`
+  ${systemProps};
+  ${extraConfig};
+`;
 
-export default Box
+export default Box;
