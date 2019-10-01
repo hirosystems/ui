@@ -1,5 +1,11 @@
 import { useState } from "react";
 
+interface IClipboard<T> {
+  value?: T;
+  onCopy?: () => void;
+  hasCopied?: boolean;
+}
+
 /**
  *
  * @param {any} value - The content to add to clipboard
@@ -26,7 +32,7 @@ const copyToClipboard = value => {
   }
 };
 
-const useClipboard = value => {
+function useClipboard<T>(value: T): IClipboard<T> {
   const [hasCopied, setHasCopied] = useState(false);
 
   const onCopy = () => {
