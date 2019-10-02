@@ -1,8 +1,7 @@
 import * as StyledSystem from "styled-system";
 import { BoxProps } from "../box";
-import * as React from "react";
 
-interface IFlex {
+interface FlexPropsBase {
   /**
    * Shorthand for Styled-System `alignItems` prop
    */
@@ -21,8 +20,5 @@ interface IFlex {
   direction?: BoxProps["flexDirection"];
 }
 
-export type FlexProps = IFlex & BoxProps & React.RefAttributes<HTMLElement>;
+export type FlexProps = FlexPropsBase & BoxProps;
 
-declare const Flex: React.FC<FlexProps>;
-
-export default Flex;

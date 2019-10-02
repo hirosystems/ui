@@ -1,7 +1,8 @@
 import React, { forwardRef } from "react";
 import Box from "../box";
+import { FlexProps } from "./types";
 
-const Flex = forwardRef(({ align, justify, wrap, direction, ...rest }, ref) => (
+const Flex = forwardRef<any, FlexProps>(({ align, justify, wrap, direction, ...rest }, ref) => (
   <Box
     ref={ref}
     display="flex"
