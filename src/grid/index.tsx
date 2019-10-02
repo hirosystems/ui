@@ -1,7 +1,8 @@
 import React, { forwardRef } from "react";
 import Box from "../box";
+import { GridProps } from "./types";
 
-const Grid = forwardRef(
+const Grid = forwardRef<any, GridProps>(
   (
     {
       templateColumns,
