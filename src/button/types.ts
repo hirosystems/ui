@@ -1,30 +1,30 @@
 import * as React from "react";
 import * as StyledSystem from "styled-system";
-import { PseudoBoxProps } from "../pseudo-box";
+import { PseudoBoxProps } from "../pseudo-box/types";
 
-export interface IButton {
-  /**
-   * The size of the button
-   */
-  size?: "sm" | "md" | "lg";
-  /**
-   * If `true`, the button will show a spinner.
-   */
+/**
+ * The size of the button
+ */
+export type ButtonSizes = "sm" | "md" | "lg"
+/**
+ * The color scheme of the button variant. Use the color keys passed in `theme.colors`.
+ */
+export type ButtonColorVariants = "green" | "purple" | "orange"
+/**
+ * The variant of the button style to use.
+ */
+export type ButtonVariants = "outline" | "unstyled" | "link" | "solid"
+/**
+ * The mode of the button style to use.
+ */
+export type ButtonModes = "primary" | "secondary"
+
+interface ButtonPropsBase {
+  size?: ButtonSizes;
   isLoading?: boolean;
-  /**
-   * The color scheme of the button variant. Use the color keys passed in `theme.colors`.
-   * @example
-   * variantColor = "green" | "purple" | "orange"
-   */
-  variantColor?: string;
-  /**
-   * The variant of the button style to use.
-   */
-  variant?: "outline" | "unstyled" | "link" | "solid"
-  /**
-   * The mode of the button style to use.
-   */;
-  mode?: "primary" | "secondary";
+  variantColor?: ButtonColorVariants;
+  variant?: ButtonVariants;
+  mode?: ButtonModes;
   /**
    * If `true`, the button will be styled in it's active state.
    */
@@ -67,10 +67,6 @@ export interface IButton {
   iconSpacing?: StyledSystem.MarginProps["margin"];
 }
 
-export type ButtonProps = IButton &
+export type ButtonProps = ButtonPropsBase &
   PseudoBoxProps &
   React.RefAttributes<HTMLButtonElement>;
-
-declare const Button: React.FC<ButtonProps>;
-
-export default Button;

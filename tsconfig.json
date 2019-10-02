@@ -11,6 +11,7 @@
     "experimentalDecorators": true,
     "baseUrl": "./",
     "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
     "noErrorTruncation": true,
     "allowJs": true
   }
