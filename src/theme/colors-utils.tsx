@@ -1,28 +1,28 @@
 import { css } from "styled-components";
 import Color from "color";
 
-export const get = (color, hue) => `${color}.${hue}`;
+export const get = (color: string, hue: string) => `${color}.${hue}`;
 
-export const addOpacity = (color, opacity) =>
+export const addOpacity = (color: string, opacity: number) =>
   Color(color)
     .fade(1 - opacity)
     .rgb()
     .string();
 
-export const addWhite = (color, opacity) => {
+export const addWhite = (color: string, opacity: number) => {
   return Color(color)
     .mix(Color("#fff"), opacity)
     .hex();
 };
 
-export const addBlack = (color, opacity) =>
+export const addBlack = (color: string, opacity: number) =>
   Color(color)
     .mix(Color("#000"), opacity)
     .hex();
 
-export const isDarkColor = color => Color(color).isDark();
+export const isDarkColor = (color: string) => Color(color).isDark();
 
-export const generateAlphaColors = color => ({
+export const generateAlphaColors = (color: string) => ({
   900: addOpacity(color, 0.92),
   800: addOpacity(color, 0.8),
   700: addOpacity(color, 0.6),
@@ -35,7 +35,9 @@ export const generateAlphaColors = color => ({
   50: addOpacity(color, 0.04),
 });
 
-export const colorEmphasis = (color, emphasis) => {
+export type Emphasis = "high" | "medium" | "low" | "lowest";
+
+export const colorEmphasis = (color: string, emphasis: Emphasis) => {
   switch (emphasis) {
     case "high":
       return color;
