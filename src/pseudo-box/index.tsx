@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import css from "@styled-system/css";
 import Box from "../box";
+import { PseudoBoxProps } from "./types";
 import { transformAliasProps as tx } from "../box/config";
 
 /**
@@ -29,7 +30,18 @@ const notFirst = "&:not(:first-of-type)";
 const notLast = "&:not(:last-of-type)";
 const groupHover = "[role=group]:hover &";
 
-const PseudoBox = styled(Box)(
+/**
+ * PseudoBox is an interactive wrapper that composes `Box`
+ * and converts common CSS pseudo-selectors to props for ease of styling.
+ *
+ * For example, to style `:hover` use `_hover`
+ *
+ * @example
+ * ```jsx
+ * <PseudoBox _hover={...} _focus={...}/>
+ * ```
+ */
+const PseudoBox = styled(Box)<PseudoBoxProps>(
   ({
     _after,
     _focus,
@@ -80,7 +92,7 @@ const PseudoBox = styled(Box)(
       "&:before": tx(_before),
       "&:after": tx(_after),
       "&:focus-within": tx(_focusWithin),
-      "&::placeholder": _placeholder,
+      "&::placeholder": tx(_placeholder),
     });
   },
 );

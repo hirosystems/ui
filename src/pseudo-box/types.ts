@@ -1,8 +1,7 @@
-import * as StyledSystem from "styled-system";
 import * as Styled from "styled-components";
-import { BoxProps } from "../box";
+import { BoxProps } from "../box/types";
 
-interface IPseudoBoxProps {
+interface PseudoBoxPropsBase {
   /**
    * Styles for CSS selector `&:after`
    *
@@ -25,7 +24,6 @@ interface IPseudoBoxProps {
   _before?: BoxProps;
   /**
    * Styles for CSS selector `&:focus`
-   *
    */
   _focus?: BoxProps;
   /**
@@ -130,19 +128,4 @@ interface IPseudoBoxProps {
   _placeholder?: BoxProps;
 }
 
-export type PseudoBoxProps = IPseudoBoxProps & BoxProps;
-
-/**
- * PseudoBox is an interactive wrapper that composes `Box`
- * and converts common CSS pseudo-selectors to props for ease of styling.
- *
- * For example, to style `:hover` use `_hover`
- *
- * @example
- * ```jsx
- * <PseudoBox _hover={...} _focus={...}/>
- * ```
- */
-declare const PseudoBox: Styled.StyledComponent<PseudoBoxProps, {}, {}>;
-
-export default PseudoBox;
+export type PseudoBoxProps = PseudoBoxPropsBase & BoxProps;
