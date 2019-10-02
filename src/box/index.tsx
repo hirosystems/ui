@@ -1,5 +1,5 @@
-/** @jsx jsx */
 import styled from "styled-components";
+
 import {
   background,
   border,
@@ -17,9 +17,11 @@ import {
   compose,
   system
 } from "styled-system";
-import extraConfig from "./config";
 
-export const truncate = props => {
+import extraConfig from "./config";
+import { BoxProps } from "./types";
+
+export const truncate = (props: any) => {
   if (props.isTruncated) {
     return {
       overflow: "hidden",
@@ -28,8 +30,6 @@ export const truncate = props => {
     };
   }
 };
-
-
 
 export const systemProps = compose(
   layout,
@@ -47,7 +47,7 @@ export const systemProps = compose(
   colorStyle
 );
 
-const Box = styled.div`
+const Box = styled.div<BoxProps>`
   ${systemProps};
   ${extraConfig};
 `;
