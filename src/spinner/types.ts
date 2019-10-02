@@ -1,11 +1,13 @@
 import * as React from "react";
 import { BoxProps } from "../box";
 
-export interface ISpinnerProps {
+export type SpinnerSize = "xs" | "sm" | "md" | "lg" | "xl";
+
+export interface SpinnerPropsBase {
   /**
    * The size of the spinner
    */
-  size?: "xs" | "sm" | "md" | "lg" | "xl";
+  size?: SpinnerSize;
   /**
    * The color of the empty area in the spinner
    */
@@ -37,13 +39,4 @@ export interface ISpinnerProps {
   label?: string;
 }
 
-export type SpinnerProps = BoxProps & ISpinnerProps;
-
-/**
- * Spinner is used for indicating a loading state of a component or page.
- *
- * RECOMMENDED: Add `aria-busy="true"` to the component that triggered the loading state while the spinner is shown.
- */
-declare const Spinner: React.FC<SpinnerProps>;
-
-export default Spinner;
+export type SpinnerProps = BoxProps & SpinnerPropsBase;

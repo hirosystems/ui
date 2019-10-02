@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 import styled, { keyframes } from "styled-components";
 import Box from "../box";
 import VisuallyHidden from "../visually-hidden";
+import { SpinnerProps, SpinnerSize } from "./types";
 
 const spin = keyframes`
   0% {
@@ -13,7 +14,7 @@ const spin = keyframes`
 `;
 
 const StyledBox = styled(Box)`
-  animation: ${spin} ${props => props.speed} linear infinite;
+  animation: ${spin} ${(props: SpinnerProps) => props.speed} linear infinite;
 `;
 
 const sizes = {
@@ -24,7 +25,12 @@ const sizes = {
   xl: "3rem"
 };
 
-const Spinner = forwardRef(
+/**
+ * Spinner is used for indicating a loading state of a component or page.
+ *
+ * RECOMMENDED: Add `aria-busy="true"` to the component that triggered the loading state while the spinner is shown.
+ */
+const Spinner = forwardRef<any, SpinnerProps>(
   (
     {
       size = "md",
@@ -37,7 +43,7 @@ const Spinner = forwardRef(
     },
     ref
   ) => {
-    const _size = sizes[size] || size;
+    const _size = (sizes[size] || size) as SpinnerSize;
 
     return (
       <StyledBox
@@ -47,7 +53,6 @@ const Spinner = forwardRef(
         borderColor="currentColor"
         borderBottomColor={emptyColor}
         borderLeftColor={emptyColor}
-        rounded="full"
         speed={speed}
         color={color}
         size={_size}
