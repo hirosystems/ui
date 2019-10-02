@@ -1,12 +1,12 @@
-import * as React from "react";
 import * as StyledSystem from "styled-system";
-import { IButton } from "../button";
+import { ButtonSizes, ButtonVariants, ButtonColorVariants } from "../button";
 import { BoxProps } from "../box";
 
-export interface IButtonGroup {
-  size?: IButton["size"];
+export interface ButtonGroupBase {
+  size?: ButtonSizes;
   color?: string;
-  variant?: IButton["variant"];
+  variant?: ButtonVariants;
+  variantColor: ButtonColorVariants;
   /**
    * If `true`, the borderRadius of button that are direct children will be altered
    * to look flushed together
@@ -16,8 +16,4 @@ export interface IButtonGroup {
   children?: React.ReactNode;
 }
 
-export type ButtonGroupProps = IButtonGroup & BoxProps;
-
-declare const ButtonGroup: React.FC<ButtonGroupProps>;
-
-export default ButtonGroup;
+export type ButtonGroupProps = ButtonGroupBase & BoxProps;

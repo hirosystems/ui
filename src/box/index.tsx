@@ -21,6 +21,8 @@ import {
 import extraConfig from "./config";
 import { BoxProps } from "./types";
 
+export * from './types';
+
 export const truncate = (props: { isTruncated: boolean }) => {
   if (props.isTruncated) {
     return {

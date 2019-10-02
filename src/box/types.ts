@@ -70,8 +70,8 @@ type TypographyProps = Omit<
   "fontWeight" | "lineHeight" | "fontSize" | "letterSpacing"
 >;
 
-export type BoxProps = React.RefAttributes<HTMLElement> &
-  React.HTMLAttributes<HTMLElement> &
+export type BoxProps = React.RefAttributes<HTMLDivElement> &
+  React.HTMLAttributes<HTMLDivElement> &
   StyledSystem.LayoutProps &
   StyledSystem.ColorProps &
   StyledSystem.SpaceProps &
