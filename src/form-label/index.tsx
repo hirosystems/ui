@@ -1,9 +1,12 @@
 import React, { forwardRef } from "react";
 import Box from "../box";
 import Text from "../text";
+import { FormLabelProps } from "./types";
 import { useFormControl } from "../form-control";
 
-export const RequiredIndicator = props => (
+export * from "./types";
+
+export const RequiredIndicator = (props: any) => (
   <Box
     as="span"
     ml={1}
@@ -14,7 +17,12 @@ export const RequiredIndicator = props => (
   />
 );
 
-export const FormLabel = forwardRef(({ children, ...props }, ref) => {
+/**
+ * FormLabel is used for form inputs and controls.
+ * It reads from the `FormControl` context to handle it's styles for
+ * the various form states.
+ */
+export const FormLabel = forwardRef<any, FormLabelProps>(({ children, ...props }, ref) => {
   const formControl = useFormControl(props);
   return (
     <Text

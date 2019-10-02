@@ -1,7 +1,7 @@
 import * as React from "react";
-import { BoxProps } from "../Box";
+import { BoxProps } from "../box";
 
-interface ILabelProps {
+interface LabelPropsBase {
   isInvalid?: boolean;
   /**
    * This prop is read from the `FormControl` context but can be passed as well.
@@ -11,15 +11,6 @@ interface ILabelProps {
   children?: React.ReactNode;
 }
 
-export type FormLabelProps = ILabelProps &
+export type FormLabelProps = LabelPropsBase &
   BoxProps &
   React.LabelHTMLAttributes<HTMLLabelElement>;
-
-/**
- * FormLabel is used for form inputs and controls.
- * It reads from the `FormControl` context to handle it's styles for
- * the various form states.
- */
-declare const FormLabel: React.FC<FormLabelProps>;
-
-export default FormLabel;
