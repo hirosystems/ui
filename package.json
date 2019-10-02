@@ -46,6 +46,7 @@
     "@styled-system/should-forward-prop": "5.0.12",
     "@types/styled-components": "^4.1.19",
     "@types/styled-system": "5.0.1",
+    "@types/styled-system__css": "^5.0.4",
     "color": "3.1.2",
     "prop-types": "^15.7.2",
     "react-spring": "8.0.23",
@@ -86,5 +87,5 @@
   "author": "Blockstack Product Team",
   "license": "MIT",
   "homepage": "https://waffle.blockstack.design/",
-  "repository": "https://github.com/blockstack/blockstack-ui"
+  "repository": "https://github.com/blockstackpbc/blockstack-ui"
 }
