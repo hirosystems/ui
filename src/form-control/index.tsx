@@ -1,5 +1,6 @@
 import React, { createContext, useContext, forwardRef } from "react";
 import Box from "../box";
+import { FormControlProps } from "./types";
 
 const FormControlContext = createContext();
 
@@ -25,7 +26,10 @@ export const useFormControl = props => {
   }, {});
 };
 
-const FormControl = forwardRef(
+/**
+ * FormControl provides context such as `isInvalid`, `isRequired`, `isDisabled` to it's children.
+ */
+const FormControl = forwardRef<any, FormControlProps>(
   ({ isInvalid, isRequired, isDisabled, isReadOnly, ...rest }, ref) => {
     const context = {
       isRequired,
