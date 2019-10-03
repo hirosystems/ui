@@ -2,10 +2,11 @@ import React from "react";
 import { forwardRef } from "react";
 import { useFormControl } from "../form-control";
 import PseudoBox from "../pseudo-box";
+import { InputProps } from "./types";
 
 import useInputStyle from "./styles";
 
-const Input = forwardRef((props, ref) => {
+const Input = forwardRef<any, InputProps>((props, ref) => {
   const {
     size,
     variant,
@@ -28,17 +29,17 @@ const Input = forwardRef((props, ref) => {
     <PseudoBox
       ref={ref}
       as={as}
-      readOnly={formControl.isReadOnly}
+      _readOnly={formControl.isReadOnly}
       aria-readonly={isReadOnly}
-      disabled={formControl.isDisabled}
+      isDisabled={formControl.isDisabled}
       aria-label={ariaLabel}
       aria-invalid={formControl.isInvalid}
-      required={formControl.isRequired}
+      isRequired={formControl.isRequired}
       aria-required={formControl.isRequired}
       aria-disabled={formControl.isDisabled}
       aria-describedby={ariaDescribedby}
-      textStyle='body.small'
-      {...inputStyleProps}
+      textStyle="body.small"
+      {...inputStyleProps as any}
       {...rest}
     />
   );

@@ -5,6 +5,8 @@ import Box from "../box";
 import { PseudoBoxProps } from "./types";
 import { transformAliasProps as tx } from "../box/config";
 
+export * from "./types";
+
 /**
  * The selectors are based on [WAI-ARIA state properties](https://www.w3.org/WAI/PF/aria-1.1/states_and_properties) and common CSS Selectors
  */

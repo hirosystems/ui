@@ -43,7 +43,7 @@ const unstyledStyle = {
   height: undefined
 };
 
-const variantProps = props => {
+const variantProps = (props: any) => {
   switch (props.variant) {
     case "unstyled":
       return unstyledStyle;
@@ -70,7 +70,7 @@ export const inputSizes = {
   }
 };
 
-const useInputStyle = props => {
+const useInputStyle = (props: any) => {
   const theme = useTheme();
 
   const _props = { ...props, theme };

@@ -1,11 +1,13 @@
 import * as React from "react";
 import { PseudoBoxProps } from "../pseudo-box";
 import { Omit } from "../common-types";
+import { Input } from "src";
+import { TextInput } from "react-native";
 
-type Variant = "outline" | "unstyled" | "flushed" | "filled";
-type Size = "sm" | "md" | "lg";
+type InputVariant = "outline" | "unstyled" | "flushed" | "filled";
+type InputSize = "sm" | "md" | "lg";
 
-export interface IInput<T = HTMLInputElement> {
+export interface InputPropsBase<T = HTMLInputElement> {
   /**
    * If `true`, the input will be disabled.
    * This sets `aria-disabled=true` and you can style this state by passing `_disabled` prop
@@ -30,13 +32,13 @@ export interface IInput<T = HTMLInputElement> {
    */
   isReadOnly?: React.InputHTMLAttributes<T>["readOnly"];
   /**
-   * The visual size of the `input` element.
+   * The visual InputSize of the `input` element.
    */
-  size?: Size;
+  size?: InputSize;
   /**
    * The variant of the input style to use.
    */
-  variant?: Variant;
+  variant?: InputVariant;
   /**
    * The element or component to use in place of `input`
    */
@@ -56,6 +58,7 @@ export interface IInput<T = HTMLInputElement> {
    * focusBorderColor = "blue"
    */
   focusBorderColor?: string;
+  textStyle: string;
 }
 
 type OmittedTypes =
@@ -67,15 +70,11 @@ type OmittedTypes =
   | "readOnly";
 
 type InputHTMLAttributes = Omit<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  OmittedTypes
+React.InputHTMLAttributes<HTMLInputElement>,
+OmittedTypes
 >;
 
-export type InputProps<T = HTMLInputElement> = IInput<T> &
+export type InputProps<T = HTMLInputElement> = InputPropsBase<T> &
   PseudoBoxProps &
   InputHTMLAttributes &
   React.RefAttributes<T>;
-
-declare const Input: React.FC<InputProps>;
-
-export default Input;
