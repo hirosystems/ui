@@ -1,6 +1,7 @@
 import colors from "./colors";
 import sizes, { baseSizes } from "./sizes";
 import typography from "./typography";
+import { Theme } from "./types";
 
 const space = baseSizes;
 
@@ -12,14 +13,24 @@ const shadows = {
   none: "none"
 };
 
-const breakpoints = ["30em", "48em", "62em", "80em"];
+
+type Breakpoints = string[] & {
+  [key: string]: string;
+  sm: string;
+  md: string;
+  lg: string;
+  xl: string;
+}
+
+// Type must be coerced here to support type `string[]` with custom properties
+const breakpoints = ["30em", "48em", "62em", "80em"] as Breakpoints;
 // aliases
 breakpoints.sm = breakpoints[0];
 breakpoints.md = breakpoints[1];
 breakpoints.lg = breakpoints[2];
 breakpoints.xl = breakpoints[3];
 
-const zIndices = {
+const zIndices: Theme["zIndices"] = {
   hide: -1,
   auto: "auto",
   "0": 0,
@@ -57,14 +68,14 @@ const borders = {
   "4px": "4px solid"
 };
 
-const theme = {
+const theme: Theme = {
   breakpoints,
   zIndices,
   radii,
   opacity,
   borders,
   colors,
-  ...typography,
+  ...(typography as any),
   sizes,
   shadows,
   space

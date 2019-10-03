@@ -28,7 +28,8 @@ const colors = {
   red: "#de0014",
   green: "#00a73e",
   orange: "#f7aa00",
-  cyan: "#00d4ff"
+  cyan: "#00d4ff",
+  feedback: {}
 };
 
 colors.feedback = {

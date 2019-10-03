@@ -1,10 +1,10 @@
 import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components";
 import React, { useContext } from "react";
-import theme from "../theme";
+import theme, { Theme } from "../theme";
 
 export let ThemeContext = React.createContext(theme);
 
-const ThemeProvider = ({ theme, children }) => (
+const ThemeProvider: React.FC<{ theme: Theme, children: any }> = ({ theme, children }) => (
   <StyledComponentsThemeProvider theme={theme}>
     {children}
   </StyledComponentsThemeProvider>

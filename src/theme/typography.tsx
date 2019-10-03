@@ -71,15 +71,15 @@ const textStyles = {
   }
 };
 
-textStyles.body.large.medium = {
+(textStyles.body.large as any).medium = {
   ...textStyles.body.large,
   fontWeight: typography.fontWeights["medium"]
 };
-textStyles.body.small.medium = {
+(textStyles.body.small as any).medium = {
   ...textStyles.body.small,
   fontWeight: typography.fontWeights["medium"]
 };
-textStyles.caption.medium = {
+(textStyles.caption as any).medium = {
   ...textStyles.body.small,
   fontWeight: typography.fontWeights["medium"]
 };
