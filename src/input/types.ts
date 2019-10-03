@@ -4,8 +4,8 @@ import { Omit } from "../common-types";
 import { Input } from "src";
 import { TextInput } from "react-native";
 
-type InputVariant = "outline" | "unstyled" | "flushed" | "filled";
-type InputSize = "sm" | "md" | "lg";
+export type InputVariant = "outline" | "unstyled" | "flushed" | "filled";
+export type InputSize = "sm" | "md" | "lg";
 
 export interface InputPropsBase<T = HTMLInputElement> {
   /**

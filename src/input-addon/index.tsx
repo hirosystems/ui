@@ -2,8 +2,11 @@ import React from "react";
 import { oneOf } from "prop-types";
 import Box from "../box";
 import useInputStyle from "../input/styles";
+import { InputAddonProps } from "./types";
 
-const InputAddon = ({ placement = "left", size = "md", ...props }) => {
+export * from "./types";
+
+const InputAddon = ({ placement = "left", size = "md", ...props }: InputAddonProps) => {
   const _placement = {
     left: {
       mr: "-1px",
@@ -20,7 +23,7 @@ const InputAddon = ({ placement = "left", size = "md", ...props }) => {
   };
 
   const styleProps = {
-    ...useInputStyle({ size, variant: "outline" }),
+    ...useInputStyle({ size, variant: "outline" }) as any,
     flex: "0 0 auto",
     whiteSpace: "nowrap",
     bg: "white", // todo: abstract out for colorMode
@@ -40,8 +43,8 @@ InputAddon.propTypes = {
   placement: oneOf(["left", "right"])
 };
 
-const InputLeftAddon = props => <InputAddon placement="left" {...props} />;
-const InputRightAddon = props => <InputAddon placement="right" {...props} />;
+const InputLeftAddon = (props: InputAddonProps) => <InputAddon placement="left" {...props} />;
+const InputRightAddon = (props: InputAddonProps) => <InputAddon placement="right" {...props} />;
 
 export { InputLeftAddon, InputRightAddon };
 export default InputAddon;

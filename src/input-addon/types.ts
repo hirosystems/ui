@@ -1,8 +1,8 @@
 import * as React from "react";
-import { IInput } from "../input";
+import { InputSize } from "../input";
 import { BoxProps } from "../box";
 
-interface IInputAddon {
+interface InputAddonPropsBase {
   /**
    * The content of the `InputAddon`
    */
@@ -10,7 +10,7 @@ interface IInputAddon {
   /**
    * The size of the addon is inherited from the `InputGroup` via `cloneElement`.
    */
-  size?: IInput["size"];
+  size?: InputSize;
   /**
    * The position the addon should appear relative to the `Input`.
    * We added `InputLeftAddon` and `InputRightAddon` so you might not need to pass this
@@ -18,10 +18,4 @@ interface IInputAddon {
   placement?: "left" | "right";
 }
 
-export type InputAddonProps = IInputAddon & BoxProps;
-
-declare const InputAddon: React.FC<InputAddonProps>;
-
-export default InputAddon;
-export const InputLeftAddon: React.FC<InputAddonProps>;
-export const InputRightAddon: React.FC<InputAddonProps>;
+export type InputAddonProps = InputAddonPropsBase & BoxProps;

@@ -6,6 +6,8 @@ import { InputProps } from "./types";
 
 import useInputStyle from "./styles";
 
+export * from "./types";
+
 const Input = forwardRef<any, InputProps>((props, ref) => {
   const {
     size,
