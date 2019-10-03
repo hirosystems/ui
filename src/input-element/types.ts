@@ -1,13 +1,13 @@
-import { IInput } from "../input";
+import { InputSize } from "../input";
 import * as React from "react";
 import { BoxProps } from "../box";
 import { Omit } from "../common-types";
 
-interface IInputElement {
+interface InputElementPropsBase {
   /**
    * The size of the adornment is inherited from the `InputGroup` via `cloneElement`.
    */
-  size?: IInput["size"];
+  size?: InputSize;
   /**
    * The position this adornment should appear relative to the `Input`.
    * We added `InputLeftElement` and `InputRightElement` so you might not need to pass this
@@ -21,13 +21,9 @@ interface IInputElement {
    * Disable pointer events on this component.
    * This allows for the content of the adornment to focus the input on click.
    */
-  disabledPointerEvents?: boolean;
+  disablePointerEvents?: boolean;
 }
 
-type IInputElementProps = IInputElement & BoxProps;
+export type InputElementProps = InputElementPropsBase & BoxProps;
 
-declare const InputElement: React.FC<IInputElementProps>;
-export default InputElement;
-
-export const InputLeftElement: React.FC<Omit<IInputElementProps, "placement">>;
-export const InputRightElement: React.FC<Omit<IInputElementProps, "placement">>;
+export type PositionedInputElementProps = Omit<InputElementProps, "placement">;

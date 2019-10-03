@@ -2,8 +2,11 @@ import React from "react";
 import { forwardRef } from "react";
 import Box from "../box";
 import { inputSizes } from "../input/styles";
+import { InputElementProps, PositionedInputElementProps } from "./types";
 
-const InputElement = forwardRef(
+export * from "./types";
+
+const InputElement = forwardRef<any, InputElementProps>(
   (
     {
       size = "default",
@@ -41,11 +44,11 @@ const InputElement = forwardRef(
   }
 );
 
-const InputLeftElement = forwardRef((props, ref) => (
+const InputLeftElement = forwardRef<any, PositionedInputElementProps>((props, ref) => (
   <InputElement ref={ref} placement="left" {...props} />
 ));
 
-const InputRightElement = forwardRef((props, ref) => (
+const InputRightElement = forwardRef<any, PositionedInputElementProps>((props, ref) => (
   <InputElement ref={ref} placement="right" {...props} />
 ));
 
