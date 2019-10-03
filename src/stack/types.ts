@@ -3,7 +3,7 @@ import * as React from "react";
 import * as StyledSystem from "styled-system";
 import { FlexProps } from "../flex";
 
-interface IStack {
+interface StackPropsBase {
   /**
    * If `true` the items will be stacked horizontally inline.
    */
@@ -31,8 +31,4 @@ interface IStack {
   shouldWrapChildren?: boolean;
 }
 
-export type StackProps = IStack & BoxProps;
-
-declare const Stack: React.FC<StackProps>;
-
-export default Stack;
+export type StackProps = StackPropsBase & BoxProps;

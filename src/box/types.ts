@@ -70,6 +70,16 @@ type TypographyProps = Omit<
   "fontWeight" | "lineHeight" | "fontSize" | "letterSpacing"
 >;
 
+interface FlexDirectionShorthandProps {
+  flexDir?: StyledSystem.FlexDirectionProps["flexDirection"];
+}
+
+interface DisplayShorthandProps {
+  d?: StyledSystem.DisplayProps["display"];
+}
+
+type ShorthandProps = FlexDirectionShorthandProps & DisplayShorthandProps;
+
 export type BoxProps = React.RefAttributes<HTMLDivElement> &
   React.HTMLAttributes<HTMLDivElement> &
   StyledSystem.LayoutProps &
@@ -82,6 +92,7 @@ export type BoxProps = React.RefAttributes<HTMLDivElement> &
   StyledSystem.ShadowProps &
   StyledSystem.GridProps &
   StyledSystem.OpacityProps &
+  ShorthandProps &
   TypographyProps &
   IFontSize &
   ILetterSpacing &

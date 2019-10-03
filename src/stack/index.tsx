@@ -6,8 +6,11 @@ import React, {
 } from "react";
 import Flex from "../flex";
 import Box from "../box";
+import { StackProps } from "./types";
 
-const Stack = forwardRef(
+export * from "./types";
+
+const Stack = forwardRef<any, StackProps>(
   (
     {
       isInline,
@@ -30,10 +33,11 @@ const Stack = forwardRef(
       >
         {Children.map(children, (child, index) => {
           if (!isValidElement(child)) return;
-          let isLastChild = children.length === index + 1;
-          let spacingProps = isInline
-            ? { mr: isLastChild ? null : spacing }
-            : { mb: isLastChild ? null : spacing };
+          if (!Array.isArray(children)) return;
+          const isLastChild = children.length === index + 1;
+          const spacingProps = isInline
+            ? { mr: isLastChild ? undefined : spacing }
+            : { mb: isLastChild ? undefined : spacing };
 
           if (shouldWrapChildren) {
             return (
