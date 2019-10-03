@@ -2,7 +2,7 @@ import React, { createContext, useContext, forwardRef } from "react";
 import Box from "../box";
 import { FormControlProps } from "./types";
 
-const FormControlContext = createContext();
+const FormControlContext = createContext({});
 
 export const useFormControlContext = () => useContext(FormControlContext);
 

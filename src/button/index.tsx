@@ -1,12 +1,11 @@
 import React, { forwardRef } from "react";
-import { MarginProps } from "styled-system";
 import PseudoBox from "../pseudo-box";
 import Box from "../box";
 import { useButtonStyle } from "./styles";
 import Spinner from "../spinner";
 import { ButtonProps } from "./types";
 
-export * from './types';
+export * from "./types";
 
 const Button = forwardRef<any, ButtonProps>(
   (
@@ -31,6 +30,7 @@ const Button = forwardRef<any, ButtonProps>(
       size
     });
     return (
+      // @ts-ignore
       <PseudoBox
         disabled={isDisabled}
         aria-disabled={isDisabled}
@@ -48,12 +48,12 @@ const Button = forwardRef<any, ButtonProps>(
             position={loadingText ? "relative" : "absolute"}
             mr={loadingText ? 2 : 0}
             color="currentColor"
-            size="1em"
+            size="sm"
           />
         )}
         {isLoading
           ? loadingText || (
-              <Box as="span" opacity="0">
+              <Box as="span" opacity={0}>
                 {children}
               </Box>
             )

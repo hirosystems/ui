@@ -6,10 +6,11 @@ const presets = [
     "@babel/preset-env",
     {
       loose: true,
-      modules: isBuilding ? false : "commonjs",
-    },
+      modules: isBuilding ? false : "commonjs"
+    }
   ],
   "@babel/preset-react",
+  "@babel/preset-typescript"
 ];
 
 const plugins = [
@@ -18,12 +19,12 @@ const plugins = [
   [
     "babel-plugin-transform-react-remove-prop-types",
     {
-      mode: "unsafe-wrap",
-    },
-  ],
+      mode: "unsafe-wrap"
+    }
+  ]
 ];
 
 module.exports = {
   presets: presets,
-  plugins: plugins,
+  plugins: plugins
 };

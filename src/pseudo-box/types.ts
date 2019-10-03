@@ -1,5 +1,5 @@
 import * as Styled from "styled-components";
-import { BoxProps } from "../box/types";
+import { BoxProps } from '../box';
 
 interface PseudoBoxPropsBase {
   /**
