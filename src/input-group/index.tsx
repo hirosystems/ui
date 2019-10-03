@@ -4,15 +4,18 @@ import Input from "../input";
 import { inputSizes } from "../input/styles";
 import { InputLeftElement, InputRightElement } from "../input-element";
 import { useTheme } from "../theme-provider";
+import { InputGroupProps } from "./types";
 
-const InputGroup = ({ children, size = "default", ...props }) => {
+const InputGroup = ({ children, size = "md", ...props }: InputGroupProps) => {
   const { sizes } = useTheme();
   const height = inputSizes[size] && inputSizes[size]["height"];
-  let pl = null;
-  let pr = null;
+  let pl: string | null = null;
+  let pr: string | null = null;
   return (
     <Box display="flex" position="relative" {...props}>
       {Children.map(children, child => {
+        if (!React.isValidElement(child)) return;
+
         if (child.type === InputLeftElement) {
           pl = sizes[height];
         }
