@@ -9,14 +9,14 @@
     "strict": true,
     "noEmit": false,
     "experimentalDecorators": true,
-    "baseUrl": "./",
     "allowSyntheticDefaultImports": true,
     "suppressImplicitAnyIndexErrors": true,
     "outDir": "./lib",
-    "skipLibCheck": true,
+    "baseUrl": "./",
     "rootDir": "./src",
-    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false, // TODO remove in the future
     "strictNullChecks": false // TODO remove in the future
-  },
-  "include": ["src/**/*"]
+  }
 }

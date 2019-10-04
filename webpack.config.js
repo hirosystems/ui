@@ -4,6 +4,7 @@ const webpack = require("webpack");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
 const WebpackAssetsManifest = require("webpack-assets-manifest");
+const TerserPlugin = require("terser-webpack-plugin");
 
 /**
  * Generates markdown example for using the blockstack.js dist file with a CDN
@@ -48,6 +49,14 @@ module.exports = (env, argv) => {
   const opts = {
     entry: "./src/index.ts",
     devtool: "source-map",
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new TerserPlugin({
+          test: /\.js(\?.*)?$/i
+        })
+      ]
+    },
     module: {
       rules: [
         {
@@ -57,7 +66,7 @@ module.exports = (env, argv) => {
             {
               loader: "ts-loader",
               options: {
-                configFile: "tsconfig.browser.json"
+                configFile: "tsconfig.json"
               }
             }
           ]
