@@ -51,7 +51,7 @@ module.exports = (env, argv) => {
     module: {
       rules: [
         {
-          test: /\.ts?$/,
+          test: /\.tsx?$/,
           exclude: /node_modules/,
           use: [
             {
@@ -79,7 +79,7 @@ module.exports = (env, argv) => {
       )
     },
     resolve: {
-      extensions: [".ts", ".js"]
+      extensions: [".ts", ".tsx", ".js"]
     },
     output: {
       filename: "blockstack-ui.js",
