@@ -37,7 +37,13 @@ const defaultStyle = {
   }
 };
 
-const unstyledStyle = {
+interface UnstyledStyle {
+  bg: string;
+  px?: string;
+  height?: string;
+}
+
+const unstyledStyle: UnstyledStyle = {
   bg: "transparent",
   px: undefined,
   height: undefined

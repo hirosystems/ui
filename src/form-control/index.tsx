@@ -6,7 +6,7 @@ const FormControlContext = createContext({});
 
 export const useFormControlContext = () => useContext(FormControlContext);
 
-export const useFormControl = props => {
+export const useFormControl = (props: any) => {
   const context = useFormControlContext();
   if (!context) {
     return props;

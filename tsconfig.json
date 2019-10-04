@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es6",
-    "lib": ["es6", "dom"],
+    "lib": ["es6", "dom", "es2017"],
     "jsx": "react",
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
@@ -15,7 +15,7 @@
     "outDir": "./lib",
     "skipLibCheck": true,
     "rootDir": "./src",
-    "noImplicitAny": false, // TODO remove in the future
+    "noImplicitAny": true,
     "strictNullChecks": false // TODO remove in the future
   },
   "include": ["src/**/*"]

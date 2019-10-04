@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-interface IClipboard<T> {
-  value?: T;
+interface Clipboard {
+  value?: string;
   onCopy?: () => void;
   hasCopied?: boolean;
 }
@@ -10,7 +10,7 @@ interface IClipboard<T> {
  *
  * @param {any} value - The content to add to clipboard
  */
-const copyToClipboard = value => {
+const copyToClipboard = (value: string) => {
   const el = document.createElement("textarea");
   el.value = value;
   el.setAttribute("readonly", "");
@@ -32,7 +32,7 @@ const copyToClipboard = value => {
   }
 };
 
-function useClipboard<T>(value: T): IClipboard<T> {
+function useClipboard(value: string): Clipboard {
   const [hasCopied, setHasCopied] = useState(false);
 
   const onCopy = () => {
