@@ -11,7 +11,7 @@ import theme from "../theme";
 const defaultConfig = (theme: any) => ({
   light: {
     color: theme.colors.ink[900],
-    bg: undefined,
+    bg: (undefined as any),
     borderColor: theme.colors.ink[100],
     placeholderColor: theme.colors.ink[400]
   },
