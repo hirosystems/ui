@@ -1,31 +1,28 @@
-import React from "react";
-import { forwardRef } from "react";
-import { useFormControl } from "../form-control";
-import PseudoBox from "../pseudo-box";
-import { InputProps } from "./types";
+import React from 'react'
+import { forwardRef } from 'react'
+import { useFormControl } from '../form-control'
+import PseudoBox from '../pseudo-box'
+import { InputProps } from './types'
 
-import useInputStyle from "./styles";
+import useInputStyle from './styles'
 
-export * from "./types";
+export * from './types'
 
 const Input = forwardRef<any, InputProps>((props, ref) => {
   const {
-    size,
-    variant,
     as,
-    "aria-label": ariaLabel,
-    "aria-describedby": ariaDescribedby,
+    'aria-label': ariaLabel,
+    'aria-describedby': ariaDescribedby,
     isReadOnly,
-    isFullWidth,
-    isDisabled,
-    isInvalid,
-    isRequired,
-    focusBorderColor,
+    // isFullWidth,
+    // isDisabled,
+    // isInvalid,
+    // isRequired,
     ...rest
-  } = props;
+  } = props
 
-  const inputStyleProps = useInputStyle(props);
-  const formControl = useFormControl(props);
+  const inputStyleProps = useInputStyle(props)
+  const formControl = useFormControl(props)
 
   return (
     <PseudoBox
@@ -41,16 +38,16 @@ const Input = forwardRef<any, InputProps>((props, ref) => {
       aria-disabled={formControl.isDisabled}
       aria-describedby={ariaDescribedby}
       textStyle="body.small"
-      {...inputStyleProps as any}
+      {...(inputStyleProps as any)}
       {...rest}
     />
-  );
-});
+  )
+})
 
 Input.defaultProps = {
-  as: "input",
+  as: 'input',
   isFullWidth: true,
-  focusBorderColor: "blue.300"
-};
+  focusBorderColor: 'blue.300'
+}
 
-export default Input;
+export default Input

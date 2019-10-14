@@ -1,84 +1,80 @@
-import * as StyledSystem from "styled-system";
-import * as React from "react";
-import { Omit } from "../common-types";
+import * as StyledSystem from 'styled-system'
+import * as React from 'react'
+import { Omit } from '../common-types'
 
-type FontSize =
-  | "xs"
-  | "sm"
-  | "base"
-  | "lg"
-  | "xl"
-  | "2xl"
-  | "3xl"
-  | "4xl"
-  | "5xl"
-  | "6xl";
+type FontSize = 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl'
 
-
-type FontWeight =
-  | "hairline"
-  | "thin"
-  | "light"
-  | "normal"
-  | "medium"
-  | "semibold"
-  | "bold"
-  | "extrabold"
-  | "black";
+type FontWeight = 'hairline' | 'thin' | 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black'
 
 interface IFontSize {
-  fontSize?:
-  | StyledSystem.ResponsiveValue<FontSize>
-  | StyledSystem.FontSizeProps["fontSize"];
+  fontSize?: StyledSystem.ResponsiveValue<FontSize> | StyledSystem.FontSizeProps['fontSize']
 }
-
 
 interface IFontWeight {
-  fontWeight?:
-  | StyledSystem.ResponsiveValue<FontWeight>
-  | StyledSystem.FontWeightProps["fontWeight"];
+  fontWeight?: StyledSystem.ResponsiveValue<FontWeight> | StyledSystem.FontWeightProps['fontWeight']
 }
 
-type LineHeight = "none" | "shorter" | "short" | "normal" | "tall" | "taller";
+type LineHeight = 'none' | 'shorter' | 'short' | 'normal' | 'tall' | 'taller'
 
 interface ILineHeight {
-  lineHeight?:
-  | StyledSystem.ResponsiveValue<LineHeight>
-  | StyledSystem.LineHeightProps["lineHeight"];
+  lineHeight?: StyledSystem.ResponsiveValue<LineHeight> | StyledSystem.LineHeightProps['lineHeight']
 }
 
-type LetterSpacing =
-  | "tighter"
-  | "tight"
-  | "normal"
-  | "wide"
-  | "wider"
-  | "widest";
+type LetterSpacing = 'tighter' | 'tight' | 'normal' | 'wide' | 'wider' | 'widest'
 
 interface ILetterSpacing {
-  letterSpacing?:
-  | StyledSystem.ResponsiveValue<LetterSpacing>
-  | StyledSystem.LetterSpacingProps["letterSpacing"];
+  letterSpacing?: StyledSystem.ResponsiveValue<LetterSpacing> | StyledSystem.LetterSpacingProps['letterSpacing']
 }
 
-interface As {
-  as?: React.ElementType;
+type TextAlign =
+  | 'inherit'
+  | 'unset'
+  | 'initial'
+  | 'left'
+  | 'right'
+  | 'center'
+  | 'justify'
+  | 'justify-all'
+  | 'start'
+  | 'end'
+  | 'match-parent'
+
+interface ITextAlign {
+  textAlign?: StyledSystem.ResponsiveValue<TextAlign> | StyledSystem.TextAlignProps['textAlign']
+}
+
+type TextStyle =
+  | 'display.large'
+  | 'display.small'
+  | 'body.large.medium'
+  | 'body.large'
+  | 'body.small.medium'
+  | 'body.small'
+  | 'caption'
+  | 'caption.medium'
+
+interface ITextStyle {
+  textStyle?: StyledSystem.ResponsiveValue<TextStyle> | StyledSystem.TextStyleProps['textStyle']
+}
+
+interface IAs {
+  as?: React.ElementType
 }
 
 type TypographyProps = Omit<
   StyledSystem.TypographyProps,
-  "fontWeight" | "lineHeight" | "fontSize" | "letterSpacing"
->;
+  'fontWeight' | 'lineHeight' | 'fontSize' | 'letterSpacing' | 'textAlign' | 'textStyle'
+>
 
-interface FlexDirectionShorthandProps {
-  flexDir?: StyledSystem.FlexDirectionProps["flexDirection"];
+interface IFlexDirectionShorthandProps {
+  flexDir?: StyledSystem.FlexDirectionProps['flexDirection']
 }
 
-interface DisplayShorthandProps {
-  d?: StyledSystem.DisplayProps["display"];
+interface IDisplayShorthandProps {
+  d?: StyledSystem.DisplayProps['display']
 }
 
-type ShorthandProps = FlexDirectionShorthandProps & DisplayShorthandProps;
+type ShorthandProps = IFlexDirectionShorthandProps & IDisplayShorthandProps
 
 export type BoxProps = React.RefAttributes<HTMLDivElement> &
   React.HTMLAttributes<HTMLDivElement> &
@@ -96,8 +92,10 @@ export type BoxProps = React.RefAttributes<HTMLDivElement> &
   TypographyProps &
   IFontSize &
   ILetterSpacing &
+  ITextAlign &
+  ITextStyle &
   IFontWeight &
   ILineHeight &
-  As;
+  IAs
 
-export type BoxComponent = React.FC<BoxProps>;
+export type BoxComponent = React.FC<BoxProps>

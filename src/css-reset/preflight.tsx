@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+import { css } from 'styled-components'
 
 const tailwindPreflight = css`
   /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -210,9 +210,9 @@ const tailwindPreflight = css`
  */
 
   button::-moz-focus-inner,
-  [type="button"]::-moz-focus-inner,
-  [type="reset"]::-moz-focus-inner,
-  [type="submit"]::-moz-focus-inner {
+  [type='button']::-moz-focus-inner,
+  [type='reset']::-moz-focus-inner,
+  [type='submit']::-moz-focus-inner {
     border-style: none;
     padding: 0;
   }
@@ -273,8 +273,8 @@ const tailwindPreflight = css`
  * 2. Remove the padding in IE 10.
  */
 
-  [type="checkbox"],
-  [type="radio"] {
+  [type='checkbox'],
+  [type='radio'] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
   }
@@ -283,8 +283,8 @@ const tailwindPreflight = css`
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
-  [type="number"]::-webkit-inner-spin-button,
-  [type="number"]::-webkit-outer-spin-button {
+  [type='number']::-webkit-inner-spin-button,
+  [type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none !important;
   }
 
@@ -293,7 +293,7 @@ const tailwindPreflight = css`
  * 2. Correct the outline style in Safari.
  */
 
-  [type="search"] {
+  [type='search'] {
     -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
   }
@@ -302,7 +302,7 @@ const tailwindPreflight = css`
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 
-  [type="search"]::-webkit-search-decoration {
+  [type='search']::-webkit-search-decoration {
     -webkit-appearance: none !important;
   }
 
@@ -434,9 +434,8 @@ const tailwindPreflight = css`
  */
 
   html {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; /* 1 */
     line-height: 1.5; /* 2 */
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -470,7 +469,7 @@ const tailwindPreflight = css`
   }
 
   button,
-  [role="button"] {
+  [role='button'] {
     cursor: pointer;
   }
 
@@ -531,8 +530,7 @@ const tailwindPreflight = css`
   code,
   kbd,
   samp {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
-      monospace;
+    font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   }
 
   /**
@@ -567,6 +565,6 @@ const tailwindPreflight = css`
     max-width: 100%;
     height: auto;
   }
-`;
+`
 
-export default tailwindPreflight;
+export default tailwindPreflight

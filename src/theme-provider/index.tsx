@@ -1,26 +1,24 @@
-import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components";
-import React, { useContext } from "react";
-import theme, { Theme } from "../theme";
+import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components'
+import React, { useContext } from 'react'
+import { theme, Theme } from '../theme'
 
-export let ThemeContext = React.createContext(theme);
+export const ThemeContext = React.createContext(theme)
 
-const ThemeProvider: React.FC<{ theme: Theme, children: any }> = ({ theme, children }) => (
-  <StyledComponentsThemeProvider theme={theme}>
-    {children}
-  </StyledComponentsThemeProvider>
-);
+const ThemeProvider: React.FC<{ theme: Theme; children: any }> = ({ theme, children }) => (
+  <StyledComponentsThemeProvider theme={theme}>{children}</StyledComponentsThemeProvider>
+)
 
 ThemeProvider.defaultProps = {
   theme
-};
+}
 
 const useTheme = () => {
-  const theme = useContext(ThemeContext);
+  const theme = useContext(ThemeContext)
   if (theme === undefined) {
-    throw new Error("useTheme must be used within a ThemeProvider");
+    throw new Error('useTheme must be used within a ThemeProvider')
   }
-  return theme;
-};
+  return theme
+}
 
-export default ThemeProvider;
-export { useTheme };
+export default ThemeProvider
+export { useTheme }
