@@ -60,6 +60,9 @@ interface ILetterSpacing {
 }
 
 type TextAlign =
+  | "inherit"
+  | "unset"
+  | "initial"
   | "left"
   | "right"
   | "center"
