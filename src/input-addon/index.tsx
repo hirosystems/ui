@@ -27,6 +27,7 @@ const InputAddon = ({ placement = "left", size = "md", ...props }: InputAddonPro
     flex: "0 0 auto",
     whiteSpace: "nowrap",
     bg: "white", // todo: abstract out for colorMode
+    fontSize: "body.small",
     ..._placement[placement]
   };
 

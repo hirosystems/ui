@@ -1,5 +1,3 @@
-import { useTheme } from "../theme-provider";
-
 const defaultStyle = {
   border: "1px solid",
   borderBottomColor: "ink.100",
@@ -26,7 +24,7 @@ const defaultStyle = {
     borderRightColor: "blue.300",
     borderTopColor: "blue.300",
     borderColor: "blue.300",
-    boxShadow: "0 0 0 3px rgba(170, 179, 255, 0.75)"
+    boxShadow: "0 0 0 1px rgba(170, 179, 255, 0.75)"
   },
   _invalid: {
     borderBottomColor: "red",
@@ -34,27 +32,6 @@ const defaultStyle = {
     borderRightColor: "red",
     borderTopColor: "red",
     borderColor: "red"
-  }
-};
-
-interface UnstyledStyle {
-  bg: string;
-  px?: string;
-  height?: string;
-}
-
-const unstyledStyle: UnstyledStyle = {
-  bg: "transparent",
-  px: undefined,
-  height: undefined
-};
-
-const variantProps = (props: any) => {
-  switch (props.variant) {
-    case "unstyled":
-      return unstyledStyle;
-    default:
-      return defaultStyle;
   }
 };
 
@@ -71,16 +48,12 @@ const baseProps = {
 export const inputSizes = {
   default: {
     fontSize: "body.small",
-    height: 7,
+    height: 12, // 48px
     lineHeight: "base"
   }
 };
 
 const useInputStyle = (props: any) => {
-  const theme = useTheme();
-
-  const _props = { ...props, theme };
-
   return {
     width: props.isFullWidth ? "100%" : undefined,
     ...baseProps,
