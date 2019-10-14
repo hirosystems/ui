@@ -15,7 +15,6 @@
     "baseUrl": "./",
     "rootDir": "./src",
     "skipLibCheck": true,
-    "declaration": true,
     "esModuleInterop": true,
     "strictNullChecks": false // TODO remove in the future
   }
