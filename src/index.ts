@@ -18,6 +18,8 @@ export {
   InputLeftAddon,
   InputRightAddon
 } from "./input-addon";
+export { default as FormLabel } from "./form-label";
+export { default as FormControl } from "./form-control";
 export { default as Stack } from "./stack";
 export { default as VisuallyHidden } from "./visually-hidden";
 export { default as theme } from "./theme";
