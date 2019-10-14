@@ -78,13 +78,34 @@ interface ITextAlign {
     | StyledSystem.TextAlignProps["textAlign"];
 }
 
+type TextStyle =
+  | "display.large"
+  | "display.small"
+  | "body.large.medium"
+  | "body.large"
+  | "body.small.medium"
+  | "body.small"
+  | "caption"
+  | "caption.medium";
+
+interface ITextStyle {
+  textStyle?:
+    | StyledSystem.ResponsiveValue<TextStyle>
+    | StyledSystem.TextStyleProps["textStyle"];
+}
+
 interface As {
   as?: React.ElementType;
 }
 
 type TypographyProps = Omit<
   StyledSystem.TypographyProps,
-  "fontWeight" | "lineHeight" | "fontSize" | "letterSpacing" | "textAlign"
+  | "fontWeight"
+  | "lineHeight"
+  | "fontSize"
+  | "letterSpacing"
+  | "textAlign"
+  | "textStyle"
 >;
 
 interface FlexDirectionShorthandProps {
@@ -114,6 +135,7 @@ export type BoxProps = React.RefAttributes<HTMLDivElement> &
   IFontSize &
   ILetterSpacing &
   ITextAlign &
+  ITextStyle &
   IFontWeight &
   ILineHeight &
   As;
