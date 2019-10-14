@@ -6,7 +6,6 @@ const colors = {
   blue: Object.assign("#3700ff", {
     50: "#f2f2ff",
     100: "#e3e5ff",
-    150: "#D8DAF3",
     200: "#c5ccff",
     300: "#aab3ff",
     900: "#5548ff",
