@@ -128,4 +128,4 @@ interface PseudoBoxPropsBase {
   _placeholder?: BoxProps;
 }
 
-export type PseudoBoxProps = PseudoBoxPropsBase & BoxProps;
+export type PseudoBoxProps = BoxProps & PseudoBoxPropsBase;
