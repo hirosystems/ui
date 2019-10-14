@@ -82,7 +82,7 @@
   "scripts": {
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "build": "npm run build:js && npm run build:webpack",
+    "build": "npm run build:js && && run build:types && npm run build:webpack",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "build:watch": "nodemon -w src -x 'rm .babelrc &> /dev/null; npm run build'",
