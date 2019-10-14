@@ -1,4 +1,5 @@
 const defaultStyle = {
+  height: 12,
   border: '1px solid',
   borderBottomColor: 'ink.100',
   borderLeftColor: 'ink.100',
@@ -14,7 +15,7 @@ const defaultStyle = {
     borderColor: 'ink.200'
   },
   _disabled: {
-    bg: '#F9F9FC',
+    bg: '#f9f9fc',
     cursor: 'not-allowed',
     pointerEvents: 'none'
   },

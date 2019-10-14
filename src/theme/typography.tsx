@@ -29,9 +29,9 @@ const typography = {
   },
   fonts: {
     heading:
-      '\'Inter\', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+      '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
     body:
-      '\'Inter\', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+      '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
     mono: 'SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace'
   },
   fontSizes: [12, 14, 16, 20, 24, 28, 32, 36, 48, 64, 96, 128]
@@ -40,49 +40,49 @@ const typography = {
 const textStyles = {
   display: {
     large: {
-      fontWeight: typography.fontWeights['semibold'],
+      fontWeight: typography.fontWeights.semibold,
       fontSize: typography.fontSizes[4],
-      lineHeight: typography.lineHeights['shorter'], // 1.333
+      lineHeight: typography.lineHeights.shorter, // 1.333
       letterSpacing: '-0.02em'
     },
     small: {
-      fontWeight: typography.fontWeights['medium'],
+      fontWeight: typography.fontWeights.medium,
       fontSize: typography.fontSizes[3],
-      lineHeight: typography.lineHeights['short'], // 1.4
+      lineHeight: typography.lineHeights.short, // 1.4
       letterSpacing: '-0.02em'
     }
   },
   body: {
     large: {
-      fontWeight: typography.fontWeights['normal'],
+      fontWeight: typography.fontWeights.normal,
       fontSize: typography.fontSizes[2],
-      lineHeight: typography.lineHeights['base'], // 1.5 (24)
+      lineHeight: typography.lineHeights.base, // 1.5 (24)
       letterSpacing: '-0.01em'
     },
     small: {
-      fontWeight: typography.fontWeights['normal'],
+      fontWeight: typography.fontWeights.normal,
       fontSize: typography.fontSizes[1],
-      lineHeight: typography.lineHeights['short'], // 1.4 (19.6)
+      lineHeight: typography.lineHeights.short, // 1.4 (19.6)
       letterSpacing: '-0.01em'
     }
   },
   caption: {
     fontSize: typography.fontSizes[0],
-    lineHeight: typography.lineHeights['shorter'], // 1.333 (16)
+    lineHeight: typography.lineHeights.shorter, // 1.333 (16)
     letterSpacing: '0.00em'
   }
 }
 ;(textStyles.body.large as any).medium = {
   ...textStyles.body.large,
-  fontWeight: typography.fontWeights['medium']
+  fontWeight: typography.fontWeights.medium
 }
 ;(textStyles.body.small as any).medium = {
   ...textStyles.body.small,
-  fontWeight: typography.fontWeights['medium']
+  fontWeight: typography.fontWeights.medium
 }
 ;(textStyles.caption as any).medium = {
   ...textStyles.body.small,
-  fontWeight: typography.fontWeights['medium']
+  fontWeight: typography.fontWeights.medium
 }
 
 export { textStyles }

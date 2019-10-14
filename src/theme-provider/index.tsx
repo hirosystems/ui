@@ -1,6 +1,6 @@
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components'
 import React, { useContext } from 'react'
-import theme, { Theme } from '../theme'
+import { theme, Theme } from '../theme'
 
 export const ThemeContext = React.createContext(theme)
 

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import preflight from './preflight'
-import theme from '../theme'
+import { theme } from '../theme'
+import typography from '../theme/typography'
 
 //
 // Should type as theme here, however this type
@@ -21,7 +22,7 @@ const defaultConfig = (theme: any) => ({
   }
 })
 
-const { color, bg, borderColor, placeholderColor } = defaultConfig(theme)['light']
+const { color, bg, borderColor, placeholderColor } = defaultConfig(theme).light
 
 const CSSReset = createGlobalStyle`
   ${preflight};
@@ -29,7 +30,7 @@ const CSSReset = createGlobalStyle`
     line-height: 1.5;
     color: ${color};
     background-color: ${bg};
-    font-family: ${theme.fonts['body']};
+    font-family: ${typography.fonts.body};
   }
 
   /**

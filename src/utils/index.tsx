@@ -9,7 +9,9 @@ export function genId(prefix: string) {
 export const makeId = (id: string, index: number) => `${id}:${index}`
 
 export function assignRef<T>(ref: Ref<T>, value: T) {
-  if (ref == null) return
+  if (ref == null) {
+    return
+  }
   if (typeof ref === 'function') {
     ref(value)
   } else {

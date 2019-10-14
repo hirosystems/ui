@@ -1,24 +1,22 @@
-import * as StyledSystem from "styled-system";
-import { BoxProps } from "../box";
+import { BoxProps } from '../box'
 
-interface FlexPropsBase {
+interface IFlexPropsBase {
   /**
    * Shorthand for Styled-System `alignItems` prop
    */
-  align?: BoxProps["alignItems"];
+  align?: BoxProps['alignItems']
   /**
    * Shorthand for Styled-System `justifyContent` prop
    */
-  justify?: BoxProps["justifyContent"];
+  justify?: BoxProps['justifyContent']
   /**
    * Shorthand for Styled-System `flexWrap` prop
    */
-  wrap?: BoxProps["flexWrap"];
+  wrap?: BoxProps['flexWrap']
   /**
    * Shorthand for Styled-System `flexDirection` prop
    */
-  direction?: BoxProps["flexDirection"];
+  direction?: BoxProps['flexDirection']
 }
 
-export type FlexProps = FlexPropsBase & BoxProps;
-
+export type FlexProps = IFlexPropsBase & BoxProps

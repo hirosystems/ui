@@ -6,7 +6,7 @@ import { InputAddonProps } from './types'
 
 export * from './types'
 
-const InputAddon = ({ placement = 'left', size = 'md', ...props }: InputAddonProps) => {
+const InputAddon = ({ placement = 'left', ...props }: InputAddonProps) => {
   const _placement = {
     left: {
       mr: '-1px',
@@ -23,7 +23,7 @@ const InputAddon = ({ placement = 'left', size = 'md', ...props }: InputAddonPro
   }
 
   const styleProps = {
-    ...(useInputStyle({ size, variant: 'outline' }) as any),
+    ...(useInputStyle({ variant: 'outline' }) as any),
     flex: '0 0 auto',
     whiteSpace: 'nowrap',
     bg: 'white', // todo: abstract out for colorMode

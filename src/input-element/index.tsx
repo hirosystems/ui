@@ -8,8 +8,8 @@ export * from './types'
 
 const InputElement = forwardRef<any, InputElementProps>(
   ({ size = 'default', children, placement = 'left', disablePointerEvents = false, ...props }, ref) => {
-    const height = inputSizes[size] && inputSizes[size]['height']
-    const fontSize = inputSizes[size] && inputSizes[size]['fontSize']
+    const height = inputSizes[size] && inputSizes[size].height
+    const fontSize = inputSizes[size] && inputSizes[size].fontSize
 
     const placementProp = { [placement]: '0' }
 

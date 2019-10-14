@@ -6,15 +6,17 @@ import { InputLeftElement, InputRightElement } from '../input-element'
 import { useTheme } from '../theme-provider'
 import { InputGroupProps } from './types'
 
-const InputGroup = ({ children, size = 'md', ...props }: InputGroupProps) => {
+const InputGroup = ({ children, size = 'default', ...props }: InputGroupProps) => {
   const { sizes } = useTheme()
-  const height = inputSizes[size] && inputSizes[size]['height']
+  const height = inputSizes[size] && inputSizes[size].height
   let pl: string | null = null
   let pr: string | null = null
   return (
     <Box display="flex" position="relative" {...props}>
       {Children.map(children, child => {
-        if (!React.isValidElement(child)) return
+        if (!React.isValidElement(child)) {
+          return
+        }
 
         if (child.type === InputLeftElement) {
           pl = sizes[height]
@@ -24,7 +26,7 @@ const InputGroup = ({ children, size = 'md', ...props }: InputGroupProps) => {
         }
         if (child.type === Input) {
           return cloneElement(child, {
-            size,
+            width: '100%',
             pl: child.props.pl || pl,
             pr: child.props.pr || pr
           })
