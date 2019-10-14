@@ -1,90 +1,90 @@
-import { system, Config } from "styled-system";
+import { system, Config } from 'styled-system'
 
 export const config: Config = {
   roundedTop: {
-    properties: ["borderTopLeftRadius", "borderTopRightRadius"],
-    scale: "radii",
+    properties: ['borderTopLeftRadius', 'borderTopRightRadius'],
+    scale: 'radii'
   },
   roundedBottom: {
-    properties: ["borderBottomLeftRadius", "borderBottomRightRadius"],
-    scale: "radii",
+    properties: ['borderBottomLeftRadius', 'borderBottomRightRadius'],
+    scale: 'radii'
   },
   roundedLeft: {
-    properties: ["borderTopLeftRadius", "borderBottomLeftRadius"],
-    scale: "radii",
+    properties: ['borderTopLeftRadius', 'borderBottomLeftRadius'],
+    scale: 'radii'
   },
   roundedRight: {
-    properties: ["borderTopRightRadius", "borderBottomRightRadius"],
-    scale: "radii",
+    properties: ['borderTopRightRadius', 'borderBottomRightRadius'],
+    scale: 'radii'
   },
   roundedTopRight: {
-    property: "borderTopRightRadius",
-    scale: "radii",
+    property: 'borderTopRightRadius',
+    scale: 'radii'
   },
   roundedTopLeft: {
-    property: "borderTopLeftRadius",
-    scale: "radii",
+    property: 'borderTopLeftRadius',
+    scale: 'radii'
   },
   roundedBottomRight: {
-    property: "borderBottomRightRadius",
-    scale: "radii",
+    property: 'borderBottomRightRadius',
+    scale: 'radii'
   },
   roundedBottomLeft: {
-    property: "borderBottomLeftRadius",
-    scale: "radii",
+    property: 'borderBottomLeftRadius',
+    scale: 'radii'
   },
   rounded: {
-    property: "borderRadius",
-    scale: "radii",
+    property: 'borderRadius',
+    scale: 'radii'
   },
   d: {
-    property: "display",
+    property: 'display'
   },
   w: {
-    property: "width",
-    scale: "sizes",
+    property: 'width',
+    scale: 'sizes'
   },
   minW: {
-    property: "minWidth",
-    scale: "sizes",
+    property: 'minWidth',
+    scale: 'sizes'
   },
   maxW: {
-    property: "maxWidth",
-    scale: "sizes",
+    property: 'maxWidth',
+    scale: 'sizes'
   },
   h: {
-    property: "height",
-    scale: "sizes",
+    property: 'height',
+    scale: 'sizes'
   },
   minH: {
-    property: "minHeight",
-    scale: "sizes",
+    property: 'minHeight',
+    scale: 'sizes'
   },
   maxH: {
-    property: "maxHeight",
-    scale: "sizes",
+    property: 'maxHeight',
+    scale: 'sizes'
   },
   bgImg: {
-    property: "backgroundImage",
+    property: 'backgroundImage'
   },
   bgSize: {
-    property: "backgroundSize",
+    property: 'backgroundSize'
   },
   bgPos: {
-    property: "backgroundPosition",
+    property: 'backgroundPosition'
   },
   bgRepeat: {
-    property: "backgroundRepeat",
+    property: 'backgroundRepeat'
   },
   pos: {
-    property: "position",
+    property: 'position'
   },
   flexDir: {
-    property: "flexDirection",
+    property: 'flexDirection'
   },
   shadow: {
-    property: "boxShadow",
-    scale: "shadows",
+    property: 'boxShadow',
+    scale: 'shadows'
   },
   textDecoration: true,
   overflowX: true,
@@ -109,56 +109,56 @@ export const config: Config = {
   listStylePosition: true,
   listStyleImage: true,
   fill: {
-    property: "fill",
-    scale: "colors",
+    property: 'fill',
+    scale: 'colors'
   },
   stroke: {
-    property: "stroke",
-    scale: "colors",
+    property: 'stroke',
+    scale: 'colors'
   },
   objectFit: true,
   objectPosition: true,
   backgroundAttachment: true,
-  outline: true,
-};
+  outline: true
+}
 
-config.bgAttachment = config.backgroundAttachment;
-config.textDecor = config.textDecoration;
-config.listStylePos = config.listStylePosition;
-config.listStyleImg = config.listStyleImage;
+config.bgAttachment = config.backgroundAttachment
+config.textDecor = config.textDecoration
+config.listStylePos = config.listStylePosition
+config.listStyleImg = config.listStyleImage
 
-const extraConfig = system(config);
+const extraConfig = system(config)
 
-export default extraConfig;
+export default extraConfig
 
 // Create an issue on @styled-system/css to allow custom alias to be passed to the `css` function
 
 // Transform the custom alias to a format that styled-system CSS supports
 const transformAlias = (prop: string, propValue: any) => {
-  const configKeys = Object.keys(config);
-  let result = {};
+  const configKeys = Object.keys(config)
+  const result = {}
 
   if (configKeys.includes(prop)) {
-    const { properties, property } = config[prop] as any;
+    const { properties, property } = config[prop] as any
     if (properties) {
-      properties.forEach((_cssProp: string) => (result[_cssProp] = propValue));
+      properties.forEach((_cssProp: string) => (result[_cssProp] = propValue))
     }
     if (property) {
-      result[property] = propValue;
+      result[property] = propValue
     }
     if (config[prop] === true) {
-      result[prop] = propValue;
+      result[prop] = propValue
     }
   } else {
-    result[prop] = propValue;
+    result[prop] = propValue
   }
-  return result;
-};
+  return result
+}
 
 export const transformAliasProps = (props: any) => {
-  let result = {};
-  for (let prop in props) {
-    result = { ...result, ...transformAlias(prop, props[prop]) };
+  let result = {}
+  for (const prop in props) {
+    result = { ...result, ...transformAlias(prop, props[prop]) }
   }
-  return result;
-};
+  return result
+}

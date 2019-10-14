@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 import {
   background,
@@ -14,24 +14,13 @@ import {
   textStyle,
   colorStyle,
   buttonStyle,
-  compose,
-  system
-} from "styled-system";
+  compose
+} from 'styled-system'
 
-import extraConfig from "./config";
-import { BoxProps } from "./types";
+import extraConfig from './config'
+import { BoxProps } from './types'
 
-export * from './types';
-
-export const truncate = (props: { isTruncated: boolean }) => {
-  if (props.isTruncated) {
-    return {
-      overflow: "hidden",
-      textOverflow: "ellipsis",
-      whiteSpace: "nowrap"
-    };
-  }
-};
+export * from './types'
 
 export const systemProps = compose(
   layout,
@@ -47,11 +36,11 @@ export const systemProps = compose(
   textStyle,
   buttonStyle,
   colorStyle
-);
+)
 
 const Box = styled.div<BoxProps>`
   ${systemProps};
   ${extraConfig};
-`;
+`
 
-export default Box;
+export default Box

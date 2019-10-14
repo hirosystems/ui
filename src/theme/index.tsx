@@ -1,3 +1,3 @@
-export { default } from "./theme";
+export { default } from './theme'
 
-export * from "./types";
+export * from './types'

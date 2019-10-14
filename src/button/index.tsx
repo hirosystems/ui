@@ -1,11 +1,11 @@
-import React, { forwardRef } from "react";
-import PseudoBox from "../pseudo-box";
-import Box from "../box";
-import { useButtonStyle } from "./styles";
-import Spinner from "../spinner";
-import { ButtonProps } from "./types";
+import React, { forwardRef } from 'react'
+import PseudoBox from '../pseudo-box'
+import Box from '../box'
+import { useButtonStyle } from './styles'
+import Spinner from '../spinner'
+import { ButtonProps } from './types'
 
-export * from "./types";
+export * from './types'
 
 const Button = forwardRef<any, ButtonProps>(
   (
@@ -14,10 +14,10 @@ const Button = forwardRef<any, ButtonProps>(
       isActive,
       children,
       as: Comp,
-      mode = "primary",
-      variant = "solid",
+      mode = 'primary',
+      variant = 'solid',
       type,
-      size = "lg",
+      size = 'lg',
       isLoading,
       loadingText,
       ...rest
@@ -28,7 +28,7 @@ const Button = forwardRef<any, ButtonProps>(
       variant,
       mode,
       size
-    });
+    })
     return (
       // @ts-ignore
       <PseudoBox
@@ -38,14 +38,14 @@ const Button = forwardRef<any, ButtonProps>(
         type={type}
         borderRadius="6px"
         fontWeight="medium"
-        data-active={isActive ? "true" : undefined}
-        as={"button" || Comp}
+        data-active={isActive ? 'true' : undefined}
+        as={'button' || Comp}
         {...rest}
         {...styles}
       >
         {isLoading && (
           <Spinner
-            position={loadingText ? "relative" : "absolute"}
+            position={loadingText ? 'relative' : 'absolute'}
             mr={loadingText ? 2 : 0}
             color="currentColor"
             size="sm"
@@ -59,8 +59,8 @@ const Button = forwardRef<any, ButtonProps>(
             )
           : children}
       </PseudoBox>
-    );
+    )
   }
-);
+)
 
-export default Button;
+export default Button

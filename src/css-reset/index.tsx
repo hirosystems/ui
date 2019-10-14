@@ -1,8 +1,6 @@
-import React from "react";
-import { createGlobalStyle } from "styled-components";
-// import { Theme } from "styled-system";
-import preflight from "./preflight";
-import theme from "../theme";
+import { createGlobalStyle } from 'styled-components'
+import preflight from './preflight'
+import theme from '../theme'
 
 //
 // Should type as theme here, however this type
@@ -11,7 +9,7 @@ import theme from "../theme";
 const defaultConfig = (theme: any) => ({
   light: {
     color: theme.colors.ink[900],
-    bg: (undefined as any),
+    bg: undefined as any,
     borderColor: theme.colors.ink[100],
     placeholderColor: theme.colors.ink[400]
   },
@@ -21,9 +19,9 @@ const defaultConfig = (theme: any) => ({
     borderColor: theme.colors.ink[600],
     placeholderColor: theme.colors.ink[500]
   }
-});
+})
 
-const { color, bg, borderColor, placeholderColor } = defaultConfig(theme)["light"];
+const { color, bg, borderColor, placeholderColor } = defaultConfig(theme)['light']
 
 const CSSReset = createGlobalStyle`
   ${preflight};
@@ -31,7 +29,7 @@ const CSSReset = createGlobalStyle`
     line-height: 1.5;
     color: ${color};
     background-color: ${bg};
-    font-family: ${theme.fonts["body"]};
+    font-family: ${theme.fonts['body']};
   }
 
   /**
@@ -60,6 +58,6 @@ const CSSReset = createGlobalStyle`
   textarea::placeholder {
     color: ${placeholderColor};
   }
-`;
+`
 
-export default CSSReset;
+export default CSSReset
