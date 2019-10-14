@@ -14,7 +14,6 @@ type FontSize =
   | "5xl"
   | "6xl";
 
-
 type FontWeight =
   | "hairline"
   | "thin"
@@ -28,23 +27,22 @@ type FontWeight =
 
 interface IFontSize {
   fontSize?:
-  | StyledSystem.ResponsiveValue<FontSize>
-  | StyledSystem.FontSizeProps["fontSize"];
+    | StyledSystem.ResponsiveValue<FontSize>
+    | StyledSystem.FontSizeProps["fontSize"];
 }
-
 
 interface IFontWeight {
   fontWeight?:
-  | StyledSystem.ResponsiveValue<FontWeight>
-  | StyledSystem.FontWeightProps["fontWeight"];
+    | StyledSystem.ResponsiveValue<FontWeight>
+    | StyledSystem.FontWeightProps["fontWeight"];
 }
 
 type LineHeight = "none" | "shorter" | "short" | "normal" | "tall" | "taller";
 
 interface ILineHeight {
   lineHeight?:
-  | StyledSystem.ResponsiveValue<LineHeight>
-  | StyledSystem.LineHeightProps["lineHeight"];
+    | StyledSystem.ResponsiveValue<LineHeight>
+    | StyledSystem.LineHeightProps["lineHeight"];
 }
 
 type LetterSpacing =
@@ -57,8 +55,24 @@ type LetterSpacing =
 
 interface ILetterSpacing {
   letterSpacing?:
-  | StyledSystem.ResponsiveValue<LetterSpacing>
-  | StyledSystem.LetterSpacingProps["letterSpacing"];
+    | StyledSystem.ResponsiveValue<LetterSpacing>
+    | StyledSystem.LetterSpacingProps["letterSpacing"];
+}
+
+type TextAlign =
+  | "left"
+  | "right"
+  | "center"
+  | "justify"
+  | "justify-all"
+  | "start"
+  | "end"
+  | "match-parent";
+
+interface ITextAlign {
+  textAlign?:
+    | StyledSystem.ResponsiveValue<TextAlign>
+    | StyledSystem.TextAlignProps["textAlign"];
 }
 
 interface As {
@@ -67,7 +81,7 @@ interface As {
 
 type TypographyProps = Omit<
   StyledSystem.TypographyProps,
-  "fontWeight" | "lineHeight" | "fontSize" | "letterSpacing"
+  "fontWeight" | "lineHeight" | "fontSize" | "letterSpacing" | "textAlign"
 >;
 
 interface FlexDirectionShorthandProps {
@@ -96,6 +110,7 @@ export type BoxProps = React.RefAttributes<HTMLDivElement> &
   TypographyProps &
   IFontSize &
   ILetterSpacing &
+  ITextAlign &
   IFontWeight &
   ILineHeight &
   As;
