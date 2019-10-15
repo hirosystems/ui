@@ -5,3 +5,4 @@ node_modules
 lib
 mdincludes
 emotion
+yarn-error.log
