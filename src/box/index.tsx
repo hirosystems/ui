@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-
+import React from 'react'
+import BaseTag from '../base-tag'
 import {
   background,
   border,
@@ -20,8 +21,6 @@ import {
 import extraConfig from './config'
 import { BoxProps } from './types'
 
-export * from './types'
-
 export const systemProps = compose(
   layout,
   color,
@@ -38,9 +37,17 @@ export const systemProps = compose(
   colorStyle
 )
 
-const Box = styled.div<BoxProps>`
+export * from './types'
+
+const StyledBox = styled('div')<BoxProps>`
   ${systemProps};
   ${extraConfig};
 `
+
+// @ts-ignore
+const Box = forwardRef<BoxProps>(({ as, ...rest }, ref) => (
+  //@ts-ignore
+  <StyledBox as={p => <BaseTag {...p} as={as} />} {...rest} ref={ref} />
+))
 
 export default Box

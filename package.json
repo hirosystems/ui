@@ -5,6 +5,7 @@
   "author": "Blockstack <engineering@blockstack.com> (https://blockstack.com/)",
   "dependencies": {
     "@styled-system/css": "5.0.23",
+    "@styled-system/should-forward-prop": "^5.1.2",
     "@types/color": "^3.0.0",
     "@types/styled-components": "^4.1.19",
     "@types/styled-system": "^5.1.2",
