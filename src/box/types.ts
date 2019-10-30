@@ -76,9 +76,7 @@ interface IDisplayShorthandProps {
 
 type ShorthandProps = IFlexDirectionShorthandProps & IDisplayShorthandProps
 
-export type BoxProps = React.RefAttributes<HTMLDivElement> &
-  React.HTMLAttributes<HTMLDivElement> &
-  StyledSystem.LayoutProps &
+type StyledSystemProps = StyledSystem.LayoutProps &
   StyledSystem.ColorProps &
   StyledSystem.SpaceProps &
   StyledSystem.BordersProps &
@@ -88,14 +86,18 @@ export type BoxProps = React.RefAttributes<HTMLDivElement> &
   StyledSystem.ShadowProps &
   StyledSystem.GridProps &
   StyledSystem.OpacityProps &
-  ShorthandProps &
-  TypographyProps &
+  StyledSystem.OverflowProps
+
+type ModifiedStyledSystemProps = TypographyProps &
   IFontSize &
   ILetterSpacing &
   ITextAlign &
   ITextStyle &
   IFontWeight &
-  ILineHeight &
-  IAs
+  ILineHeight
 
-export type BoxComponent = React.FC<BoxProps>
+type BoxHTMLProps = React.RefAttributes<HTMLDivElement> & React.HTMLAttributes<HTMLDivElement>
+
+export type BoxProps = StyledSystemProps & ModifiedStyledSystemProps & ShorthandProps & IAs & BoxHTMLProps
+
+export type Box = React.FC<BoxProps>
