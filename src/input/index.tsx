@@ -1,7 +1,7 @@
 import React from 'react'
 import { forwardRef } from 'react'
 import { useFormControl } from '../form-control'
-import PseudoBox from '../pseudo-box'
+import { PseudoBox } from '../pseudo-box'
 import { InputProps } from './types'
 
 import useInputStyle from './styles'
@@ -50,4 +50,4 @@ Input.defaultProps = {
   focusBorderColor: 'blue.300'
 }
 
-export default Input
+export { Input }

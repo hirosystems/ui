@@ -20,5 +20,4 @@ const useTheme = () => {
   return theme
 }
 
-export default ThemeProvider
-export { useTheme }
+export { useTheme, ThemeProvider }

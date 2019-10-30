@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import styled, { keyframes } from 'styled-components'
-import Box from '../box'
-import VisuallyHidden from '../visually-hidden'
+import { Box } from '../box'
+import { VisuallyHidden } from '../visually-hidden'
 import { SpinnerProps, SpinnerSize } from './types'
 
 const spin = keyframes`
@@ -64,4 +64,4 @@ const Spinner = forwardRef<any, SpinnerProps>(
   }
 )
 
-export default Spinner
+export { Spinner }

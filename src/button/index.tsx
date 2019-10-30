@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react'
-import PseudoBox from '../pseudo-box'
-import Box from '../box'
+import { PseudoBox } from '../pseudo-box'
+import { Box } from '../box'
 import { useButtonStyle } from './styles'
-import Spinner from '../spinner'
+import { Spinner } from '../spinner'
 import { ButtonProps } from './types'
 
 export * from './types'
@@ -63,4 +63,4 @@ const Button = forwardRef<any, ButtonProps>(
   }
 )
 
-export default Button
+export { Button }

@@ -1,6 +1,6 @@
 import React, { forwardRef, Children, cloneElement, isValidElement } from 'react'
-import Flex from '../flex'
-import Box from '../box'
+import { Flex } from '../flex'
+import { Box } from '../box'
 import { StackProps } from './types'
 
 export * from './types'
@@ -35,4 +35,4 @@ const Stack = forwardRef<any, StackProps>(
   }
 )
 
-export default Stack
+export { Stack }

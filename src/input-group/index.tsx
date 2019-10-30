@@ -1,6 +1,6 @@
 import React, { Children, cloneElement } from 'react'
-import Box from '../box'
-import Input from '../input'
+import { Box } from '../box'
+import { Input } from '../input'
 import { inputSizes } from '../input/styles'
 import { InputLeftElement, InputRightElement } from '../input-element'
 import { useTheme } from '../theme-provider'
@@ -37,4 +37,4 @@ const InputGroup = ({ children, size = 'default', ...props }: InputGroupProps) =
   )
 }
 
-export default InputGroup
+export { InputGroup }

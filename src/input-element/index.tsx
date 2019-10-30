@@ -1,6 +1,6 @@
 import React from 'react'
 import { forwardRef } from 'react'
-import Box from '../box'
+import { Box } from '../box'
 import { inputSizes } from '../input/styles'
 import { InputElementProps, PositionedInputElementProps } from './types'
 
@@ -43,5 +43,4 @@ const InputRightElement = forwardRef<any, PositionedInputElementProps>((props, r
   <InputElement ref={ref} placement="right" {...props} />
 ))
 
-export { InputLeftElement, InputRightElement }
-export default InputElement
+export { InputElement, InputLeftElement, InputRightElement }

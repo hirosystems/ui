@@ -1,3 +1,2 @@
-export { default as theme } from './theme'
-
+export { theme } from './theme'
 export * from './types'

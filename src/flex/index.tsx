@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import Box from '../box'
+import { Box } from '../box'
 import { FlexProps } from './types'
 
 export * from './types'
@@ -16,4 +16,4 @@ const Flex = forwardRef<any, FlexProps>(({ align, justify, wrap, direction, ...r
   />
 ))
 
-export default Flex
+export { Flex }

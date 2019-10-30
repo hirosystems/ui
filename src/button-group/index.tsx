@@ -1,5 +1,5 @@
 import React, { Children, cloneElement } from 'react'
-import Box from '../box'
+import { Box } from '../box'
 import { ButtonGroupProps } from './types'
 
 const ButtonGroup: React.FC<ButtonGroupProps> = ({
@@ -38,4 +38,4 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({
   )
 }
 
-export default ButtonGroup
+export { ButtonGroup }
