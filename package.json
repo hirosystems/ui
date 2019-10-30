@@ -92,7 +92,7 @@
   "main": "dist/index.js",
   "umd:main": "dist/ui.umd.production.js",
   "module": "dist/ui.esm.js",
-  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],

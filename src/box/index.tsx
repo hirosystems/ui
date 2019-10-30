@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import styled from 'styled-components'
 
 import {
@@ -39,9 +39,12 @@ export const systemProps = compose(
   colorStyle
 )
 
-const Box = styled.div<BoxProps>`
+const StyledBox = styled.div<BoxProps>`
   ${systemProps};
   ${extraConfig};
 `
 
+const Box = forwardRef<any, BoxProps>(({ ...rest }, ref) => <StyledBox ref={ref} {...rest} />)
+
 export { Box }
+
