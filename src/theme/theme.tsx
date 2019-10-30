@@ -80,4 +80,4 @@ const theme: Theme = {
   space
 }
 
-export default theme
+export { theme }

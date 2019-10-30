@@ -53,6 +53,7 @@
     "terser-webpack-plugin": "^2.1.2",
     "ts-loader": "^6.2.0",
     "ts-node": "^8.4.1",
+    "tsdx": "^0.11.0",
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.6.3",
@@ -80,7 +81,6 @@
       "git add"
     ]
   },
-  "main": "lib/index",
   "peerDependencies": {
     "react": "16.x",
     "react-dom": "16.x",
@@ -89,21 +89,23 @@
   "publishConfig": {
     "access": "public"
   },
+  "main": "dist/index.js",
+  "umd:main": "dist/ui.umd.production.js",
+  "module": "dist/ui.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": "https://github.com/blockstackpbc/blockstack-ui",
   "scripts": {
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "build": "npm run build:js && npm run build:types && npm run build:webpack",
-    "build:types": "tsc --declaration --emitDeclarationOnly",
-    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
-    "build:watch": "nodemon -w src -x 'rm .babelrc &> /dev/null; npm run build'",
-    "build:webpack": "cross-env NODE_ENV=production webpack --mode=production",
-    "build:webpack:analyze": "shx rm -rf dist/* && cross-env NODE_ENV=production ANALYZE=true webpack --mode=production",
-    "build:webpack:watch": "shx rm -rf dist/* && cross-env NODE_ENV=development webpack --mode=development --watch --progress --info-verbosity verbose",
+    "start": "cross-env NODE_ENV=development tsdx watch",
+    "build": "cross-env NODE_ENV=production tsdx build --format=cjs,esm,umd",
     "format": "npm run prettier -- --write",
     "lint": "eslint \"src/**/*.+(ts|tsx)\"",
     "lint:fix": "eslint \"src/**/*.+(ts|tsx)\" --fix",
-    "prebuild": "rimraf dist && rimraf lib",
+    "prebuild": "rimraf dist",
     "prepublishOnly": "npm run type-check && npm run build",
     "prettier": "prettier \"**/*.+(js|jsx|ts|tsx|d.ts|md|mdx)\"",
     "validate": "npm run lint && npm run prettier -- --list-different && npm run tslint",

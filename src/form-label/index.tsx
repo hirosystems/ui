@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
-import Box from '../box'
-import Text from '../text'
+import { Box } from '../box'
+import { Text } from '../text'
 import { FormLabelProps } from './types'
 import { useFormControl } from '../form-control'
 

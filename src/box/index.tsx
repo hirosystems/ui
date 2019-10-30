@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 import {
@@ -43,4 +44,4 @@ const Box = styled.div<BoxProps>`
   ${extraConfig};
 `
 
-export default Box
+export { Box }

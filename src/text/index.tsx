@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import Box from '../pseudo-box'
+import { PseudoBox } from '../pseudo-box'
 
 // if nothing is passed for the prop `textStyle`, we will assume styles for various dom elements
 const assumeTextStyle = ({ as }: { as: string }) => {
@@ -16,7 +16,7 @@ const assumeTextStyle = ({ as }: { as: string }) => {
 }
 const Text = forwardRef<any, any>(({ textStyle, ...rest }, ref) => {
   return (
-    <Box
+    <PseudoBox
       ref={ref}
       as="span"
       whiteSpace="unset"
@@ -27,4 +27,4 @@ const Text = forwardRef<any, any>(({ textStyle, ...rest }, ref) => {
   )
 })
 
-export default Text
+export { Text }

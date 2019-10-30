@@ -1,5 +1,5 @@
 import React, { createContext, useContext, forwardRef } from 'react'
-import Box from '../box'
+import { Box } from '../box'
 import { FormControlProps } from './types'
 
 const FormControlContext = createContext({})
@@ -46,4 +46,4 @@ const FormControl = forwardRef<any, FormControlProps>(
   }
 )
 
-export default FormControl
+export { FormControl }

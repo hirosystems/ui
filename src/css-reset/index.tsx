@@ -3,7 +3,6 @@ import preflight from './preflight'
 import { theme } from '../theme'
 import typography from '../theme/typography'
 
-//
 // Should type as theme here, however this type
 // has optional properties. Need to enforce type to ensure
 // these values are defined
@@ -61,4 +60,4 @@ const CSSReset = createGlobalStyle`
   }
 `
 
-export default CSSReset
+export { CSSReset }

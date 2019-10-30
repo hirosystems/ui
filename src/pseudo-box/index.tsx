@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import styled from 'styled-components'
 import css from '@styled-system/css'
-import Box from '../box'
+import { Box } from '../box'
 import { PseudoBoxProps } from './types'
 import { transformAliasProps as tx } from '../box/config'
 
@@ -99,4 +99,4 @@ const PseudoBox = styled(Box)<PseudoBoxProps>(
   }
 )
 
-export default PseudoBox
+export { PseudoBox }

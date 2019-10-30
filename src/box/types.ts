@@ -1,5 +1,6 @@
 import * as StyledSystem from 'styled-system'
 import * as React from 'react'
+import {Ref} from 'react'
 import { Omit } from '../common-types'
 
 type FontSize = 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl'

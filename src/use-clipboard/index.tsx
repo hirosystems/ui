@@ -41,4 +41,4 @@ function useClipboard(value: string): Clipboard {
   return { value, onCopy, hasCopied }
 }
 
-export default useClipboard
+export { useClipboard }

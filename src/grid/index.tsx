@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import Box from '../box'
+import { Box } from '../box'
 import { GridProps } from './types'
 
 const Grid = forwardRef<any, GridProps>(
@@ -41,4 +41,4 @@ const Grid = forwardRef<any, GridProps>(
   )
 )
 
-export default Grid
+export { Grid }

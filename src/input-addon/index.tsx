@@ -1,6 +1,6 @@
 import React from 'react'
 import { oneOf } from 'prop-types'
-import Box from '../box'
+import { Box } from '../box'
 import useInputStyle from '../input/styles'
 import { InputAddonProps } from './types'
 
@@ -41,5 +41,4 @@ InputAddon.propTypes = {
 const InputLeftAddon = (props: InputAddonProps) => <InputAddon placement="left" {...props} />
 const InputRightAddon = (props: InputAddonProps) => <InputAddon placement="right" {...props} />
 
-export { InputLeftAddon, InputRightAddon }
-export default InputAddon
+export { InputAddon, InputLeftAddon, InputRightAddon }
