@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, Ref } from 'react'
 import styled from 'styled-components'
 
 import {
@@ -44,7 +44,6 @@ const StyledBox = styled.div<BoxProps>`
   ${extraConfig};
 `
 
-const Box = forwardRef<any, BoxProps>(({ ...rest }, ref) => <StyledBox ref={ref} {...rest} />)
+const Box = forwardRef((props: BoxProps, ref: Ref<HTMLDivElement>) => <StyledBox ref={ref} {...props} />)
 
 export { Box, StyledBox }
-
