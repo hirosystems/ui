@@ -1,7 +1,7 @@
-/** @jsx jsx */
+import React from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
-import { Box } from '../box'
+import { StyledBox } from '../box'
 import { PseudoBoxProps } from './types'
 import { transformAliasProps as tx } from '../box/config'
 
@@ -43,7 +43,7 @@ const groupHover = '[role=group]:hover &'
  * <PseudoBox _hover={...} _focus={...}/>
  * ```
  */
-const PseudoBox = styled(Box)<PseudoBoxProps>(
+const PseudoBox = styled(StyledBox)<PseudoBoxProps>(
   ({
     _after,
     _focus,

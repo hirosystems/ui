@@ -46,5 +46,5 @@ const StyledBox = styled.div<BoxProps>`
 
 const Box = forwardRef<any, BoxProps>(({ ...rest }, ref) => <StyledBox ref={ref} {...rest} />)
 
-export { Box }
+export { Box, StyledBox }
 
