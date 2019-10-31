@@ -22,7 +22,7 @@ export const FormLabel = forwardRef<any, FormLabelProps>(({ children, ...props }
     <Text
       ref={ref}
       pb="4px"
-      opacity={formControl.isDisabled ? '0.4' : '1'}
+      opacity={formControl.isDisabled ? 0.4 : 1}
       textAlign="left"
       verticalAlign="middle"
       display="inline-block"
