@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react'
-import { PseudoBox } from '../pseudo-box'
-import { BoxProps, IAs } from '../box'
+import { PseudoBox, PseudoBoxProps } from '../pseudo-box'
 
 // if nothing is passed for the prop `textStyle`, we will assume styles for various dom elements
 const assumeTextStyle = (as: string | React.ElementType) => {
@@ -15,7 +14,7 @@ const assumeTextStyle = (as: string | React.ElementType) => {
       return
   }
 }
-const Text = forwardRef<any, BoxProps>(({ textStyle, as, ...rest }, ref) => {
+const Text = forwardRef<any, PseudoBoxProps>(({ textStyle, as, ...rest }, ref) => {
   return (
     <PseudoBox
       ref={ref}
