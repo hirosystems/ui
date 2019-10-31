@@ -56,7 +56,7 @@ export interface InputPropsBase<T = HTMLInputElement> {
    * focusBorderColor = "blue"
    */
   focusBorderColor?: string
-  textStyle: string
+  textStyle?: string
 }
 
 type OmittedTypes = 'size' | 'disabled' | 'required' | 'checked' | 'defaultChecked' | 'readOnly'
