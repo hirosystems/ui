@@ -14,11 +14,11 @@ const assumeTextStyle = (as: string | React.ElementType) => {
       return
   }
 }
-const Text = forwardRef<any, PseudoBoxProps>(({ textStyle, as, ...rest }, ref) => {
+const Text = forwardRef<any, PseudoBoxProps>(({ textStyle, as = 'span', ...rest }, ref) => {
   return (
     <PseudoBox
       ref={ref}
-      as="span"
+      as={as}
       whiteSpace="unset"
       display="inline"
       textStyle={textStyle || assumeTextStyle(as)}
