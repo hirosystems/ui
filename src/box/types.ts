@@ -61,10 +61,15 @@ interface IAs {
   as?: React.ElementType
 }
 
+interface WhiteSpace {
+  // @todo: Add additional props
+  whiteSpace: 'unset'
+}
+
 type TypographyProps = Omit<
   StyledSystem.TypographyProps,
   'fontWeight' | 'lineHeight' | 'fontSize' | 'letterSpacing' | 'textAlign' | 'textStyle'
->
+  > & WhiteSpace
 
 interface IFlexDirectionShorthandProps {
   flexDir?: StyledSystem.FlexDirectionProps['flexDirection']
