@@ -76,10 +76,9 @@ export interface IDisplayShorthandProps {
   d?: StyledSystem.DisplayProps['display']
 }
 
-export type Transform = 'none' | string
-
-export interface ITransform {
-  transform?: StyledSystem.ResponsiveValue<Transform> | CSS.TransformProperty
+export interface IOtherProps {
+  cursor?: CSS.CursorProperty | StyledSystem.ResponsiveValue<CSS.CursorProperty>
+  transform?: CSS.TransformProperty | StyledSystem.ResponsiveValue<CSS.TransformProperty>
 }
 
 export type ShorthandProps = IFlexDirectionShorthandProps & IDisplayShorthandProps
@@ -103,7 +102,7 @@ export type ModifiedStyledSystemProps = TypographyProps &
   ITextStyle &
   IFontWeight &
   ILineHeight &
-  ITransform
+  IOtherProps
 
 export type BoxHTMLProps = React.RefAttributes<HTMLDivElement> & React.HTMLAttributes<HTMLDivElement>
 
