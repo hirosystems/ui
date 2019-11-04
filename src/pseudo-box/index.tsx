@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
 import { StyledBox } from '../box'

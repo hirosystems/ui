@@ -15,7 +15,7 @@ const InputGroup = ({ children, size = 'default', ...props }: InputGroupProps) =
     <Box display="flex" position="relative" {...props}>
       {Children.map(children, child => {
         if (!React.isValidElement(child)) {
-          return
+          return null
         }
 
         if (child.type === InputLeftElement) {

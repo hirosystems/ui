@@ -48,7 +48,7 @@ export const colorEmphasis = (color: string, emphasis: Emphasis) => {
     case 'lowest':
       return generateAlphaColors(color)[300]
     default:
-      return
+      return undefined
   }
 }
 
