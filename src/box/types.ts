@@ -3,10 +3,6 @@ import * as React from 'react'
 import { Omit } from '../common-types'
 import * as CSS from 'csstype'
 
-export interface ITransform {
-  transform?: StyledSystem.ResponsiveValue<CSS.TransformProperty> | CSS.TransformProperty
-}
-
 export type FontSize = 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl'
 
 export type FontWeight =
@@ -78,6 +74,12 @@ export interface IFlexDirectionShorthandProps {
 
 export interface IDisplayShorthandProps {
   d?: StyledSystem.DisplayProps['display']
+}
+
+export type Transform = 'none' | string
+
+export interface ITransform {
+  transform?: StyledSystem.ResponsiveValue<Transform> | CSS.TransformProperty
 }
 
 export type ShorthandProps = IFlexDirectionShorthandProps & IDisplayShorthandProps

@@ -9,7 +9,7 @@ export type ButtonSizes = 'sm' | 'md' | 'lg'
 /**
  * The color scheme of the button variant. Use the color keys passed in `theme.colors`.
  */
-export type ButtonColorVariants = 'green' | 'purple' | 'orange'
+export type ButtonColorVariants = string
 /**
  * The variant of the button style to use.
  */
