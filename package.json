@@ -27,6 +27,7 @@
     "@babel/preset-env": "7.6.2",
     "@babel/preset-react": "7.0.0",
     "@babel/preset-typescript": "^7.6.0",
+    "@blockstack/ui": "^1.0.0-alpha.8",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
     "babel-loader": "^8.0.6",
@@ -46,6 +47,7 @@
     "fs-extra": "8.1.0",
     "glob": "7.1.4",
     "path": "0.12.7",
+    "playroom": "^0.10.1",
     "prettier": "^1.18.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -62,7 +64,8 @@
     "webpack": "^4.41.0",
     "webpack-assets-manifest": "^3.1.1",
     "webpack-bundle-analyzer": "^3.5.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
   },
   "homepage": "https://waffle.blockstack.design/",
   "husky": {
@@ -112,7 +115,9 @@
     "prettier": "prettier \"**/*.+(js|jsx|ts|tsx|d.ts|md|mdx)\"",
     "bundlesize": "bundlesize",
     "validate": "npm run lint && npm run prettier -- --list-different && npm run tslint",
-    "version": "npm run build"
+    "version": "npm run build",
+    "playroom:start": "playroom start",
+    "playroom:build": "playroom build"
   },
   "sideEffects": false,
   "unpkg": "dist/blockstack.js"
