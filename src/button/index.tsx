@@ -20,6 +20,7 @@ const Button = forwardRef<any, ButtonProps>(
       size = 'lg',
       isLoading,
       loadingText,
+      customStyles,
       ...rest
     },
     ref
@@ -27,7 +28,8 @@ const Button = forwardRef<any, ButtonProps>(
     const styles = useButtonStyle({
       variant,
       mode,
-      size
+      size,
+      customStyles
     })
     return (
       // @ts-ignore

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0-alpha.8
+
+- Updated tsconfig.js based off of [Formik's](https://github.com/jaredpalmer/formik/blob/master/tsconfig.base.json)
+- removed any empty returns
+
 ## 1.0.0-alpha.7
 
 - Updated variantColor typings on `Button` and `ButtonGroup`.
