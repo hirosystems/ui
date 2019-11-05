@@ -9,7 +9,7 @@ export type ButtonSizes = 'sm' | 'md' | 'lg'
 /**
  * The color scheme of the button variant. Use the color keys passed in `theme.colors`.
  */
-export type ButtonColorVariants = 'green' | 'purple' | 'orange'
+export type ButtonColorVariants = string
 /**
  * The variant of the button style to use.
  */
@@ -19,12 +19,18 @@ export type ButtonVariants = 'outline' | 'unstyled' | 'link' | 'solid'
  */
 export type ButtonModes = 'primary' | 'secondary'
 
+export interface CustomStyles {
+  primary: PseudoBoxProps
+  secondary: PseudoBoxProps
+}
+
 interface IButtonPropsBase {
   size?: ButtonSizes
   isLoading?: boolean
   variantColor?: ButtonColorVariants
   variant?: ButtonVariants
   mode?: ButtonModes
+  customStyles?: CustomStyles
   /**
    * If `true`, the button will be styled in it's active state.
    */
@@ -65,6 +71,13 @@ interface IButtonPropsBase {
    * Use the styled-system tokens or add custom values as a string
    */
   iconSpacing?: StyledSystem.MarginProps['margin']
+}
+
+export interface IButtonStyles {
+  variant: ButtonVariants
+  mode: ButtonModes
+  size: ButtonSizes
+  customStyles: CustomStyles
 }
 
 export type ButtonProps = IButtonPropsBase & PseudoBoxProps & React.RefAttributes<HTMLButtonElement>

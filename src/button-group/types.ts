@@ -7,7 +7,7 @@ export interface IButtonGroupBase {
   size?: ButtonSizes
   color?: string
   variant?: ButtonVariants
-  variantColor: ButtonColorVariants
+  variantColor?: ButtonColorVariants
   /**
    * If `true`, the borderRadius of button that are direct children will be altered
    * to look flushed together

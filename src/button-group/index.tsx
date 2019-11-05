@@ -16,7 +16,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({
     const isLast = index === Children.count(children) - 1
 
     if (!React.isValidElement(child)) {
-      return
+      return null
     }
 
     return cloneElement(child, {

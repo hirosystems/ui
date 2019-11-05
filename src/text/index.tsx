@@ -11,7 +11,7 @@ const assumeTextStyle = (as: string | React.ElementType) => {
     case 'h3':
       return 'body.large.medium'
     default:
-      return
+      return undefined
   }
 }
 const Text = forwardRef<any, PseudoBoxProps>(({ textStyle, as = 'span', ...rest }, ref) => {

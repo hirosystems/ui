@@ -1,6 +1,4 @@
-import { useTheme } from '../theme-provider'
-
-import { ButtonModes, ButtonSizes } from '../button'
+import { ButtonModes, ButtonSizes, CustomStyles, IButtonStyles } from '../button'
 
 const baseProps = {
   display: 'inline-flex',
@@ -75,7 +73,7 @@ const linkVariantProps = () => {
   }
 }
 
-const solidVariantProps = ({ mode }: { mode: ButtonModes }) => {
+const solidVariantProps = ({ mode, customStyles }: { mode: ButtonModes; customStyles: CustomStyles }) => {
   const style = {
     primary: {
       bg: 'blue',
@@ -113,6 +111,10 @@ const solidVariantProps = ({ mode }: { mode: ButtonModes }) => {
     }
   }
 
+  if (customStyles) {
+    return customStyles[mode]
+  }
+
   return style[mode]
 }
 
@@ -131,15 +133,10 @@ const variantProps = (props: any) => {
   }
 }
 
-const useButtonStyle = (props: any) => {
-  const theme = useTheme()
-
-  const _props = { ...props, theme }
-  return {
-    ...baseProps,
-    ...variantProps(_props),
-    ...sizeProps(_props)
-  }
-}
+const useButtonStyle = (props: IButtonStyles): any => ({
+  ...baseProps,
+  ...variantProps(props),
+  ...sizeProps(props)
+})
 
 export { useButtonStyle }

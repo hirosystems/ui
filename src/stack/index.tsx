@@ -11,10 +11,10 @@ const Stack = forwardRef<any, StackProps>(
       <Flex align={align} justify={justify} flexDir={isInline ? 'row' : 'column'} ref={ref} {...rest}>
         {Children.map(children, (child, index) => {
           if (!isValidElement(child)) {
-            return
+            return null
           }
           if (!Array.isArray(children)) {
-            return
+            return null
           }
           const isLastChild = children.length === index + 1
           const spacingProps = isInline
