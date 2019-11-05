@@ -33,6 +33,7 @@
     "babel-plugin-module-resolver": "3.2.0",
     "babel-plugin-react-remove-properties": "0.3.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
+    "bundlesize": "^0.18.0",
     "cross-env": "6.0.3",
     "dtslint": "^0.9.8",
     "eslint": "^6.5.1",
@@ -109,6 +110,7 @@
     "prebuild": "rimraf dist",
     "prepublishOnly": "npm run type-check && npm run build",
     "prettier": "prettier \"**/*.+(js|jsx|ts|tsx|d.ts|md|mdx)\"",
+    "bundlesize": "bundlesize",
     "validate": "npm run lint && npm run prettier -- --list-different && npm run tslint",
     "version": "npm run build"
   },

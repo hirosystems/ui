@@ -1,5 +1,3 @@
-import { useTheme } from '../theme-provider'
-
 import { ButtonModes, ButtonSizes, CustomStyles, IButtonStyles } from '../button'
 
 const baseProps = {
@@ -135,16 +133,10 @@ const variantProps = (props: any) => {
   }
 }
 
-// @ts-ignore
-const useButtonStyle = (props: IButtonStyles) => {
-  const theme = useTheme()
-
-  const _props = { ...props, theme }
-  return {
-    ...baseProps,
-    ...variantProps(_props),
-    ...sizeProps(_props)
-  }
-}
+const useButtonStyle = (props: IButtonStyles): any => ({
+  ...baseProps,
+  ...variantProps(props),
+  ...sizeProps(props)
+})
 
 export { useButtonStyle }
