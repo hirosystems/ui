@@ -19,6 +19,7 @@ const HoverChange = ({ isHovered, isDisabled }: { isHovered: boolean; isDisabled
     bg="darken.150"
     opacity={!isDisabled && isHovered ? 1 : 0}
     zIndex={1}
+    transition="all 250ms"
   />
 )
 
