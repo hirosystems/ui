@@ -79,6 +79,7 @@ export interface IDisplayShorthandProps {
 export interface IOtherProps {
   cursor?: CSS.CursorProperty | StyledSystem.ResponsiveValue<CSS.CursorProperty>
   transform?: CSS.TransformProperty | StyledSystem.ResponsiveValue<CSS.TransformProperty>
+  transition?: CSS.TransitionProperty | StyledSystem.ResponsiveValue<CSS.TransitionProperty>
 }
 
 export type ShorthandProps = IFlexDirectionShorthandProps & IDisplayShorthandProps

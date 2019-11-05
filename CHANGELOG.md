@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0-alpha.11
+
+- `transition` style typing added to `<Box>`
+- Added transition prop to hover element on buttons to animate it smoothly.
+
 ## 1.0.0-alpha.10
 
 - Added hover element in buttons to automatically add in the dark layer on hover.
