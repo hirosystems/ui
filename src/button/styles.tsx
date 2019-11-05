@@ -79,7 +79,6 @@ const solidVariantProps = ({ mode, customStyles }: { mode: ButtonModes; customSt
       bg: 'blue',
       color: 'white',
       _hover: {
-        bg: 'blue.hover',
         cursor: 'pointer'
       },
       _focus: {
@@ -95,7 +94,6 @@ const solidVariantProps = ({ mode, customStyles }: { mode: ButtonModes; customSt
       bg: 'blue.100',
       color: 'blue',
       _hover: {
-        bg: 'blue.150',
         cursor: 'pointer'
       },
       _focus: {

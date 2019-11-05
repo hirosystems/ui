@@ -1,13 +1,28 @@
-import React, { forwardRef } from 'react'
+import React, { Ref, forwardRef } from 'react'
 import { PseudoBox } from '../pseudo-box'
 import { Box } from '../box'
 import { useButtonStyle } from './styles'
 import { Spinner } from '../spinner'
 import { ButtonProps } from './types'
+import { useHover } from 'use-events'
 
 export * from './types'
 
-const Button = forwardRef<any, ButtonProps>(
+const HoverChange = ({ isHovered, isDisabled }: { isHovered: boolean; isDisabled: boolean }) => (
+  <Box
+    borderRadius="6px"
+    position="absolute"
+    width="100%"
+    height="100%"
+    left={0}
+    top={0}
+    bg="darken.150"
+    opacity={!isDisabled && isHovered ? 1 : 0}
+    zIndex={1}
+  />
+)
+
+const Button = forwardRef<Ref<HTMLDivElement>, ButtonProps>(
   (
     {
       isDisabled,
@@ -31,6 +46,9 @@ const Button = forwardRef<any, ButtonProps>(
       size,
       customStyles
     })
+    // @ts-ignore
+    const [hovered, bind] = useHover()
+
     return (
       // @ts-ignore
       <PseudoBox
@@ -40,26 +58,31 @@ const Button = forwardRef<any, ButtonProps>(
         type={type}
         borderRadius="6px"
         fontWeight="medium"
+        position="relative"
         data-active={isActive ? 'true' : undefined}
         as={'button' || Comp}
         {...rest}
         {...styles}
+        {...bind}
       >
-        {isLoading && (
-          <Spinner
-            position={loadingText ? 'relative' : 'absolute'}
-            mr={loadingText ? 2 : 0}
-            color="currentColor"
-            size="sm"
-          />
-        )}
-        {isLoading
-          ? loadingText || (
-              <Box as="span" opacity={0}>
-                {children}
-              </Box>
-            )
-          : children}
+        <Box as="span" display="block" position="relative" zIndex={5}>
+          {isLoading && (
+            <Spinner
+              position={loadingText ? 'relative' : 'absolute'}
+              mr={loadingText ? 2 : 0}
+              color="currentColor"
+              size="sm"
+            />
+          )}
+          {isLoading
+            ? loadingText || (
+                <Box as="span" opacity={0}>
+                  {children}
+                </Box>
+              )
+            : children}
+        </Box>
+        <HoverChange isDisabled={isDisabled} isHovered={hovered} />
       </PseudoBox>
     )
   }
