@@ -1,9 +1,12 @@
 # Changelog
 
+## 1.0.0-alpha.10
+
+- Added hover element in buttons to automatically add in the dark layer on hover.
+
 ## 1.0.0-alpha.9
 
 - Added ability to pass `customStyles` prop to buttons to change their styling
-
 
 ## 1.0.0-alpha.8
 
@@ -17,7 +20,6 @@
 ## 1.0.0-alpha.6
 
 - Added `transform` typings to `Box`.
-
 
 ## 1.0.0-alpha.5
 
