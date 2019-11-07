@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0-alpha.12
+
+- Updated our colors based off of the design system.
+- Added more specific types for boxShadow to reflect our values in the theme.
+
 ## 1.0.0-alpha.11
 
 - `transition` style typing added to `<Box>`
