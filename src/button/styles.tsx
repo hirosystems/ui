@@ -101,7 +101,7 @@ const solidVariantProps = ({ mode, customStyles }: { mode: ButtonModes; customSt
         boxShadow: '0 0 0 3px rgba(170, 179, 255, 0.75)'
       },
       _disabled: {
-        bg: 'blue.50',
+        bg: 'blue.100',
         pointerEvents: 'none',
         cursor: 'not-allowed',
         color: 'blue.300'

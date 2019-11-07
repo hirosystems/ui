@@ -1,7 +1,7 @@
 {
   "name": "@blockstack/ui",
   "description": "Blockstack UI components built using React and styled-components with styled-system.",
-  "version": "1.0.0-alpha.11",
+  "version": "1.0.0-alpha.12",
   "author": "Blockstack <engineering@blockstack.com> (https://blockstack.com/)",
   "dependencies": {
     "@styled-system/css": "5.0.23",
@@ -78,7 +78,8 @@
   "peerDependencies": {
     "react": "16.x",
     "react-dom": "16.x",
-    "styled-components": "4.x"
+    "styled-components": "4.x",
+    "use-events": "1.4.1"
   },
   "publishConfig": {
     "access": "public"
@@ -107,5 +108,5 @@
     "version": "npm run build"
   },
   "sideEffects": false,
-  "unpkg": "dist/blockstack.js"
+  "unpkg": "dist/ui.cjs.production.min.js"
 }

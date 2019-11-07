@@ -76,10 +76,13 @@ export interface IDisplayShorthandProps {
   d?: StyledSystem.DisplayProps['display']
 }
 
+export type BoxShadow = 'low' | 'mid' | 'high' | 'inner' | 'none' | CSS.BoxShadowProperty
+
 export interface IOtherProps {
   cursor?: CSS.CursorProperty | StyledSystem.ResponsiveValue<CSS.CursorProperty>
   transform?: CSS.TransformProperty | StyledSystem.ResponsiveValue<CSS.TransformProperty>
   transition?: CSS.TransitionProperty | StyledSystem.ResponsiveValue<CSS.TransitionProperty>
+  boxShadow?: BoxShadow | StyledSystem.ResponsiveValue<BoxShadow>
 }
 
 export type ShorthandProps = IFlexDirectionShorthandProps & IDisplayShorthandProps
