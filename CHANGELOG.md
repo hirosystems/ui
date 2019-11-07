@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0-alpha.13
+
+- Added textDecoration typings
+
 ## 1.0.0-alpha.12
 
 - Updated our colors based off of the design system.
