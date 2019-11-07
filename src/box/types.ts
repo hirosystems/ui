@@ -41,7 +41,7 @@ export interface ITextAlign {
 }
 
 export interface ITextDecoration {
-  textAlign?: StyledSystem.ResponsiveValue<CSS.TextDecorationProperty> | CSS.TextDecorationProperty
+  textDecoration?: StyledSystem.ResponsiveValue<CSS.TextDecorationProperty> | CSS.TextDecorationProperty
 }
 
 export type TextStyle =
