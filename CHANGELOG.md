@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0-alpha.13
+## 1.0.0-alpha.14
 
 - Added textDecoration typings
 
