@@ -10,7 +10,7 @@ const defaultConfig = (theme: any) => ({
   light: {
     color: theme.colors.ink[900],
     bg: undefined as any,
-    borderColor: theme.colors.ink[100],
+    borderColor: '#E5E5EC', // TODO: replace this with theme color
     placeholderColor: theme.colors.ink[400]
   },
   dark: {

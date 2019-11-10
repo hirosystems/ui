@@ -12,6 +12,7 @@ export { InputElement, InputLeftElement, InputRightElement } from './input-eleme
 export { InputAddon, InputLeftAddon, InputRightAddon } from './input-addon'
 export { FormLabel } from './form-label'
 export { FormControl } from './form-control'
+export { Spinner } from './spinner'
 export { Stack } from './stack'
 export { VisuallyHidden } from './visually-hidden'
 export { theme } from './theme'

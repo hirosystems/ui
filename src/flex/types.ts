@@ -1,4 +1,4 @@
-import { BoxProps } from '../box'
+import { BoxProps } from '../box/types'
 
 interface IFlexPropsBase {
   /**

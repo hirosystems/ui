@@ -7,16 +7,18 @@ export * from './types'
 
 const Stack = forwardRef<any, StackProps>(
   ({ isInline, children, align, justify, spacing = 2, shouldWrapChildren, ...rest }, ref) => {
+    // @ts-ignore
+    const validChildren = children.filter(isValidElement)
     return (
       <Flex align={align} justify={justify} flexDir={isInline ? 'row' : 'column'} ref={ref} {...rest}>
-        {Children.map(children, (child, index) => {
+        {Children.map(validChildren, (child, index) => {
           if (!isValidElement(child)) {
             return null
           }
           if (!Array.isArray(children)) {
             return null
           }
-          const isLastChild = children.length === index + 1
+          const isLastChild = validChildren.length === index + 1
           const spacingProps = isInline
             ? { mr: isLastChild ? undefined : spacing }
             : { mb: isLastChild ? undefined : spacing }

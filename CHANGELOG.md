@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.0.0-alpha.19
+
+- Update input border colors.
+
+## 1.0.0-alpha.18
+
+- Update theme default border color.
+
+## 1.0.0-alpha.17
+
+- Fixed bug with `<Stack>` where it would render null children and mess up the `isLastChild` check.
+
+## 1.0.0-alpha.16
+
+- Export `<Spinner>` component.
+
 ## 1.0.0-alpha.14
 
 - Added textDecoration typings

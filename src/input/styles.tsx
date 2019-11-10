@@ -1,18 +1,18 @@
 const defaultStyle = {
   height: 12,
   border: '1px solid',
-  borderBottomColor: 'ink.100',
-  borderLeftColor: 'ink.100',
-  borderRightColor: 'ink.100',
-  borderTopColor: 'ink.100',
-  borderColor: 'ink.100',
+  borderBottomColor: 'inherit',
+  borderLeftColor: 'inherit',
+  borderRightColor: 'inherit',
+  borderTopColor: 'inherit',
+  borderColor: 'inherit',
   bg: 'white',
   _hover: {
-    borderBottomColor: 'ink.200',
-    borderLeftColor: 'ink.200',
-    borderRightColor: 'ink.200',
-    borderTopColor: 'ink.200',
-    borderColor: 'ink.200'
+    borderBottomColor: 'ink.300',
+    borderLeftColor: 'ink.300',
+    borderRightColor: 'ink.300',
+    borderTopColor: 'ink.300',
+    borderColor: 'ink.300'
   },
   _disabled: {
     bg: '#f9f9fc',

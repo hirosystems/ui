@@ -53,6 +53,7 @@ const Spinner = forwardRef<any, SpinnerProps>(
         borderColor="currentColor"
         borderBottomColor={emptyColor}
         borderLeftColor={emptyColor}
+        borderRadius="100%"
         speed={speed}
         color={color}
         size={_size}

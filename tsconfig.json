@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "jsx": "react",
@@ -29,9 +29,6 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "rootDir": "./src",
-    "paths": {
-      "csstype": ["node_modules/react/node_modules/csstype/"]
-    },
     "skipLibCheck": true,
     "esModuleInterop": true,
     "strictNullChecks": false // TODO remove in the future
