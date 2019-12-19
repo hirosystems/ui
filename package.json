@@ -1,7 +1,7 @@
 {
   "name": "@blockstack/ui",
   "description": "Blockstack UI components built using React and styled-components with styled-system.",
-  "version": "1.0.0-alpha.20",
+  "version": "1.0.0-alpha.21",
   "author": "Blockstack <engineering@blockstack.com> (https://blockstack.com/)",
   "dependencies": {
     "@styled-system/css": "5.1.4",
@@ -29,6 +29,7 @@
     "@typescript-eslint/eslint-plugin": "^2.11.0",
     "@typescript-eslint/parser": "^2.11.0",
     "babel-plugin-module-resolver": "4.0.0",
+    "@blockstack/prettier-config": "^0.0.4",
     "babel-plugin-react-remove-properties": "0.3.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "bundlesize": "^0.18.0",
@@ -98,6 +99,7 @@
     "start": "cross-env NODE_ENV=development tsdx watch",
     "build": "cross-env NODE_ENV=production tsdx build --format=cjs,esm,umd",
     "format": "npm run prettier -- --write",
+    "lint:formatting": "npm run ",
     "lint": "eslint \"src/**/*.+(ts|tsx)\"",
     "lint:fix": "eslint \"src/**/*.+(ts|tsx)\" --fix",
     "prebuild": "rimraf dist",
