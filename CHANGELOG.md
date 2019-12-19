@@ -1,12 +1,16 @@
 # Changelog
 
+## 1.0.0-alpha.22
+
+- Implement and export `Modal` component.
+
 ## 1.0.0-alpha.21
 
-- Format library with `@blockstack/prettier-config` and enforce with CircleCI
+- Format library with `@blockstack/prettier-config` and enforce with CircleCI.
 
 ## 1.0.0-alpha.20
 
-- Export more from the library, including types
+- Export more from the library, including types.
 
 ## 1.0.0-alpha.19
 
