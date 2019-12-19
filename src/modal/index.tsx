@@ -1,5 +1,6 @@
 import React from 'react'
-import { Box, Flex } from '../'
+import { Box } from '../box'
+import { Flex } from '../flex'
 import { ModalContextTypes, ModalProps, WrapperComponentProps } from './types'
 
 const ModalContext = React.createContext<ModalContextTypes>({
@@ -31,40 +32,46 @@ const Footer = ({ component }: WrapperComponentProps) =>
 const Modal: React.FC<ModalProps> = ({
   footerComponent: FooterComponent = null,
   headerComponent: HeaderComponent = null,
-  children
+  isOpen = false,
+  children,
+  noAnimation = false,
+  ...rest
 }) => {
-  const { isOpen } = useModalState()
-  return isOpen ? (
-    <>
+  return (
+    <Flex
+      position="fixed"
+      size="100%"
+      left={0}
+      top={0}
+      align={['flex-end', 'center']}
+      justify="center"
+      bg={`rgba(0,0,0,${isOpen ? '0.48' : '0'})`}
+      opacity={isOpen ? 1 : 0}
+      zIndex={9999999}
+      transition={noAnimation ? 'unset' : 'all 0.2s'}
+      style={{ userSelect: isOpen ? 'unset' : 'none', pointerEvents: isOpen ? 'unset' : 'none' }}
+      {...rest}
+    >
       <Flex
-        position="fixed"
-        size="100%"
-        left={0}
-        top={0}
-        align={['flex-end', 'center']}
-        justify="center"
-        bg="rgba(0,0,0,0.48)"
-        zIndex={99}
+        bg="white"
+        direction="column"
+        minWidth={['100%', '440px']}
+        width="100%"
+        maxWidth={['100%', '440px']}
+        maxHeight={['100vh', 'calc(100vh - 48px)']}
+        borderRadius={['unset', '6px']}
+        boxShadow="high"
+        transform={isOpen ? 'none' : noAnimation ? 'none' : 'translateY(10px)'}
+        transition={noAnimation ? 'unset' : 'all 0.2s'}
       >
-        <Flex
-          bg="white"
-          direction="column"
-          minWidth={['100%', '440px']}
-          width="100%"
-          maxWidth={['100%', '440px']}
-          maxHeight={['100vh', 'calc(100vh - 48px)']}
-          borderRadius={['unset', '6px']}
-          boxShadow="high"
-        >
-          <Header component={HeaderComponent} />
-          <Flex width="100%" p={[5, 8]} overflowY="auto" flexGrow={1} position="relative">
-            <ModalContent>{children}</ModalContent>
-          </Flex>
-          <Footer component={FooterComponent} />
+        <Header component={HeaderComponent} />
+        <Flex width="100%" p={[5, 8]} overflowY="auto" flexGrow={1} position="relative">
+          <ModalContent>{children}</ModalContent>
         </Flex>
+        <Footer component={FooterComponent} />
       </Flex>
-    </>
-  ) : null
+    </Flex>
+  )
 }
 
 const ModalProvider: React.FC = props => {
