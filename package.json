@@ -3,6 +3,12 @@
   "description": "Blockstack UI components built using React and styled-components with styled-system.",
   "version": "1.0.0-alpha.22",
   "author": "Blockstack <engineering@blockstack.com> (https://blockstack.com/)",
+   "bundlesize": [
+    {
+      "path": "./dist/**/*.js",
+      "maxSize": "13 kB"
+    }
+  ],
   "dependencies": {
     "@styled-system/css": "5.1.4",
     "@types/color": "^3.0.0",

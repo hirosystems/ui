@@ -1,33 +1,33 @@
-import React from 'react'
-import { Box } from '../box'
-import { Flex } from '../flex'
-import { ModalContextTypes, ModalProps, WrapperComponentProps } from './types'
+import React from 'react';
+import { Box } from '../box';
+import { Flex } from '../flex';
+import { ModalContextTypes, ModalProps, WrapperComponentProps } from './types';
 
 const ModalContext = React.createContext<ModalContextTypes>({
-  isOpen: false
-})
+  isOpen: false,
+});
 
-const useModalState = () => React.useContext(ModalContext)
+const useModalState = () => React.useContext(ModalContext);
 
 const ModalContent: React.FC = ({ children, ...rest }) => (
   <Flex width="100%" height="100%" {...rest}>
     {children}
   </Flex>
-)
+);
 
 const Header = ({ component }: WrapperComponentProps) =>
   component ? (
     <Box borderTopRightRadius="6px" borderTopLeftRadius="6px">
       {component}
     </Box>
-  ) : null
+  ) : null;
 
 const Footer = ({ component }: WrapperComponentProps) =>
   component ? (
     <Box borderBottomRightRadius="6px" borderBottomLeftRadius="6px">
       {component}
     </Box>
-  ) : null
+  ) : null;
 
 const Modal: React.FC<ModalProps> = ({
   footerComponent: FooterComponent = null,
@@ -49,7 +49,10 @@ const Modal: React.FC<ModalProps> = ({
       opacity={isOpen ? 1 : 0}
       zIndex={9999999}
       transition={noAnimation ? 'unset' : 'all 0.2s'}
-      style={{ userSelect: isOpen ? 'unset' : 'none', pointerEvents: isOpen ? 'unset' : 'none' }}
+      style={{
+        userSelect: isOpen ? 'unset' : 'none',
+        pointerEvents: isOpen ? 'unset' : 'none',
+      }}
       {...rest}
     >
       <Flex
@@ -65,30 +68,30 @@ const Modal: React.FC<ModalProps> = ({
         transition={noAnimation ? 'unset' : 'all 0.2s'}
       >
         <Header component={HeaderComponent} />
-        <Flex width="100%" p={[5, 8]} overflowY="auto" flexGrow={1} position="relative">
+        <Flex width="100%" overflowY="auto" flexGrow={1} position="relative">
           <ModalContent>{children}</ModalContent>
         </Flex>
         <Footer component={FooterComponent} />
       </Flex>
     </Flex>
-  )
-}
+  );
+};
 
 const ModalProvider: React.FC = props => {
-  const [isOpen, setIsOpen] = React.useState(false)
-  const doOpenModal = () => (!isOpen ? setIsOpen(true) : null)
-  const doCloseModal = () => (isOpen ? setIsOpen(true) : null)
+  const [isOpen, setIsOpen] = React.useState(false);
+  const doOpenModal = () => (!isOpen ? setIsOpen(true) : null);
+  const doCloseModal = () => (isOpen ? setIsOpen(true) : null);
   return (
     <ModalContext.Provider
       value={{
         isOpen,
         doOpenModal,
-        doCloseModal
+        doCloseModal,
       }}
     >
       {props.children}
     </ModalContext.Provider>
-  )
-}
+  );
+};
 
-export { ModalProvider, Modal, useModalState }
+export { ModalProvider, Modal, useModalState };
