@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0-alpha.24
+
+- Update layout for button to center elements.
+
+## 1.0.0-alpha.23
+
+- Remove padding on modal content component.
+
 ## 1.0.0-alpha.22
 
 - Implement and export `Modal` component.
