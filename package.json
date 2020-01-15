@@ -1,8 +1,14 @@
 {
   "name": "@blockstack/ui",
   "description": "Blockstack UI components built using React and styled-components with styled-system.",
-  "version": "1.0.0-alpha.21",
-  "author": "Blockstack <engineering@blockstack.com> (https://blockstack.com/)",
+  "version": "1.0.0-alpha.24",
+  "author": "Blockstack <engineering@blockstack.com> (https://blockstack.org/)",
+  "bundlesize": [
+    {
+      "path": "./dist/**/*.js",
+      "maxSize": "13 kB"
+    }
+  ],
   "dependencies": {
     "@styled-system/css": "5.1.4",
     "@types/color": "^3.0.1",
@@ -17,18 +23,18 @@
     "use-events": "^1.4.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.7.7",
-    "@babel/core": "7.7.7",
-    "@babel/plugin-proposal-class-properties": "7.7.4",
-    "@babel/plugin-proposal-object-rest-spread": "7.7.7",
-    "@babel/plugin-transform-object-assign": "7.7.4",
-    "@babel/plugin-transform-runtime": "7.7.6",
-    "@babel/preset-env": "7.7.7",
-    "@babel/preset-react": "7.7.4",
-    "@babel/preset-typescript": "^7.7.7",
-    "@blockstack/prettier-config": "^0.0.4",
-    "@typescript-eslint/eslint-plugin": "^2.15.0",
-    "@typescript-eslint/parser": "^2.15.0",
+    "@babel/cli": "7.8.0",
+    "@babel/core": "7.8.0",
+    "@babel/plugin-proposal-class-properties": "7.8.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.8.0",
+    "@babel/plugin-transform-object-assign": "7.8.0",
+    "@babel/plugin-transform-runtime": "7.8.0",
+    "@babel/preset-env": "7.8.2",
+    "@babel/preset-react": "7.8.0",
+    "@babel/preset-typescript": "^7.8.0",
+    "@blockstack/prettier-config": "^0.0.5",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
     "babel-plugin-module-resolver": "4.0.0",
     "babel-plugin-react-remove-properties": "0.3.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
@@ -39,7 +45,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-import-resolver-typescript": "^2.0.0",
-    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.17.0",
     "fs-extra": "8.1.0",
@@ -50,13 +56,16 @@
     "react-dom": "^16.12.0",
     "rimraf": "3.0.0",
     "shx": "^0.3.2",
-    "styled-components": "^4.4.1",
-    "ts-node": "^8.6.0",
-    "tsdx": "^0.12.1",
+    "styled-components": "^5.0.0",
+    "ts-node": "^8.6.2",
+    "tsdx": "^0.12.3",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.7.4"
   },
+  "files": [
+    "dist"
+  ],
   "homepage": "https://waffle.blockstack.design/",
   "husky": {
     "hooks": {
@@ -76,6 +85,8 @@
       "git add"
     ]
   },
+  "main": "dist/index.js",
+  "module": "dist/ui.esm.js",
   "peerDependencies": {
     "react": "16.x",
     "react-dom": "16.x",
@@ -85,30 +96,21 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.js",
-  "umd:main": "dist/ui.umd.production.js",
-  "module": "dist/ui.esm.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "repository": "https://github.com/blockstackpbc/blockstack-ui",
   "scripts": {
-    "type-check": "tsc --noEmit",
-    "type-check:watch": "npm run type-check -- --watch",
-    "start": "cross-env NODE_ENV=development tsdx watch",
     "build": "cross-env NODE_ENV=production tsdx build --format=cjs,esm,umd",
+    "bundlesize": "bundlesize",
     "format": "npm run prettier -- --write",
-    "lint:formatting": "npm run ",
     "lint": "eslint \"src/**/*.+(ts|tsx)\"",
     "lint:fix": "eslint \"src/**/*.+(ts|tsx)\" --fix",
     "prebuild": "rimraf dist",
     "prepublishOnly": "npm run type-check && npm run build",
-    "prettier": "prettier \"**/*.+(js|jsx|ts|tsx|d.ts|md|mdx)\"",
-    "bundlesize": "bundlesize",
-    "validate": "npm run lint && npm run prettier -- --list-different && npm run tslint",
-    "version": "npm run build"
+    "start": "cross-env NODE_ENV=development tsdx watch",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch"
   },
   "sideEffects": false,
+  "types": "dist/index.d.ts",
+  "umd:main": "dist/ui.umd.production.js",
   "unpkg": "dist/ui.cjs.production.min.js"
 }
