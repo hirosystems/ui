@@ -19,3 +19,4 @@ export * from './visually-hidden';
 export * from './theme';
 export * from './use-clipboard';
 export * from './theme-provider';
+export * from './when';
