@@ -38,42 +38,44 @@ const Modal: React.FC<ModalProps> = ({
   ...rest
 }) => {
   return (
+    // <Flex
+    //   position="fixed"
+    //   size="100%"
+    //   left={0}
+    //   top={0}
+    //   align={['flex-end', 'center']}
+    //   justify="center"
+    //   bg={`rgba(0,0,0,${isOpen ? '0.48' : '0'})`}
+    //   opacity={isOpen ? 1 : 0}
+    //   zIndex={9999999}
+    //   transition={noAnimation ? 'unset' : 'all 0.2s'}
+    //   style={{
+    //     userSelect: isOpen ? 'unset' : 'none',
+    //     pointerEvents: isOpen ? 'unset' : 'none',
+    //   }}
+    //   {...rest}
+    // >
     <Flex
-      position="fixed"
-      size="100%"
-      left={0}
-      top={0}
-      align={['flex-end', 'center']}
-      justify="center"
-      bg={`rgba(0,0,0,${isOpen ? '0.48' : '0'})`}
-      opacity={isOpen ? 1 : 0}
-      zIndex={9999999}
+      as="dialog"
+      p={0}
+      bg="white"
+      direction="column"
+      minWidth={['100%', '440px']}
+      width="100%"
+      maxWidth={['100%', '440px']}
+      maxHeight={['100vh', 'calc(100vh - 48px)']}
+      borderRadius={['unset', '6px']}
+      boxShadow="high"
+      transform={isOpen ? 'none' : noAnimation ? 'none' : 'translateY(10px)'}
       transition={noAnimation ? 'unset' : 'all 0.2s'}
-      style={{
-        userSelect: isOpen ? 'unset' : 'none',
-        pointerEvents: isOpen ? 'unset' : 'none',
-      }}
-      {...rest}
     >
-      <Flex
-        bg="white"
-        direction="column"
-        minWidth={['100%', '440px']}
-        width="100%"
-        maxWidth={['100%', '440px']}
-        maxHeight={['100vh', 'calc(100vh - 48px)']}
-        borderRadius={['unset', '6px']}
-        boxShadow="high"
-        transform={isOpen ? 'none' : noAnimation ? 'none' : 'translateY(10px)'}
-        transition={noAnimation ? 'unset' : 'all 0.2s'}
-      >
-        <Header component={HeaderComponent} />
-        <Flex width="100%" overflowY="auto" flexGrow={1} position="relative">
-          <ModalContent>{children}</ModalContent>
-        </Flex>
-        <Footer component={FooterComponent} />
+      <Header component={HeaderComponent} />
+      <Flex width="100%" overflowY="auto" flexGrow={1} position="relative">
+        <ModalContent>{children}</ModalContent>
       </Flex>
+      <Footer component={FooterComponent} />
     </Flex>
+    // </Flex>
   );
 };
 
