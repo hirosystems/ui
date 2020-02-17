@@ -40,7 +40,6 @@
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "bundlesize": "^0.18.0",
     "cross-env": "7.0.0",
-    "dtslint": "^3.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.10.0",
