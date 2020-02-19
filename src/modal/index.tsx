@@ -108,6 +108,32 @@ export const Modal: React.FC<ModalProps> = ({
 }) => {
   const { doCloseModal } = useModalState();
   const ref = React.useRef(null);
+
+  React.useEffect(() => {
+    const func = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        if (close) {
+          close();
+        } else {
+          doCloseModal();
+        }
+      }
+    };
+
+    if (isOpen) {
+      typeof window !== 'undefined' &&
+        window.document &&
+        window.document.createElement &&
+        document.addEventListener('keydown', func);
+    }
+    return () => {
+      typeof window !== 'undefined' &&
+        window.document &&
+        window.document.createElement &&
+        document.removeEventListener('keydown', func);
+    };
+  }, [isOpen, close]);
+
   useOnClickOutside(ref, close || doCloseModal);
 
   return (
