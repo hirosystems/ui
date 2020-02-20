@@ -17,6 +17,7 @@
     "@types/styled-system__css": "^5.0.4",
     "color": "3.1.2",
     "prop-types": "^15.7.2",
+    "react-hotkeys-hook": "^1.5.4",
     "react-spring": "8.0.27",
     "styled-system": "5.1.5",
     "use-dark-mode": "2.3.1",

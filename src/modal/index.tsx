@@ -1,8 +1,10 @@
 import React from 'react';
+import { useHotkeys } from 'react-hotkeys-hook';
+import useOnClickOutside from 'use-onclickoutside';
+
 import { Box } from '../box';
 import { Flex } from '../flex';
 import { ModalContextTypes, ModalProps, WrapperComponentProps } from './types';
-import useOnClickOutside from 'use-onclickoutside';
 import { transition } from '../theme/theme';
 
 const ModalContext = React.createContext<ModalContextTypes>({
@@ -58,7 +60,12 @@ export const Modal: React.FC<ModalProps> = ({
 }) => {
   const { doCloseModal } = useModalState();
   const ref = React.useRef(null);
-  useOnClickOutside(ref, close || doCloseModal);
+  const closeModal = close || doCloseModal;
+  useOnClickOutside(ref, closeModal);
+  useHotkeys('esc', () => {
+    if (!isOpen) return;
+    closeModal();
+  });
 
   return (
     <>
