@@ -1,4 +1,8 @@
 # Blockstack UI
+
+## This package now lives at https://github.com/blockstack/ux/tree/master/packages/ui
+
+
 This is design system implementation using react, styled-components, and styled system for use within the blockstack organization and ecosystem.
 
 ## Prior work
