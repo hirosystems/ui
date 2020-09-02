@@ -1,0 +1,76 @@
+{
+  "name": "@stacks/ui",
+  "description": "Stacks UI components built using React, emotion, and @stacks/system-ui.",
+  "version": "3.0.0-alpha.7",
+  "author": "Blockstack <engineering@blockstack.com> (https://blockstack.org/)",
+  "dependencies": {
+    "@popperjs/core": "^2.4.0",
+    "@reach/alert": "^0.11.2",
+    "@reach/auto-id": "^0.11.2",
+    "@reach/rect": "^0.11.2",
+    "@stacks/ui-core": "^1.0.0-beta.2",
+    "@styled-system/should-forward-prop": "^5.1.5",
+    "@styled-system/theme-get": "^5.1.2",
+    "@types/flushable": "^1.0.1",
+    "@types/styled-system__theme-get": "^5.0.0",
+    "color": "3.1.2",
+    "flushable": "^1.0.0",
+    "prism-react-renderer": "^1.0.2",
+    "prismjs": "^1.20.0",
+    "react-transition-group": "^4.4.1",
+    "type-fest": "^0.16.0",
+    "use-events": "^1.4.1",
+    "use-onclickoutside": "^0.3.1"
+  },
+  "devDependencies": {
+    "@blockstack/prettier-config": "^0.0.6",
+    "@emotion/core": "^11.0.0-next.10",
+    "@emotion/react": "^11.0.0-next.15",
+    "@types/lodash-es": "^4.17.3",
+    "@types/react": "^16.9.48",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-transition-group": "^4.2.4",
+    "@types/styled-system__should-forward-prop": "^5.1.1",
+    "husky": "^4.2.5",
+    "prettier": "^2.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "tsdx": "^0.13.3",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://blockstack.design/",
+  "license": "MIT",
+  "peerDependencies": {
+    "@emotion/core": "^11.0.0-next.10",
+    "@emotion/react": "^11.0.0-next.15",
+    "@stacks/ui-core": "^1.0.0-beta.2",
+    "react": "16.x",
+    "react-dom": "16.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/blockstack/ux/tree/master/packages/ui",
+  "scripts": {
+    "dev": "yarn start",
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint:eslint": "eslint \"src/**/*.{ts,tsx}\" -f unix",
+    "lint:fix": "eslint \"src/**/*.{ts,tsx}\" -f unix --fix",
+    "lint:prettier": "prettier --check \"src/**/*.{ts,tsx}\" *.js",
+    "lint:prettier:fix": "prettier --write \"src/**/*.{ts,tsx}\" *.js",
+    "start": "tsdx watch --verbose --noClean --onSuccess yalc publish --push",
+    "build": "tsdx build",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "npm run typecheck -- --watch"
+  },
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/ui/src/index.d.ts",
+  "umd:main": "dist/ui.umd.production.js",
+  "unpkg": "dist/ui.cjs.production.min.js"
+}
