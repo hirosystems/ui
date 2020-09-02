@@ -9,7 +9,6 @@ export const properties = [
   '-webkit-align-self',
   'alignment-baseline',
   'all',
-  'alt',
   '-webkit-alt',
   'animation',
   'animation-delay',
