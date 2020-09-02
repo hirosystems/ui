@@ -1,14 +1,14 @@
 {
   "name": "@stacks/ui",
   "description": "Stacks UI components built using React, emotion, and @stacks/system-ui.",
-  "version": "3.0.0-alpha.7",
+  "version": "3.0.0-alpha.9",
   "author": "Blockstack <engineering@blockstack.com> (https://blockstack.org/)",
   "dependencies": {
     "@popperjs/core": "^2.4.0",
     "@reach/alert": "^0.11.2",
     "@reach/auto-id": "^0.11.2",
     "@reach/rect": "^0.11.2",
-    "@stacks/ui-core": "^1.0.0-beta.2",
+    "@stacks/ui-core": "^1.0.0-beta.3",
     "@styled-system/should-forward-prop": "^5.1.5",
     "@styled-system/theme-get": "^5.1.2",
     "@types/flushable": "^1.0.1",

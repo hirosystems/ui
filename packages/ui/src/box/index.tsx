@@ -5,17 +5,17 @@ import {
   useCss,
   ForwardRefExoticComponentWithAs,
   forwardRefWithAs,
+  memoWithAs,
   Theme,
   BoxProps,
 } from '@stacks/ui-core';
 
 export { BoxProps };
 
-export const Box: ForwardRefExoticComponentWithAs<BoxProps, 'div'> = forwardRefWithAs<
-  BoxProps,
-  'div'
->(({ as: Element = 'div', ...props }, ref) => {
-  const [styles, _props] = useCss(props);
-  const generateCss = React.useCallback((theme: Theme) => css(styles(theme)), [styles]);
-  return <Element ref={ref} css={generateCss} {..._props} as={undefined} />;
-});
+export const Box: ForwardRefExoticComponentWithAs<BoxProps, 'div'> = memoWithAs<BoxProps, 'div'>(
+  forwardRefWithAs<BoxProps, 'div'>(({ as: Element = 'div', ...props }, ref) => {
+    const [styles, _props] = useCss(props);
+    const generateCss = React.useCallback((theme: Theme) => css(styles(theme)), [styles]);
+    return <Element ref={ref} css={generateCss} {..._props} as={undefined} />;
+  })
+);
