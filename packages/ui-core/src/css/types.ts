@@ -5,8 +5,6 @@
  */
 import * as CSS from 'csstype';
 
-type StandardCSSProperties = CSS.Properties<number | string>;
-
 /**
  * The `css` function accepts arrays as values for mobile-first responsive styles.
  * Note that this extends to non-theme values also. For example `display=['none', 'block']`
@@ -47,44 +45,6 @@ type CSSInterpolation = undefined | number | string | CSSObject;
 
 interface CSSOthersObjectForCSSObject {
   [propertiesName: string]: CSSInterpolation;
-}
-
-export interface ColorProps {
-  bg?: ResponsiveStyleValue<StandardCSSProperties['backgroundColor']>;
-  background?: ResponsiveStyleValue<StandardCSSProperties['background']>;
-  color?: ResponsiveStyleValue<StandardCSSProperties['color']>;
-  borderColor?: ResponsiveStyleValue<StandardCSSProperties['borderColor']>;
-  borderBottomColor?: ResponsiveStyleValue<StandardCSSProperties['borderBottomColor']>;
-  borderTopColor?: ResponsiveStyleValue<StandardCSSProperties['borderTopColor']>;
-  borderLeftColor?: ResponsiveStyleValue<StandardCSSProperties['borderLeftColor']>;
-  borderRightColor?: ResponsiveStyleValue<StandardCSSProperties['borderRightColor']>;
-}
-
-export interface SpaceProps {
-  margin?: ResponsiveStyleValue<StandardCSSProperties['margin']>;
-  m?: ResponsiveStyleValue<StandardCSSProperties['margin']>;
-  mt?: ResponsiveStyleValue<StandardCSSProperties['marginTop']>;
-  mr?: ResponsiveStyleValue<StandardCSSProperties['marginRight']>;
-  mb?: ResponsiveStyleValue<StandardCSSProperties['marginBottom']>;
-  ml?: ResponsiveStyleValue<StandardCSSProperties['marginLeft']>;
-  mx?: ResponsiveStyleValue<StandardCSSProperties['marginLeft']>;
-  marginX?: ResponsiveStyleValue<StandardCSSProperties['marginLeft']>;
-  my?: ResponsiveStyleValue<StandardCSSProperties['marginTop']>;
-  marginY?: ResponsiveStyleValue<StandardCSSProperties['marginTop']>;
-  padding?: ResponsiveStyleValue<StandardCSSProperties['padding']>;
-  p?: ResponsiveStyleValue<StandardCSSProperties['padding']>;
-  pt?: ResponsiveStyleValue<StandardCSSProperties['paddingTop']>;
-  pr?: ResponsiveStyleValue<StandardCSSProperties['paddingRight']>;
-  pb?: ResponsiveStyleValue<StandardCSSProperties['paddingBottom']>;
-  pl?: ResponsiveStyleValue<StandardCSSProperties['paddingLeft']>;
-  px?: ResponsiveStyleValue<StandardCSSProperties['paddingLeft']>;
-  paddingX?: ResponsiveStyleValue<StandardCSSProperties['paddingLeft']>;
-  py?: ResponsiveStyleValue<StandardCSSProperties['paddingTop']>;
-  paddingY?: ResponsiveStyleValue<StandardCSSProperties['paddingTop']>;
-  size?: ResponsiveStyleValue<StandardCSSProperties['width']>;
-}
-export interface TextStyleProp {
-  textStyle?: ResponsiveStyleValue<string>;
 }
 
 interface OverwriteCSSProperties {
@@ -143,6 +103,10 @@ export interface VariantProperty {
 
 export interface ThemeDerivedStyles {
   (theme: Theme): ThemeUICSSObject;
+}
+
+export interface ThemeDerivedStylesGeneric<T> {
+  (theme: Theme): T;
 }
 
 export type Label = {

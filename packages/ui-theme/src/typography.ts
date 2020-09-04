@@ -1,4 +1,4 @@
-const typography = {
+const _typography = {
   letterSpacings: {
     tighter: '-0.02em',
     tight: '-0.01em',
@@ -38,45 +38,45 @@ const typography = {
 };
 
 const displayLarge = {
-  fontWeight: typography.fontWeights.semibold,
-  fontSize: typography.fontSizes[4],
-  lineHeight: typography.lineHeights.shorter, // 1.333
+  fontWeight: _typography.fontWeights.semibold,
+  fontSize: _typography.fontSizes[4],
+  lineHeight: _typography.lineHeights.shorter, // 1.333
   letterSpacing: '-0.02em',
 };
 const displaySmall = {
-  fontWeight: typography.fontWeights.medium,
-  fontSize: typography.fontSizes[3],
-  lineHeight: typography.lineHeights.short, // 1.4
+  fontWeight: _typography.fontWeights.medium,
+  fontSize: _typography.fontSizes[3],
+  lineHeight: _typography.lineHeights.short, // 1.4
   letterSpacing: '-0.02em',
 };
 const bodyLarge = {
-  fontWeight: typography.fontWeights.normal,
-  fontSize: typography.fontSizes[2],
-  lineHeight: typography.lineHeights.base, // 1.5 (24)
+  fontWeight: _typography.fontWeights.normal,
+  fontSize: _typography.fontSizes[2],
+  lineHeight: _typography.lineHeights.base, // 1.5 (24)
   letterSpacing: '-0.01em',
 };
 const bodyLargeMedium = {
   ...bodyLarge,
-  fontWeight: typography.fontWeights.medium,
+  fontWeight: _typography.fontWeights.medium,
 };
 const bodySmall = {
-  fontWeight: typography.fontWeights.normal,
-  fontSize: typography.fontSizes[1],
-  lineHeight: typography.lineHeights.short, // 1.4 (19.6)
+  fontWeight: _typography.fontWeights.normal,
+  fontSize: _typography.fontSizes[1],
+  lineHeight: _typography.lineHeights.short, // 1.4 (19.6)
   letterSpacing: '-0.01em',
 };
 const bodySmallMedium = {
   ...bodySmall,
-  fontWeight: typography.fontWeights.medium,
+  fontWeight: _typography.fontWeights.medium,
 };
 const caption = {
-  fontSize: typography.fontSizes[0],
-  lineHeight: typography.lineHeights.shorter, // 1.333 (16)
+  fontSize: _typography.fontSizes[0],
+  lineHeight: _typography.lineHeights.shorter, // 1.333 (16)
   letterSpacing: '0.00em',
 };
 const captionMedium = {
   ...bodySmall,
-  fontWeight: typography.fontWeights.medium,
+  fontWeight: _typography.fontWeights.medium,
 };
 
 export const textStyles = {
@@ -100,7 +100,7 @@ export const textStyles = {
   },
 } as const;
 
-export default {
-  ...typography,
+export const typography = {
+  ..._typography,
   textStyles,
 };

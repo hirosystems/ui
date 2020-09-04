@@ -1,4 +1,16 @@
-export * from './colors';
-export * from './sizes';
-export * from './theme';
-export * from './typography';
+export {
+  Colors,
+  Spacing,
+  TextStyles,
+  baseSizes,
+  colors,
+  namedSpacingUnits,
+  shadows,
+  sizes,
+  space,
+  textStyles,
+  theme,
+  themeColor,
+  transition,
+  typography,
+} from '@stacks/ui-theme';

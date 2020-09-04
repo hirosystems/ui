@@ -4,11 +4,6 @@ import { aliases, multiples, css, Theme } from '../css';
 import { useCallback } from 'react';
 
 export const config: any = {
-  roundedTopRight: 'borderTopRightRadius',
-  roundedTopLeft: 'borderTopLeftRadius',
-  roundedBottomRight: 'borderBottomRightRadius',
-  roundedBottomLeft: 'borderBottomLeftRadius',
-  rounded: 'borderRadius',
   d: 'display',
   w: 'width',
   minW: 'minWidth',
@@ -50,7 +45,6 @@ config['listStylePos'] = config.listStylePosition;
 config['listStyleImg'] = config.listStyleImage;
 
 const variantProps = ['textStyle', 'buttonStyle', 'colorStyle'];
-
 
 /**
  * The selectors are based on [WAI-ARIA state properties](https://www.w3.org/WAI/PF/aria-1.1/states_and_properties) and common CSS Selectors

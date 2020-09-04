@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { ColorProps, SpaceProps, ThemeUICSSProperties, TextStyleProp } from '../../css/types';
+import { ThemeUICSSProperties } from '../../css/types';
+import { SpaceProps, TextStyleProp, ColorProps } from '../../css/custom-types';
 
 type Aliases = SpaceProps & ColorProps & TextStyleProp;
 type BoxCSSProps = ThemeUICSSProperties & Aliases;

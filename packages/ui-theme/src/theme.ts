@@ -1,6 +1,6 @@
-import colors from './colors';
+import { colors } from './colors';
 import { sizes } from './sizes';
-import typography from './typography';
+import { typography } from './typography';
 import { Theme } from '@stacks/ui-core';
 
 const space = sizes;

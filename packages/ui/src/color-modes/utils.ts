@@ -1,11 +1,5 @@
 import { Theme } from '@stacks/ui-core';
-import {
-  ColorModesInterface,
-  ColorsStringLiteral,
-  ColorModeTypes,
-  Color,
-  ThemeColorsStringLiteral,
-} from './types';
+import { ColorModesInterface, ColorsStringLiteral, ColorModeTypes, Color } from './types';
 import { themeGet } from '@styled-system/theme-get';
 
 export const colorGet = (path: string, fallback?: string): ((props: any) => any) =>
@@ -54,10 +48,6 @@ const colorMap = (props: { theme: Theme; colorMode: 'light' | 'dark' }): ColorsS
 
 export const color = (name: ColorsStringLiteral): string => {
   return `var(--colors-${name})`;
-};
-
-export const themeColor = (name: ThemeColorsStringLiteral): string => {
-  return name;
 };
 
 export const generateCssVariables = (mode: 'light' | 'dark') => ({

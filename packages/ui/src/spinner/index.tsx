@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { forwardRef } from 'react';
 import { jsx, keyframes } from '@emotion/react';
 import { Box } from '../box';
 import { VisuallyHidden } from '../visually-hidden';
 import { SpinnerProps, SpinnerSize } from './types';
+import { ForwardRefExoticComponentWithAs, forwardRefWithAs } from '@stacks/ui-core';
 
 const spin = keyframes`
   0% {
@@ -36,7 +36,10 @@ const getSize = (size: SpinnerSize): string => {
  *
  * RECOMMENDED: Add `aria-busy="true"` to the component that triggered the loading state while the spinner is shown.
  */
-const Spinner = forwardRef<any, SpinnerProps>(
+const Spinner: ForwardRefExoticComponentWithAs<SpinnerProps, 'div'> = forwardRefWithAs<
+  SpinnerProps,
+  'div'
+>(
   (
     {
       size = 'md',
@@ -60,11 +63,10 @@ const Spinner = forwardRef<any, SpinnerProps>(
         borderBottomColor={emptyColor}
         borderLeftColor={emptyColor}
         borderRadius="100%"
-        speed={speed}
         color={color}
         size={_size}
         animation={`${spin} ${speed} linear infinite`}
-        {...props}
+        {...(props as any)}
       >
         {label && <VisuallyHidden>{label}</VisuallyHidden>}
       </Box>

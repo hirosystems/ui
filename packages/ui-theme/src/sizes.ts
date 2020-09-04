@@ -1,12 +1,3 @@
-import { Spacing } from '../box/literal-types';
-
-const containers = {
-  'screen-sm': '640px',
-  'screen-md': '768px',
-  'screen-lg': '1024px',
-  'screen-xl': '1280px',
-};
-
 export const baseSizes = {
   '0': '0px',
   px: '1px',
@@ -40,10 +31,7 @@ export const namedSpacingUnits = {
   'extra-loose': baseSizes[8], //32px
 };
 
-export const space = (spacing: Spacing | Spacing[]): Spacing | Spacing[] => spacing;
-
 export const sizes = {
   ...baseSizes,
-  containers,
   ...namedSpacingUnits,
 };

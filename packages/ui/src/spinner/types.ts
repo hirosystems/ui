@@ -23,10 +23,6 @@ export interface SpinnerPropsBase {
    */
   emptyColor?: string;
   /**
-   * The color of the spinner
-   */
-  color?: string;
-  /**
    * The thickness of the spinner
    * @example
    * ```jsx
@@ -49,4 +45,4 @@ export interface SpinnerPropsBase {
   label?: string;
 }
 
-export type SpinnerProps = BoxProps & SpinnerPropsBase;
+export type SpinnerProps = SpinnerPropsBase & Omit<BoxProps, 'size'>;
