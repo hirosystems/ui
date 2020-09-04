@@ -47,10 +47,12 @@ type ThemeColorsStringLiteral =
   | 'red'
   | 'green'
   | 'orange'
-  | 'cyan';
+  | 'moss'
+  | 'purple'
+  | 'violet';
 
 export type Colors = LiteralUnion<ThemeColorsStringLiteral, string>;
 
 export type Spacing = LiteralUnion<NamedSpacingUnitsLiteral, string | number>;
 
-export type Text = TextStylesLiteral;
+export type TextStyles = TextStylesLiteral;

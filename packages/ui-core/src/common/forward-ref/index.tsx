@@ -23,5 +23,5 @@ export function memoWithAs<Props, ComponentType extends As = 'div'>(
     nextProps: Readonly<React.PropsWithChildren<Props>>
   ) => boolean
 ) {
-  return React.memo(Component, propsAreEqual) as MemoExoticComponentWithAs<ComponentType, Props>;
+  return React.memo(Component, propsAreEqual) as MemoExoticComponentWithAs<Props, ComponentType>;
 }

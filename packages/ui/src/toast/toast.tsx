@@ -14,7 +14,7 @@ import { useTimeout } from '../hooks';
 
 import { ActionProps, ToastAction, ToastProps } from './types';
 import { useHover, useFocus } from 'use-events';
-import { transition } from '../theme/theme';
+import { transition } from '../theme';
 
 const toneToIcon = {
   critical: ExclamationMarkCircleIcon,

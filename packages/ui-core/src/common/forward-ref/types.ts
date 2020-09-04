@@ -74,7 +74,7 @@ export interface ForwardRefExoticComponentWithAs<ComponentProps, ComponentType e
   propTypes?: React.WeakValidationMap<PropsWithAs<ComponentProps, ComponentType>>;
 }
 
-export interface MemoExoticComponentWithAs<ComponentType extends As, ComponentProps>
+export interface MemoExoticComponentWithAs<ComponentProps, ComponentType extends As>
   extends NamedExoticComponentWithAs<ComponentProps, ComponentType> {
   readonly type: ComponentType extends React.ComponentType
     ? ComponentType
@@ -86,7 +86,7 @@ export interface ForwardRefWithAsRenderFunction<
   ComponentType extends As = 'div'
 > {
   (
-    props: React.PropsWithChildren<PropsFromAs<ComponentProps, ComponentType>>,
+    props: React.PropsWithRef<PropsFromAs<ComponentProps, ComponentType>>,
     ref:
       | ((
           instance:
@@ -99,7 +99,7 @@ export interface ForwardRefWithAsRenderFunction<
       | React.Ref<
           (ComponentType extends keyof ElementTagNameMap ? ElementByTag<ComponentType> : any) | null
         >
-      | null
+      | any
   ): React.ReactElement | null;
   displayName?: string;
   // explicit rejected with `never` required due to

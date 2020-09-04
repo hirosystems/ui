@@ -103,10 +103,10 @@ export const multiples = {
   paddingX: ['paddingLeft', 'paddingRight'],
   paddingY: ['paddingTop', 'paddingBottom'],
   size: ['width', 'height'],
-  roundedTop: ['borderTopLeftRadius', 'borderTopRightRadius'],
-  roundedBottom: ['borderBottomLeftRadius', 'borderBottomRightRadius'],
-  roundedLeft: ['borderTopLeftRadius', 'borderBottomLeftRadius'],
-  roundedRight: ['borderTopRightRadius', 'borderBottomRightRadius'],
+  radiusTop: ['borderTopLeftRadius', 'borderTopRightRadius'],
+  radiusBottom: ['borderBottomLeftRadius', 'borderBottomRightRadius'],
+  radiusLeft: ['borderTopLeftRadius', 'borderBottomLeftRadius'],
+  radiusRight: ['borderTopRightRadius', 'borderBottomRightRadius'],
 };
 
 export const scales = {
