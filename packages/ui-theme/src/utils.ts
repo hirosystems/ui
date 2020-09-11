@@ -1,8 +1,10 @@
 import { Spacing, Colors } from './literal-types';
-import { ResponsiveStyleValue } from '@stacks/ui-core';
+import { BoxProps, ResponsiveStyleValue } from '@stacks/ui-core';
 
-export const space = (spacing: ResponsiveStyleValue<Spacing>): ResponsiveStyleValue<Spacing> =>
-  spacing;
+export const space = (
+  spacing: ResponsiveStyleValue<Spacing> & BoxProps['margin']
+): ResponsiveStyleValue<Spacing> & BoxProps['margin'] => spacing;
 
-export const themeColor = (color: ResponsiveStyleValue<Colors>): ResponsiveStyleValue<Colors> =>
-  color;
+export const themeColor = (
+  color: ResponsiveStyleValue<Colors> & BoxProps['color']
+): ResponsiveStyleValue<Colors> & BoxProps['color'] => color;
