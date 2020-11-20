@@ -1,0 +1,19 @@
+sections:
+  - pages:
+      - path: /
+      - path: /getting-started
+      - path: /patterns-and-principles
+      - path: /contributing
+
+  - title: Design graph
+    pages:
+      - path: /what-is-it
+      - path: /system-props
+      - path: /theme
+      - path: /colors
+      - path: /space
+      - path: /typography
+      - path: /responsive-styles
+  - title: Components
+    pages:
+      - path: /box

@@ -1,7 +1,7 @@
 {
   "name": "@stacks/ui",
   "description": "Stacks UI components built using React, emotion, and @stacks/system-ui.",
-  "version": "3.0.0-alpha.16",
+  "version": "3.0.0-alpha.19",
   "author": "Blockstack <engineering@blockstack.com> (https://blockstack.org/)",
   "dependencies": {
     "@popperjs/core": "^2.4.0",
@@ -25,8 +25,8 @@
   },
   "devDependencies": {
     "@blockstack/prettier-config": "^0.0.6",
-    "@emotion/core": "^11.0.0-next.10",
-    "@emotion/react": "^11.0.0-next.15",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.0.0",
     "@types/lodash-es": "^4.17.3",
     "@types/react": "^16.9.48",
     "@types/react-dom": "^16.9.8",
@@ -46,9 +46,9 @@
   "homepage": "https://blockstack.design/",
   "license": "MIT",
   "peerDependencies": {
-    "@emotion/core": "^11.0.0-next.10",
-    "@emotion/react": "^11.0.0-next.15",
-    "@stacks/ui-core": "^1.0.0-beta.2",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.0.0",
+    "@stacks/ui-core": "^1.0.0-beta.7",
     "react": "16.x",
     "react-dom": "16.x"
   },
@@ -72,7 +72,7 @@
   "sideEffects": false,
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
-  "typings": "dist/index.d.ts",
+  "typings": "dist/ui/src/index.d.ts",
   "umd:main": "dist/ui.umd.production.js",
   "unpkg": "dist/ui.cjs.production.min.js"
 }

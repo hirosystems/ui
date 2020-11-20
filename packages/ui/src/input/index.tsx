@@ -28,10 +28,10 @@ export const Input: React.FC<InputProps> = React.forwardRef((props, ref) => {
       as={as}
       _readOnly={isReadOnly}
       aria-readonly={isReadOnly}
-      isDisabled={isDisabled}
+      disabled={isDisabled}
       aria-label={ariaLabel}
       aria-invalid={isInvalid}
-      isRequired={isRequired}
+      required={isRequired}
       aria-required={isRequired}
       aria-disabled={isDisabled}
       aria-describedby={ariaDescribedby}

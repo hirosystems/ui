@@ -1,7 +1,7 @@
 {
-  "name": "@stacks/ui-core",
+  "name": "@compiled-system/core",
   "private": false,
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0-beta.0",
   "license": "MIT",
   "files": [
     "dist",
@@ -18,8 +18,8 @@
     "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
-    "@emotion/core": "^11.0.0-next.10",
-    "@emotion/react": "^11.0.0-next.15",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.0.0",
     "react": ">=16"
   },
   "prettier": "@blockstack/prettier-config",
@@ -32,8 +32,8 @@
   "unpkg": "dist/ui-core.cjs.production.min.js",
   "devDependencies": {
     "@blockstack/prettier-config": "^0.0.6",
-    "@emotion/core": "^11.0.0-next.10",
-    "@emotion/react": "^11.0.0-next.15",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.0.0",
     "@types/lodash-es": "^4.17.3",
     "@types/react": "^16.9.48",
     "@types/react-dom": "^16.9.8",

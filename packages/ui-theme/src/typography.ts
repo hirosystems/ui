@@ -34,7 +34,20 @@ const _typography = {
       '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
     mono: 'SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace',
   },
-  fontSizes: [12, 14, 16, 20, 24, 28, 32, 36, 48, 64, 96, 128],
+  fontSizes: [
+    '12px',
+    '14px',
+    '16px',
+    '20px',
+    '24px',
+    '28px',
+    '32px',
+    '36px',
+    '48px',
+    '64px',
+    '96px',
+    '128px',
+  ],
 };
 
 const displayLarge = {
