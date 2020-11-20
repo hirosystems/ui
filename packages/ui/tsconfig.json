@@ -30,6 +30,10 @@
     "baseUrl": "./",
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "paths": {
+      "@stacks/ui-core": ["../ui-core/src"],
+      "@stacks/ui-core/*": ["../ui-core/src/*"]
+    }
   }
 }
