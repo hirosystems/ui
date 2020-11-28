@@ -4,7 +4,7 @@ title: 'System props'
 
 # System props
 
-All of the components in Blockstack UI are built with `styled-components` and implement `styled-system`. With this,
+All of the components in Stacks UI are built with `styled-components` and implement `styled-system`. With this,
 you can pass css attributes to any component as props. Check out the page [further reading](/further-reading) to dig
 deeper.
 
@@ -16,7 +16,7 @@ See below for the various props and aliases you can pass for styling components.
 ### Margin & padding
 
 ```jsx live=false
-import { Box } from '@blockstack/ui';
+import { Box } from '@stacks/ui';
 
 // m={2} refers to the value of `theme.space[2]`
 <Box m={2}>Tomato</Box>;
@@ -48,7 +48,7 @@ import { Box } from '@blockstack/ui';
 ### Color & background color
 
 ```jsx live=false
-import { Box } from "@blockstack/ui";
+import { Box } from "@stacks/ui";
 
 // picks up a nested color value using dot notation
 // => `theme.colors.ink[50]`
@@ -73,7 +73,7 @@ import { Box } from "@blockstack/ui";
 ### Typography
 
 ```jsx live=false
-import { Text } from "@blockstack/ui";
+import { Text } from "@stacks/ui";
 
 // font-size of `theme.textStyle.display.large
 <Text textStyle="display.large" />
@@ -103,7 +103,7 @@ import { Text } from "@blockstack/ui";
 ### Layout, width and height
 
 ```jsx live=false
-import { Box } from "@blockstack/ui";
+import { Box } from "@stacks/ui";
 
 // verbose
 <Box width="100%" height={32} />;
@@ -140,7 +140,7 @@ import { Box } from "@blockstack/ui";
 ### Flexbox
 
 ```jsx live=false
-import { Box, Flex } from '@blockstack/ui';
+import { Box, Flex } from '@stacks/ui';
 
 // verbose
 <Box display="flex" alignItems="center" justifyContent="space-between">
@@ -174,7 +174,7 @@ import { Box, Flex } from '@blockstack/ui';
 ### Grid Layout
 
 ```jsx live=false
-import { Box, Grid } from '@blockstack/ui';
+import { Box, Grid } from '@stacks/ui';
 
 // verbose
 <Box display="grid" gridGap={2} gridAutoFlow="row dense">
@@ -207,7 +207,7 @@ import { Box, Grid } from '@blockstack/ui';
 ### Background
 
 ```jsx live=false
-import { Box } from '@blockstack/ui';
+import { Box } from '@stacks/ui';
 
 // verbose
 <Box
@@ -232,7 +232,7 @@ import { Box } from '@blockstack/ui';
 ### Borders
 
 ```jsx live=false
-import { Box } from '@blockstack/ui';
+import { Box } from '@stacks/ui';
 
 <Box border="1px" borderRadius="6px" borderColor="ink.i00">
   Card
@@ -267,7 +267,7 @@ import { Box } from '@blockstack/ui';
 ### Border Radius
 
 ```jsx live=false
-import { Button } from '@blockstack/ui';
+import { Button } from '@stacks/ui';
 
 // This button will have no right borderRadius
 <Button roundedRight="0">Button 1</Button>;
@@ -294,7 +294,7 @@ import { Button } from '@blockstack/ui';
 ### Position
 
 ```jsx live=false
-import { Box } from '@blockstack/ui';
+import { Box } from '@stacks/ui';
 
 // verbose
 <Box position="absolute">Cover</Box>;
@@ -323,7 +323,7 @@ import { Box } from '@blockstack/ui';
 ### Shadow
 
 ```jsx live=false
-import { Box, Text } from '@blockstack/ui';
+import { Box, Text } from '@stacks/ui';
 
 // text-shadow will be `theme.shadows.low`
 // box-shadow will be `theme.shadows.high`
@@ -373,7 +373,7 @@ following props:
 
 The `as` prop is a feature that all of our components get from
 [`styled-components`](https://www.styled-components.com/docs/api#as-polymorphic-prop). It allows you to pass a HTML tag or another component to a
-Blockstack UI component to be rendered as the base tag of that component along with all
+Stacks UI component to be rendered as the base tag of that component along with all
 it's styles and props.
 
 For example, say you are using a Button component, and you need to make it a

@@ -41,66 +41,42 @@ export default class MyDocument extends Document<DocumentProps> {
           <meta name="color-scheme" content="light dark" />
           <link
             rel="preload"
-            href="/static/fonts/soehne-mono-web-buch.woff2"
+            href="/static/fonts/opensaucesans-medium-webfont.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="true"
           />
           <link
             rel="preload"
-            href="/static/fonts/soehne-web-buch.woff2"
+            href="/static/fonts/opensaucesans-regular-webfont.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="true"
           />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            rel="preload"
-            href="/static/fonts/soehne-web-kraftig_1.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="true"
-          />
-          <link
-            rel="preload"
-            href="/static/fonts/soehne-web-halbfett_1.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="true"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+            rel="stylesheet"
           />
           <style
             dangerouslySetInnerHTML={{
               __html: `@font-face {
-  font-family: 'Soehne Mono';
-  src: url('/static/fonts/soehne-mono-web-buch.woff2') format('woff2'),
-       url('/static/fonts/soehne-mono-web-buch.woff') format('woff');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Soehne';
-  src: url('/static/fonts/soehne-web-buch.woff2') format('woff2'),
-       url('/static/fonts/soehne-web-buch.woff') format('woff');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-    font-family: 'Soehne';
-  src: url('/static/fonts/soehne-web-kraftig_1.woff2') format('woff2'),
-       url('/static/fonts/soehne-web-kraftig_1.woff') format('woff');
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-    font-family: 'Soehne';
-  src: url('/static/fonts/soehne-web-halbfett_1.woff2') format('woff2'),
-       url('/static/fonts/soehne-web-halbfett_1.woff') format('woff');
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
-}
+    font-family: 'Open Sauce';
+    src: url('/static/fonts/opensaucesans-medium-webfont.woff2') format('woff2'),
+      url('/static/fonts/opensaucesans-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Open Sauce';
+    src: url('/static/fonts/opensaucesans-regular-webfont.woff2') format('woff2'),
+      url('/static/fonts/opensaucesans-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-weight: normal;
+    font-style: normal;
+  }
 `,
             }}
           />

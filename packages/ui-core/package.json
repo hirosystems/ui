@@ -1,53 +1,53 @@
 {
-  "name": "@compiled-system/core",
-  "private": false,
+  "name": "@stacks/ui-core",
   "version": "1.0.0-beta.0",
-  "license": "MIT",
-  "files": [
-    "dist",
-    "src"
-  ],
-  "engines": {
-    "node": ">=10"
-  },
-  "scripts": {
-    "start": "tsdx watch --verbose --noClean --onSuccess yalc publish --push",
-    "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
-    "prepublishOnly": "yarn build"
-  },
-  "peerDependencies": {
-    "@emotion/core": "^11.0.0",
-    "@emotion/react": "^11.0.0",
-    "react": ">=16"
-  },
-  "prettier": "@blockstack/prettier-config",
   "author": "Thomas Osmonson",
-  "sideEffects": false,
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "umd:main": "dist/ui-core.umd.production.js",
-  "module": "dist/index.esm.js",
-  "unpkg": "dist/ui-core.cjs.production.min.js",
-  "devDependencies": {
-    "@blockstack/prettier-config": "^0.0.6",
-    "@emotion/core": "^11.0.0",
-    "@emotion/react": "^11.0.0",
-    "@types/lodash-es": "^4.17.3",
-    "@types/react": "^16.9.48",
-    "@types/react-dom": "^16.9.8",
-    "husky": "^4.2.5",
-    "prettier": "^2.1.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "tsdx": "^0.13.3",
-    "tslib": "^2.0.1",
-    "typescript": "^4.0.2"
-  },
   "dependencies": {
     "@styled-system/should-forward-prop": "^5.1.5",
     "camelcase": "^6.0.0",
     "micro-memoize": "^4.0.9"
-  }
+  },
+  "devDependencies": {
+    "@blockstack/prettier-config": "^0.0.6",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.1.1",
+    "@types/lodash-es": "^4.17.3",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "husky": "^4.2.5",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.1",
+    "typescript": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "peerDependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.1.1",
+    "react": "^17.0.1"
+  },
+  "prettier": "@blockstack/prettier-config",
+  "private": false,
+  "scripts": {
+    "build": "tsdx build",
+    "lint": "tsdx lint",
+    "prepublishOnly": "yarn build",
+    "start": "tsdx watch --verbose --noClean --onSuccess yalc publish --push",
+    "test": "tsdx test --passWithNoTests"
+  },
+  "sideEffects": false,
+  "typings": "dist/index.d.ts",
+  "umd:main": "dist/ui-core.umd.production.js",
+  "unpkg": "dist/ui-core.cjs.production.min.js"
 }

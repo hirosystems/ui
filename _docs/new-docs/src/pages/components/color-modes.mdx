@@ -16,7 +16,7 @@ or an App component for other react applications.) This component provides the c
 consumed within the application.
 
 ```tsx live=false
-import { ColorModeProvider } from '@blockstack/ui';
+import { ColorModeProvider } from '@stacks/ui';
 
 // _app.tsx
 const AppWrapper = ({ children, colorMode = 'light' }: AppWrapperProps => (
@@ -47,7 +47,7 @@ This method is called when the the color mode is toggled via the `toggleColorMod
 used in a server side rendered environment.
 
 ```tsx live=false
-import { ColorModeProvider } from '@blockstack/ui';
+import { ColorModeProvider } from '@stacks/ui';
 
 import engine from 'store/src/store-engine';
 import cookieStorage from 'store/storages/cookieStorage';
@@ -73,7 +73,7 @@ const AppWrapper = ({ children, colorMode = 'light' }: AppWrapperProps => (
 There is a color mode hook exposed that can be used to access the current `colorMode` value and a method to toggle the color mode.
 
 ```tsx live=false
-import { useColorMode } from '@blockstack/ui';
+import { useColorMode } from '@stacks/ui';
 
 export const ColorModeButton = forwardRef((props: LinkProps, ref: Ref<HTMLDivElement>) => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -91,7 +91,7 @@ export const ColorModeButton = forwardRef((props: LinkProps, ref: Ref<HTMLDivEle
 With the color modes component, we have a new way of naming our colors. Rather than them reflecting the name of each color, we now are using more semantically meaningful names. With this, we have exposed a helper function called `color` that allows you to pass in a name for one of the colors. This is useful because with typescript, it allows for autocomplete functionality and the ability to ensure strict typechecking on something like a color name.
 
 ```tsx live=false
-import { color } from '@blockstack/ui';
+import { color } from '@stacks/ui';
 
 // some-component.tsx
 <Box background={color('bg-alt')} />;

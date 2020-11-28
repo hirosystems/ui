@@ -109,9 +109,9 @@ export interface ThemeDerivedStylesGeneric<T> {
   (theme: Theme): T;
 }
 
-export type Label = {
+export interface Label {
   label?: string;
-};
+}
 
 export interface CSSOthersObject {
   // we want to match CSS selectors
