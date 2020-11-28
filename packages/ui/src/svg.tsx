@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, BoxProps } from '../box';
+import { Box, BoxProps } from './box';
 import { ForwardRefExoticComponentWithAs, forwardRefWithAs } from '@stacks/ui-core';
 
 const initialProps = {

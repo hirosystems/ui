@@ -36,7 +36,7 @@
     "typescript": "^4.0.2"
   },
   "scripts": {
-    "build": "lerna run build --scope=@stacks/{ui-core,ui-theme,ui-utils} --parallel --no-bail --stream && lerna run build --scope=@stacks/ui",
+    "build": "lerna run build --scope=@stacks/{ui-core,ui-theme,ui-utils} --no-bail --stream && lerna run build --scope=@stacks/ui",
     "build:ui": "lerna run build --scope @stacks/ui",
     "build:ui-core": "lerna run build --scope @stacks/ui-core",
     "build:ui-theme": "lerna run build --scope @stacks/ui-theme",

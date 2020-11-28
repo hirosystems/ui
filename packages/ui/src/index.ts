@@ -26,7 +26,7 @@ export * from './theme';
 export * from './toast';
 export * from './tooltip';
 export * from './transition';
-export * from './use-clipboard';
+export * from './hooks/use-clipboard';
 export * from './utils/safe-await';
 export * from './visually-hidden';
 export * from './color-modes';
