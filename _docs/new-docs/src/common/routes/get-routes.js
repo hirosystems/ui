@@ -30,11 +30,11 @@ const getFlatMap = navigation => {
       if (page.pages) {
         let sectionPages = [];
         if (page.sections) {
-          sectionPages = page.sections.flatMap(_section =>
-            _section.pages.flatMap(
+          sectionPages = page.sections.flatMap(_section => {
+            return _section.pages.flatMap(
               sectionPage => sectionPage && sectionPage.path && `${page.path}${sectionPage.path}`
-            )
-          );
+            );
+          });
         }
         const pages = page.pages.flatMap(_page => {
           if (_page.pages) {
@@ -45,7 +45,7 @@ const getFlatMap = navigation => {
         });
         return [...pages, ...sectionPages];
       } else {
-        return `${section.title ? '/' + slugify(section.title) : ''}${page.path}`;
+        return `${section.slug ? `/${slugify(section.slug)}` : ''}${page.path}`;
       }
     })
   );

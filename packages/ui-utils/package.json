@@ -1,9 +1,13 @@
 {
-  "name": "@stacks/ui-theme",
-  "description": "System UI spec theme for Stacks related projects",
+  "name": "@stacks/ui-utils",
+  "description": "UI utilities for Stacks UI based projects.",
   "version": "1.1.1",
   "author": "Blockstack <engineering@blockstack.com> (https://blockstack.org/)",
   "dependencies": {
+    "@blockstack/stacks-blockchain-api-types": "^0.34.1",
+    "@types/big.js": "^6.0.0",
+    "big.js": "^6.0.2",
+    "c32check": "^1.1.2",
     "type-fest": "^0.20.2",
     "typescript": "^4.1.2"
   },

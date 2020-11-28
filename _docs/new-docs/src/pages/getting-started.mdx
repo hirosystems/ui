@@ -4,51 +4,48 @@ title: 'Getting started'
 
 # Getting Started
 
-Blockstack UI is a component library built for use with React. It uses [styled-components](https://styled-components.com)
-and [styled-system](https://styled-system.com) under the hood for a CSS-in-JS solution for building complex, accessible UI components.
+Stacks UI is a component library built for use with React. It uses [emotion v11](https://emotion.sh)
+and [theme-ui](https://theme-ui.com) under the hood for a CSS-in-JS solution for building complex, accessible UI components.
 
 ## Installation
 
 > Note: we use `yarn`, but you can also use `npm`
 
-First, make sure to install `styled-components` and its babel plugin:
+First, make sure to install `emotion` and its babel plugin:
 
 ```
-yarn add styled-components babel-plugin-styled-components
+yarn add @emotion/core @emotion/react @emotion/babel-plugin
 ```
 
-Then, install `@blockstack/ui`:
+Then, install `@stacks/ui`:
 
 ```
-yarn add @blockstack/ui
+yarn add @stacks/ui @stacks/ui-core @stacks/ui-theme
 ```
 
 ### With next.js
 
-If you're using `@blockstack/ui` with next.js, make sure to check out the
-[styled-components example](https://github.com/vercel/next.js/tree/master/examples/with-styled-components) to correctly
-use styled-components in a SSR environment.
+If you're using `@stacks/ui` with next.js, make sure to check out the
+[with emotion example](https://github.com/vercel/next.js/tree/master/examples/with-emotion-11) to correctly
+use emotion in a SSR environment. You can also look at the source code for this docs site, as it's using next.js.
 
 ## Usage
 
-> Please note that you will need to have the [styled-components babel plugin](https://github.com/styled-components/babel-plugin-styled-components)
-> set up in your project in order to use the `css` prop.
-
-To use any component from `@blockstack/ui`, we need to import the `ThemeProvider` into the root component of the app that
-will be using Blockstack UI. The ThemeProvider creates a [React Context](https://reactjs.org/docs/context.html) scope
+To use any component from `@stacks/ui`, we need to import the `ThemeProvider` into the root component of the app that
+will be using Stacks UI. The ThemeProvider creates a [React Context](https://reactjs.org/docs/context.html) scope
 for all of our components to use.
 
 ```jsx live=false
 // app.tsx
 import React from 'react';
-import { ThemeProvider } from '@blockstack/ui';
+import { ThemeProvider } from '@stacks/ui';
 
 <ThemeProvider>{children}</ThemeProvider>;
 ```
 
 ### Reset global styles
 
-Typically you will want to apply a css reset to your page. `@blockstack/ui` exports
+Typically you will want to apply a css reset to your page. `@stacks/ui` exports
 a [`CSSReset`](/components/css-reset) that will reset and improve the browsers default styles. It's heavily inspired by
 [Tailwind's preflight](https://unpkg.com/tailwindcss@1.1.2/dist/base.css).
 
@@ -65,11 +62,11 @@ const App({ children }) => {
 
 ### Using components
 
-Simply import components by name from the `@blockstack/ui` package, as shown
+Simply import components by name from the `@stacks/ui` package, as shown
 below.
 
 ```js
-import { Button } from '@blockstack/ui';
+import { Button } from '@stacks/ui';
 ```
 
 ### Contributing

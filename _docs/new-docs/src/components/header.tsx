@@ -16,14 +16,14 @@ import MenuIcon from 'mdi-react/MenuIcon';
 import CloseIcon from 'mdi-react/CloseIcon';
 import { useMobileMenuState } from '@common/hooks/use-mobile-menu';
 
-import { css, ForwardRefExoticComponentWithAs, forwardRefWithAs } from '@stacks/ui-core';
+import { ForwardRefExoticComponentWithAs, forwardRefWithAs } from '@stacks/ui-core';
 import NextLink from 'next/link';
 import { ColorModeButton } from '@components/color-mode-button';
 import { PAGE_WIDTH } from '@common/constants';
 import { border, transition } from '@common/utils';
 import { getCapsizeStyles } from '@components/mdx/typography';
 import { useTouchable } from '@common/hooks/use-touchable';
-import { useRouter } from 'next/router';
+import { StacksLogo } from '@components/stacks-logo';
 
 const MenuButton = ({ ...rest }: any) => {
   const { isOpen, handleOpen, handleClose } = useMobileMenuState();
@@ -98,7 +98,7 @@ const HeaderTextItem: ForwardRefExoticComponentWithAs<BoxProps & LinkProps, 'a'>
       ...getCapsizeStyles(16, 26),
       color: 'currentColor',
       ...rest,
-      fontWeight: '400',
+      fontWeight: '500',
       _hover: {
         cursor: 'pointer',
         textDecoration: href ? 'underline' : 'none',
@@ -213,10 +213,10 @@ const LogoLink = () => {
             color={color('invert')}
             mr={space('tight')}
           >
-            <BlockstackIcon size="20px" />
+            <StacksLogo width="80px" />
           </Box>
           <HeaderTextItem as="span" transform="translateY(1px)">
-            Blockstack
+            UI
           </HeaderTextItem>
         </Flex>
       </Link>

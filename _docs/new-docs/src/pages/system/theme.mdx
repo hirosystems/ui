@@ -2,14 +2,13 @@
 title: 'Theme'
 ---
 
-import { Box, Flex, Grid, useTheme } from '@blockstack/ui';
-import { ColorPalette, ColorPalettes, ColorWrapper, Colors } from '@components/color-palette';
+import { Box, Flex, Grid, useTheme } from '@stacks/ui';
 
 # Theme
 
 The theme object is what defines our design system. It contains things like the color
 palette, units for space and type sizes, font families, responsive breakpoints,
-box shadows, and more. Blockstack UI is based on the
+box shadows, and more. Stacks UI is based on the
 [Styled System theme specification](https://system-ui.com/theme/).
 
 ## Typography
@@ -112,7 +111,7 @@ export default {
 };
 ```
 
-By default, Blockstack UI includes a comprehensive numeric spacing scale inspired by
+By default, Stacks UI includes a comprehensive numeric spacing scale inspired by
 Tailwind CSS. The values are proportional, so 1 spacing unit is equal to
 `0.25rem`, which translates to `4px` by default in common browsers.
 
@@ -174,7 +173,7 @@ with width set to `1rem` or `16px` and height set to `0.75rem` or `12px`
 ## Configuration reference
 
 Except for breakpoints, colors, and spacing, all of the keys in the theme object
-map to one of Blockstack UI's core theme. All of these keys can be replaced or
+map to one of Stacks UI's core theme. All of these keys can be replaced or
 extended.
 
 See the [full reference table](https://styled-system.com/table) of properties.

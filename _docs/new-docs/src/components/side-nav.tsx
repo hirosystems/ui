@@ -67,6 +67,7 @@ const PageItem = React.forwardRef(
     };
     return (
       <SmartLink
+        fontWeight="500"
         ref={ref}
         {...styleProps}
         _hover={{ color: isTopLevel ? color('accent') : color('text-title') }}
@@ -84,6 +85,7 @@ const SectionTitle: React.FC<BoxProps> = ({ children, ...rest }) => (
   <Text
     {...{
       display: 'block',
+      fontWeight: 500,
       ...getCapsizeStyles(16, 26),
       color: color('text-title'),
       ...rest,
@@ -302,7 +304,7 @@ const Navigation = () => {
             return (
               <Box mb={space('extra-tight')} key={`${i}-${key}`}>
                 <PageItem
-                  href={!urlCategory ? path : !path.includes(urlCategory) && path}
+                  href={path}
                   isTopLevel={i === 0}
                   isActive={router.pathname.endsWith(path)}
                   onClick={() => handleClick(page)}
