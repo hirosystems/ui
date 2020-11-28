@@ -45,6 +45,6 @@
   },
   "sideEffects": false,
   "typings": "dist/index.d.ts",
-  "umd:main": "dist/ui-theme.umd.production.js",
-  "unpkg": "dist/ui-theme.cjs.production.min.js"
+  "umd:main": "dist/ui-utils.umd.production.js",
+  "unpkg": "dist/ui-utils.cjs.production.min.js"
 }

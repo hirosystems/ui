@@ -1,12 +1,18 @@
 import React, { Children, cloneElement, isValidElement } from 'react';
-import { Flex } from '../flex';
-import { Box } from '../box';
-import { StackProps } from './types';
 import { ForwardRefExoticComponentWithAs, forwardRefWithAs } from '@stacks/ui-core';
 
-export * from './types';
+import { Flex, FlexProps } from './flex';
+import { Box } from './box';
 
-const Stack: ForwardRefExoticComponentWithAs<StackProps, 'div'> = forwardRefWithAs<
+interface StackProps extends FlexProps {
+  isInline?: boolean;
+  children?: React.ReactNode[] | React.ReactNode;
+  divider?: React.ReactElement;
+  spacing?: FlexProps['margin'];
+  shouldWrapChildren?: boolean;
+}
+
+export const Stack: ForwardRefExoticComponentWithAs<StackProps, 'div'> = forwardRefWithAs<
   StackProps,
   'div'
 >((props, ref) => {
@@ -70,5 +76,3 @@ const Stack: ForwardRefExoticComponentWithAs<StackProps, 'div'> = forwardRefWith
 });
 
 Stack.displayName = 'Stack';
-
-export { Stack };

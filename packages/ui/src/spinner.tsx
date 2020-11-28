@@ -1,9 +1,32 @@
 /** @jsx jsx */
 import { jsx, keyframes } from '@emotion/react';
-import { Box } from '../box';
-import { VisuallyHidden } from '../visually-hidden';
-import { SpinnerProps, SpinnerSize } from './types';
 import { ForwardRefExoticComponentWithAs, forwardRefWithAs } from '@stacks/ui-core';
+import { LiteralUnion } from 'type-fest';
+
+import { Box, BoxProps } from './box';
+import { VisuallyHidden } from './visually-hidden';
+
+export enum SpinnerSizes {
+  xs = 'xs',
+  sm = 'sm',
+  md = 'md',
+  lg = 'lg',
+  xl = 'xl',
+}
+
+export type NamedSizeLiterals = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+
+export type SpinnerSize = LiteralUnion<NamedSizeLiterals, string>;
+
+export interface SpinnerPropsBase {
+  size?: SpinnerSize;
+  emptyColor?: string;
+  thickness?: string;
+  speed?: string;
+  label?: string;
+}
+
+export type SpinnerProps = SpinnerPropsBase & Omit<BoxProps, 'size'>;
 
 const spin = keyframes`
   0% {
@@ -36,7 +59,7 @@ const getSize = (size: SpinnerSize): string => {
  *
  * RECOMMENDED: Add `aria-busy="true"` to the component that triggered the loading state while the spinner is shown.
  */
-const Spinner: ForwardRefExoticComponentWithAs<SpinnerProps, 'div'> = forwardRefWithAs<
+export const Spinner: ForwardRefExoticComponentWithAs<SpinnerProps, 'div'> = forwardRefWithAs<
   SpinnerProps,
   'div'
 >(
@@ -75,5 +98,3 @@ const Spinner: ForwardRefExoticComponentWithAs<SpinnerProps, 'div'> = forwardRef
 );
 
 Spinner.displayName = 'Spinner';
-
-export { Spinner };
