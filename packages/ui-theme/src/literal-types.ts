@@ -10,11 +10,6 @@ type TextStylesLiteral =
   | 'caption'
   | 'caption.medium';
 
-type Prefix = "extra" | 'base';
-type Unit = "tight" | "base" | "loose";
-
-type Alignment = `${Prefix}-${Unit}` | Unit
-
 type NamedSpacingUnitsLiteral =
   | 'none'
   | 'extra-tight'

@@ -4,6 +4,7 @@ export * from './use-event-listener';
 export * from './use-force-update';
 export * from './use-id';
 export * from './use-latest-ref';
+export * from './use-gradient';
 export * from './use-merge-refs';
 export * from './use-previous';
 export * from './use-safe-layout-effect';
