@@ -1,5 +1,11 @@
 # @stacks/ui
 
+## 4.0.1
+
+### Patch Changes
+
+- Bump version
+
 ## 4.0.0
 
 ### Minor Changes

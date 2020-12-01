@@ -1,7 +1,7 @@
 {
   "name": "@stacks/ui-utils",
   "description": "UI utilities for Stacks UI based projects.",
-  "version": "1.0.1",
+  "version": "4.0.1",
   "author": "Blockstack <engineering@blockstack.com> (https://blockstack.org/)",
   "dependencies": {
     "@blockstack/stacks-blockchain-api-types": "^0.34.1",

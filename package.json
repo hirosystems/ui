@@ -49,6 +49,7 @@
     "start": "lerna run start --scope=@stacks/{ui,ui-core,ui-theme} --parallel --no-bail --stream",
     "typecheck": "lerna run typecheck --parallel --no-bail --stream",
     "changeset:publish": "changeset publish",
+    "changeset:version": "changeset version",
     "release": "yarn build && yarn changeset:publish",
     "version": "lerna bootstrap"
   },
