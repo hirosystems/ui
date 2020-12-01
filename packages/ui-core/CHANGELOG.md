@@ -1,5 +1,17 @@
 # @stacks/ui-core
 
+## 6.0.0
+
+### Minor Changes
+
+- 105319e: Actually remove all instances of 'd'
+
+### Patch Changes
+
+- @stacks/ui@6.0.0
+- @stacks/ui-theme@6.0.0
+- @stacks/ui-utils@6.0.0
+
 ## 5.0.0
 
 ### Patch Changes
