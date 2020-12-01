@@ -1,10 +1,9 @@
 import camelCase from 'camelcase';
 import { properties } from '../common/css-properties';
-import { aliases, multiples, css, Theme } from '../css';
+import { aliases, css, multiples, Theme } from '../css';
 import { useCallback } from 'react';
 
 export const config: any = {
-  d: 'display',
   w: 'width',
   minW: 'minWidth',
   maxW: 'maxWidth',
