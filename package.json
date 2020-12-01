@@ -48,6 +48,7 @@
     "lint:prettier:fix": "prettier --write \"packages/**/src/**/*.{ts,tsx|!(d.ts)}\" *.js",
     "start": "lerna run start --scope=@stacks/{ui,ui-core,ui-theme} --parallel --no-bail --stream",
     "typecheck": "lerna run typecheck --parallel --no-bail --stream",
+    "changeset:publish": "changeset publish",
     "version": "lerna bootstrap"
   },
   "workspaces": [
