@@ -33,3 +33,4 @@ export * from './color-modes';
 
 export * from './circle';
 export * from './dynamic-color-circle';
+export * from './brand';

@@ -60,7 +60,6 @@ export const aliases = {
   roundedBottomRight: 'borderBottomRightRadius',
   roundedBottomLeft: 'borderBottomLeftRadius',
   rounded: 'borderRadius',
-  d: 'display',
   w: 'width',
   minW: 'minWidth',
   maxW: 'maxWidth',

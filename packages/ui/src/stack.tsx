@@ -4,7 +4,7 @@ import { ForwardRefExoticComponentWithAs, forwardRefWithAs } from '@stacks/ui-co
 import { Flex, FlexProps } from './flex';
 import { Box } from './box';
 
-interface StackProps extends FlexProps {
+export interface StackProps extends FlexProps {
   isInline?: boolean;
   children?: React.ReactNode[] | React.ReactNode;
   divider?: React.ReactElement;
