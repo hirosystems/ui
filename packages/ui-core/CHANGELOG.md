@@ -1,5 +1,11 @@
 # @stacks/ui-core
 
+## 4.0.2
+
+### Patch Changes
+
+- 8494473: Remove 'd' from css-properties.ts
+
 ## 1.1.0
 
 ### Minor Changes
