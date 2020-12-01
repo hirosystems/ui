@@ -1,5 +1,17 @@
 # @stacks/ui
 
+## 5.0.0
+
+### Minor Changes
+
+- 59953ff: Bump package versions
+
+### Patch Changes
+
+- @stacks/ui-core@5.0.0
+- @stacks/ui-theme@5.0.0
+- @stacks/ui-utils@5.0.0
+
 ## 4.0.1
 
 ### Patch Changes
