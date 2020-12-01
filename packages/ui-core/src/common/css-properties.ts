@@ -323,7 +323,6 @@ export const properties = [
   '-webkit-cursor-visibility',
   'cx',
   'cy',
-  'd',
   '-apple-dashboard-region',
   '-webkit-dashboard-region',
   'direction',
