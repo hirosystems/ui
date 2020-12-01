@@ -49,5 +49,8 @@
   "sideEffects": false,
   "typings": "dist/index.d.ts",
   "umd:main": "dist/ui-core.umd.production.js",
-  "unpkg": "dist/ui-core.cjs.production.min.js"
+  "unpkg": "dist/ui-core.cjs.production.min.js",
+  "publishConfig": {
+    "access": "public"
+  }
 }
