@@ -1,5 +1,21 @@
 # @stacks/ui
 
+## 7.0.0
+
+### Minor Changes
+
+- 9b1c64b: - Adds `IconButton` component.
+- d3075c8: - Update colors per design changes
+  - Include `ColorModes` by default in `ThemeProvider`
+  - Fixes `ColorModeProvider` to use localstorage.
+  - Exports utils for color modes.
+
+### Patch Changes
+
+- @stacks/ui-core@7.0.0
+- @stacks/ui-theme@7.0.0
+- @stacks/ui-utils@7.0.0
+
 ## 6.0.0
 
 ### Patch Changes
