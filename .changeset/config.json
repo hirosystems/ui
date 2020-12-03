@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/@changesets/config@1.4.0/schema.json",
   "changelog": "@changesets/cli/changelog",
   "commit": false,
-  "linked": [["@stacks/ui", "@stacks/ui-*"]],
+  "linked": [],
   "access": "public",
   "baseBranch": "master",
   "updateInternalDependencies": "patch",
