@@ -1,13 +1,24 @@
+export type ColorModeString = 'dark' | 'light';
+export interface ColorModeState {
+  colorMode?: ColorModeString;
+  toggleColorMode?: any;
+  setColorMode?: any;
+}
 export enum Color {
   Accent = 'accent',
+  Brand = 'brand',
   Bg = 'bg',
-  BgAlt = 'bg-alt',
-  BgLight = 'bg-light',
+  Bg2 = 'bg-2',
+  Bg3 = 'bg-3',
+  Bg4 = 'bg-4',
+  BgAlt = 'bg-alt', // deprecated
+  BgLight = 'bg-light', // deprecated
   Invert = 'invert',
   TextHover = 'text-hover',
   TextTitle = 'text-title',
   TextCaption = 'text-caption',
   TextBody = 'text-body',
+  Icon = 'icon',
   InputPlaceholder = 'input-placeholder',
   Border = 'border',
   FeedbackAlert = 'feedback-alert',
@@ -17,7 +28,11 @@ export enum Color {
 
 export type ColorsStringLiteral =
   | 'accent'
+  | 'brand'
   | 'bg'
+  | 'bg-2'
+  | 'bg-3'
+  | 'bg-4'
   | 'bg-alt'
   | 'bg-light'
   | 'invert'
@@ -25,6 +40,7 @@ export type ColorsStringLiteral =
   | 'text-title'
   | 'text-caption'
   | 'text-body'
+  | 'icon'
   | 'input-placeholder'
   | 'border'
   | 'feedback-alert'

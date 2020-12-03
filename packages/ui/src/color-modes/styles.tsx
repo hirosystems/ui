@@ -1,61 +1,74 @@
-/** @jsx jsx */
-import { jsx, css, Global } from '@emotion/react';
+import React from 'react';
+import { css, Global } from '@emotion/react';
 import { generateCssVariables } from './utils';
+import { theme } from '@stacks/ui-theme';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-// @ts-ignore
-const colorModes = css`
-  :root {
-    ${generateCssVariables('light')};
-  }
+export const LightMode = (
+  <Global
+    styles={css`
+      :root {
+        ${generateCssVariables('light')({ colorMode: 'light', theme })};
+        --colors-highlight-line-bg: rgba(255, 255, 255, 0.08);
+      }
+    `}
+  />
+);
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      ${generateCssVariables('dark')};
-    }
-  }
+export const DarkMode = (
+  <Global
+    styles={css`
+      :root {
+        ${generateCssVariables('dark')({ colorMode: 'dark', theme })};
+        --colors-highlight-line-bg: rgba(255, 255, 255, 0.05);
+      }
+    `}
+  />
+);
 
-  @media (prefers-color-scheme: light) {
-    :root {
-      ${generateCssVariables('light')};
-    }
-  }
+export const Base = (
+  <Global
+    styles={css`
+      * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      html {
+        background: var(--colors-bg);
+        border-color: var(--colors-border);
 
-  html,
-  body,
-  #__next {
-    background: var(--colors-bg);
-    border-color: var(--colors-border);
-  }
+        &.light {
+          ${generateCssVariables('light')({ colorMode: 'light', theme })};
+          --colors-highlight-line-bg: rgba(255, 255, 255, 0.08);
+          * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+        }
+        &.dark {
+          ${generateCssVariables('dark')({ colorMode: 'dark', theme })};
+          --colors-highlight-line-bg: rgba(255, 255, 255, 0.04);
+          * {
+            -webkit-font-smoothing: subpixel-antialiased;
+            -moz-osx-font-smoothing: auto;
+          }
+        }
+      }
+    `}
+  />
+);
 
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  textarea:-webkit-autofill,
-  textarea:-webkit-autofill:hover,
-  textarea:-webkit-autofill:focus,
-  select:-webkit-autofill,
-  select:-webkit-autofill:hover,
-  select:-webkit-autofill:focus {
-    -webkit-text-fill-color: var(--colors-text-body);
-    font-size: 16px !important;
-    transition: background-color 5000s ease-in-out 0s;
-  }
-
-  input:-ms-input-placeholder,
-  textarea:-ms-input-placeholder {
-    color: var(--colors-input-placeholder) !important;
-  }
-
-  input::-ms-input-placeholder,
-  textarea::-ms-input-placeholder {
-    color: var(--colors-input-placeholder) !important;
-  }
-
-  input::placeholder,
-  textarea::placeholder {
-    color: var(--colors-input-placeholder) !important;
-  }
-`;
-
-export const ColorModes: any = <Global styles={colorModes} />;
+export const ColorModes: React.FC = React.memo(() => (
+  <>
+    <style
+      data-emotion-css={'css-global ' + DarkMode.props.styles.name}
+      dangerouslySetInnerHTML={{ __html: DarkMode.props.styles.styles }}
+      media="(prefers-color-scheme: dark)"
+    />
+    <style
+      data-emotion-css={'css-global ' + LightMode.props.styles.name}
+      dangerouslySetInnerHTML={{ __html: LightMode.props.styles.styles }}
+      media="(prefers-color-scheme: light)"
+    />
+    {Base}
+  </>
+));

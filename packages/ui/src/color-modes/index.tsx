@@ -1,64 +1,19 @@
-import React, { useEffect, useCallback } from 'react';
-import { useMediaQuery } from '../hooks/use-media-query';
-import { ColorModes } from './styles';
+import React from 'react';
+import { useColorModeEffect, useColorModeState } from './hooks';
+import { ColorModeContext } from './context';
+import { ColorModeString } from './types';
+import { getPersistedColorMode } from './utils';
+
 export * from './utils';
 export * from './types';
 export * from './styles';
 
-export const ColorModeContext = React.createContext<{ colorMode?: string; toggleColorMode?: any }>({
-  colorMode: undefined,
-});
-
-export const ColorModeProvider = ({
-  colorMode,
+export const ColorModeProvider: React.FC<{ defaultMode?: ColorModeString }> = ({
+  defaultMode,
   children,
-  onChange,
-}: {
-  colorMode?: string;
-  children: any;
-  onChange?: (mode: string) => void;
 }) => {
-  const [mode, setMode] = React.useState(colorMode);
-  const [darkmode] = useMediaQuery('(prefers-color-scheme: dark)');
-  const [lightmode] = useMediaQuery('(prefers-color-scheme: light)');
-
-  useEffect(() => {
-    if (!mode) {
-      setMode(darkmode ? 'dark' : 'light');
-    }
-  }, [mode, darkmode, lightmode]);
-
-  const setColorMode = useCallback(
-    (mode: 'light' | 'dark') => {
-      setMode(mode);
-      onChange && onChange(mode);
-    },
-    [mode]
-  );
-
-  const toggleColorMode = useCallback(() => {
-    if (mode === 'light') {
-      setColorMode('dark');
-      return;
-    }
-    if (mode === 'dark') {
-      setColorMode('light');
-      return;
-    }
-    if (!colorMode && darkmode) {
-      setColorMode('light');
-      return;
-    }
-    if (!mode && lightmode) {
-      setColorMode('dark');
-      return;
-    }
-  }, [mode, lightmode, darkmode]);
-
-  return (
-    <ColorModeContext.Provider value={{ colorMode: mode, toggleColorMode }}>
-      <ColorModes />
-      {children}
-    </ColorModeContext.Provider>
-  );
+  const local = getPersistedColorMode();
+  const state = useColorModeState(local || defaultMode);
+  useColorModeEffect(defaultMode);
+  return <ColorModeContext.Provider value={state}>{children}</ColorModeContext.Provider>;
 };
