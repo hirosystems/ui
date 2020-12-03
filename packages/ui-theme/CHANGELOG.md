@@ -1,5 +1,15 @@
 # @stacks/ui-theme
 
+## 7.0.0
+
+### Patch Changes
+
+- Updated dependencies [9b1c64b]
+- Updated dependencies [d3075c8]
+  - @stacks/ui@7.0.0
+  - @stacks/ui-core@7.0.0
+  - @stacks/ui-utils@7.0.0
+
 ## 6.0.0
 
 ### Patch Changes
