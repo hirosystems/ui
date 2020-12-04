@@ -1,0 +1,71 @@
+---
+title: 'Responsive styles'
+---
+
+# Responsive styles
+
+Stacks UI supports responsive styles out of the box because it is built with Theme UI.
+Instead of manually adding `@media` queries and adding nested styles throughout your code,
+any of the components allow you pass system props as arrays to enable mobile-first responsiveness.
+
+-> `@media(min-width)` media queries are used to ensure values are mobile-first.
+
+```tsx
+<>
+  <Box
+    height="40px"
+    bg={color('bg')}
+    width={[
+      '100%', // base
+      '50%', // 480px upwards
+      '25%', // 768px upwards
+      '15%', // 992px upwards
+    ]}
+  />
+  // responsive font size
+  <Box fontSize={[0, 2, 4, 6]}>Font Size</Box>
+  // responsive margin
+  <Box
+    mt={['tight', 'base-tight', 'base', 'loose']}
+    width="100%"
+    height="24px"
+    bg={color('brand')}
+  />
+  // responsive padding
+  <Box bg="whitesmoke" p={['base', 'base-loose', 'loose', 'extra-loose']}>
+    Padding
+  </Box>
+</>
+```
+
+This works for every style props in the theme specification, which means you can
+change the style of most properties at a given breakpoint.
+
+## What it does
+
+This shortcut is an alternative to writing media queries out by hand. Given the
+following:
+
+```tsx
+<Box width={['100%', '50%', '25%']} />
+```
+
+The CSS this generates will look like this:
+
+```css
+.Box {
+  width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .Box {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 52em) {
+  .Box {
+    width: 25%;
+  }
+}
+```
