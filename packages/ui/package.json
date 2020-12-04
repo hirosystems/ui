@@ -13,6 +13,7 @@
     "@stacks/ui-utils": "^7.0.0",
     "@styled-system/should-forward-prop": "^5.1.5",
     "@styled-system/theme-get": "^5.1.2",
+    "@tippyjs/react": "^4.2.0",
     "@types/flushable": "^1.0.1",
     "@types/styled-system__theme-get": "^5.0.0",
     "color": "3.1.3",
