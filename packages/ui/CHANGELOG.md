@@ -1,5 +1,12 @@
 # @stacks/ui
 
+## 7.1.0
+
+### Minor Changes
+
+- 96c8359: This restores behavior of the Input component to default to full width.
+- fd3525d: This updates the underlying package used for the toolip, switching from a custom tooltip to using [`@tippyjs/react`](https://github.com/atomiks/tippyjs-react).
+
 ## 7.0.0
 
 ### Minor Changes
