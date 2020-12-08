@@ -1,12 +1,12 @@
 import React, { Children, cloneElement } from 'react';
 import { Box } from '../box';
 import { ButtonGroupProps } from './types';
-import { forwardRefWithAs, ForwardRefExoticComponentWithAs } from '@stacks/ui-core';
+import { ForwardRefExoticComponentWithAs, forwardRefWithAs } from '@stacks/ui-core';
 
 const ButtonGroup: ForwardRefExoticComponentWithAs<ButtonGroupProps, 'div'> = forwardRefWithAs<
   ButtonGroupProps,
   'div'
->(({ size, variantColor, variant, isAttached, spacing = 2, children, ...rest }, ref) => {
+>(({ size, variant, isAttached, spacing = 2, children, ...rest }, ref) => {
   const clones = Children.map(children, (child, index) => {
     const isFirst = index === 0;
     const isLast = index === Children.count(children) - 1;
@@ -17,7 +17,6 @@ const ButtonGroup: ForwardRefExoticComponentWithAs<ButtonGroupProps, 'div'> = fo
 
     return cloneElement(child, {
       size: size || child.props.size,
-      variantColor: child.props.variantColor || variantColor,
       variant: child.props.variant || variant,
       _focus: { boxShadow: 'outline', zIndex: 1 },
       ...(!isLast && !isAttached && { mr: spacing }),
