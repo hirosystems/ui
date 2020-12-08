@@ -3,6 +3,7 @@ import { Box } from '../box';
 import { Flex, FlexProps } from '../flex';
 import { ModalContextTypes, ModalProps, WrapperComponentProps } from './types';
 import useOnClickOutside from 'use-onclickoutside';
+import { color } from '../color-modes';
 
 const ModalContext = React.createContext<ModalContextTypes>({
   isOpen: false,
@@ -87,7 +88,7 @@ const ModalCardContainer: React.FC<ModalCardContainerProps & FlexProps> = React.
   <Flex
     flexDirection="column"
     position="relative"
-    bg="white"
+    bg={color('bg-2')}
     mx="auto"
     minWidth={['100%', '396px']}
     maxWidth={['100%', '396px']}
