@@ -1,5 +1,11 @@
 # @stacks/ui
 
+## 7.1.1
+
+### Patch Changes
+
+- f50e15d: hotfix: by default isFullWidth should be true
+
 ## 7.1.0
 
 ### Minor Changes
