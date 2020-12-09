@@ -6,7 +6,17 @@ import { getPersistedColorMode } from './utils';
 
 export * from './utils';
 export * from './styles';
-export * from '@stacks/ui-theme';
+
+export {
+  Color,
+  ColorModeString,
+  ColorModeState,
+  ColorModesInterface,
+  ColorModeTypes,
+  Colors,
+  ColorsStringLiteral,
+  ThemeColorsStringLiteral,
+} from '@stacks/ui-theme';
 
 export const ColorModeProvider: React.FC<{ defaultMode?: ColorModeString }> = ({
   defaultMode,

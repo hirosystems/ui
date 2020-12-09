@@ -31,11 +31,8 @@
     "baseUrl": ".",
     "paths": {
       "@stacks/ui-theme": ["../ui-theme/src"],
-      "@stacks/ui-theme/*": ["../ui-theme/src/*"],
       "@stacks/ui-core": ["../ui-core/src"],
-      "@stacks/ui-core/*": ["../ui-core/src/*"],
-      "@stacks/ui-utils": ["../ui-utils/src"],
-      "@stacks/ui-utils/*": ["../ui-utils/src/*"]
+      "@stacks/ui-utils": ["../ui-utils/src"]
     }
   }
 }
