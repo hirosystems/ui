@@ -1,5 +1,11 @@
 # @stacks/ui
 
+## 7.1.2
+
+### Patch Changes
+
+- b67156d: Updates types for ButtonGroup, uses bg color for Modal.
+
 ## 7.1.1
 
 ### Patch Changes
