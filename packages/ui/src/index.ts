@@ -35,3 +35,5 @@ export * from './circle';
 export * from './dynamic-color-circle';
 export * from './brand';
 export * from './icon-button';
+
+export * from './controlled-modal';

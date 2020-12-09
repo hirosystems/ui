@@ -1,38 +1,40 @@
+import { color } from '../color-modes';
+
 const defaultStyle = {
-  height: 12,
+  height: '48px',
   border: '1px solid',
-  borderBottomColor: 'inherit',
-  borderLeftColor: 'inherit',
-  borderRightColor: 'inherit',
-  borderTopColor: 'inherit',
-  borderColor: 'inherit',
-  bg: 'white',
+  borderBottomColor: color('border'),
+  borderLeftColor: color('border'),
+  borderRightColor: color('border'),
+  borderTopColor: color('border'),
+  borderColor: color('border'),
+  bg: color('bg'),
   _hover: {
-    borderBottomColor: 'ink.300',
-    borderLeftColor: 'ink.300',
-    borderRightColor: 'ink.300',
-    borderTopColor: 'ink.300',
-    borderColor: 'ink.300',
+    borderBottomColor: color('border'),
+    borderLeftColor: color('border'),
+    borderRightColor: color('border'),
+    borderTopColor: color('border'),
+    borderColor: color('border'),
   },
   _disabled: {
-    bg: '#f9f9fc',
+    bg: color('bg-4'),
     cursor: 'not-allowed',
     pointerEvents: 'none',
   },
   _focus: {
-    borderBottomColor: 'blue.300',
-    borderLeftColor: 'blue.300',
-    borderRightColor: 'blue.300',
-    borderTopColor: 'blue.300',
-    borderColor: 'blue.300',
+    borderBottomColor: 'rgba(170, 179, 255, 0.4)',
+    borderLeftColor: 'rgba(170, 179, 255, 0.4)',
+    borderRightColor: 'rgba(170, 179, 255, 0.4)',
+    borderTopColor: 'rgba(170, 179, 255, 0.4)',
+    borderColor: 'rgba(170, 179, 255, 0.4)',
     boxShadow: '0 0 0 1px rgba(170, 179, 255, 0.75)',
   },
   _invalid: {
-    borderBottomColor: 'red',
-    borderLeftColor: 'red',
-    borderRightColor: 'red',
-    borderTopColor: 'red',
-    borderColor: 'red',
+    borderBottomColor: color('feedback-alert'),
+    borderLeftColor: color('feedback-alert'),
+    borderRightColor: color('feedback-alert'),
+    borderTopColor: color('feedback-alert'),
+    borderColor: color('feedback-alert'),
   },
 };
 
@@ -57,7 +59,7 @@ interface InputStyles {
 export const inputSizes: InputStyles = {
   default: {
     fontSize: 'body.small',
-    height: '12', // 48px
+    height: '48px',
     lineHeight: 'base',
   },
 };

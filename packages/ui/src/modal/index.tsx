@@ -168,8 +168,8 @@ export const Modal: React.FC<ModalProps> = React.memo(
 
 export const ModalProvider: React.FC = props => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const doOpenModal = () => (!isOpen ? setIsOpen(true) : null);
-  const doCloseModal = () => (isOpen ? setIsOpen(false) : null);
+  const doOpenModal = () => setIsOpen(true);
+  const doCloseModal = () => setIsOpen(false);
   return (
     <ModalContext.Provider
       value={{
