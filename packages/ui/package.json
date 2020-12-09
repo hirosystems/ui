@@ -1,7 +1,7 @@
 {
   "name": "@stacks/ui",
   "description": "Stacks UI components built using React, emotion, and @stacks/core-ui.",
-  "version": "7.1.1",
+  "version": "7.1.2",
   "author": "Blockstack <engineering@blockstack.com> (https://blockstack.org/)",
   "dependencies": {
     "@reach/alert": "^0.12.1",
