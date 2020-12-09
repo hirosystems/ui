@@ -1,3 +1,5 @@
+import { color } from '@stacks/ui/src';
+
 const _typography = {
   letterSpacings: {
     tighter: '-0.02em',
@@ -29,7 +31,7 @@ const _typography = {
   },
   fonts: {
     heading:
-      '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+      '"Open Sauce", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
     body:
       '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
     mono: 'SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace',
@@ -55,41 +57,49 @@ const displayLarge = {
   fontSize: _typography.fontSizes[4],
   lineHeight: _typography.lineHeights.shorter, // 1.333
   letterSpacing: '-0.02em',
+  color: color('text-title'),
 };
 const displaySmall = {
   fontWeight: _typography.fontWeights.medium,
   fontSize: _typography.fontSizes[3],
   lineHeight: _typography.lineHeights.short, // 1.4
   letterSpacing: '-0.02em',
+  color: color('text-title'),
 };
 const bodyLarge = {
   fontWeight: _typography.fontWeights.normal,
   fontSize: _typography.fontSizes[2],
   lineHeight: _typography.lineHeights.base, // 1.5 (24)
   letterSpacing: '-0.01em',
+  color: color('text-body'),
 };
 const bodyLargeMedium = {
   ...bodyLarge,
   fontWeight: _typography.fontWeights.medium,
+  color: color('text-body'),
 };
 const bodySmall = {
   fontWeight: _typography.fontWeights.normal,
   fontSize: _typography.fontSizes[1],
   lineHeight: _typography.lineHeights.short, // 1.4 (19.6)
   letterSpacing: '-0.01em',
+  color: color('text-body'),
 };
 const bodySmallMedium = {
   ...bodySmall,
   fontWeight: _typography.fontWeights.medium,
+  color: color('text-body'),
 };
 const caption = {
   fontSize: _typography.fontSizes[0],
   lineHeight: _typography.lineHeights.shorter, // 1.333 (16)
   letterSpacing: '0.00em',
+  color: color('text-caption'),
 };
 const captionMedium = {
   ...bodySmall,
   fontWeight: _typography.fontWeights.medium,
+  color: color('text-caption'),
 };
 
 export const textStyles = {
