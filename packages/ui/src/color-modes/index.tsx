@@ -1,12 +1,12 @@
 import React from 'react';
 import { useColorModeEffect, useColorModeState } from './hooks';
 import { ColorModeContext } from './context';
-import { ColorModeString } from './types';
+import { ColorModeString } from '@stacks/ui-theme';
 import { getPersistedColorMode } from './utils';
 
 export * from './utils';
-export * from './types';
 export * from './styles';
+export * from '@stacks/ui-theme';
 
 export const ColorModeProvider: React.FC<{ defaultMode?: ColorModeString }> = ({
   defaultMode,

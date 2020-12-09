@@ -1,3 +1,5 @@
+import { ColorsStringLiteral } from '@stacks/ui';
+
 /**
  * generateHash
  * @param str - The string to hash
@@ -45,3 +47,5 @@ export function moduloRange(x: number, range: [number, number], includeMax = fal
     d = max - min;
   return x === max && includeMax ? x : ((((x - min) % d) + d) % d) + min;
 }
+
+export const color = (name: ColorsStringLiteral): string => `var(--colors-${name})`;

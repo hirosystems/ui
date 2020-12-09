@@ -1,4 +1,4 @@
-import { color } from '@stacks/ui/src';
+import { color } from '@stacks/ui-utils';
 
 const _typography = {
   letterSpacings: {
