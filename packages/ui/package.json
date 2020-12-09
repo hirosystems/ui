@@ -1,15 +1,15 @@
 {
   "name": "@stacks/ui",
   "description": "Stacks UI components built using React, emotion, and @stacks/core-ui.",
-  "version": "7.1.2",
+  "version": "7.2.0",
   "author": "Blockstack <engineering@blockstack.com> (https://blockstack.org/)",
   "dependencies": {
     "@reach/alert": "^0.12.1",
     "@reach/auto-id": "^0.12.1",
     "@reach/rect": "^0.12.1",
     "@stacks/ui-core": "^7.0.0",
-    "@stacks/ui-theme": "^7.0.0",
-    "@stacks/ui-utils": "^7.0.0",
+    "@stacks/ui-theme": "^7.1.0",
+    "@stacks/ui-utils": "^7.1.0",
     "@styled-system/should-forward-prop": "^5.1.5",
     "@styled-system/theme-get": "^5.1.2",
     "@tippyjs/react": "^4.2.0",

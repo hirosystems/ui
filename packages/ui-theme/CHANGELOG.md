@@ -1,5 +1,15 @@
 # @stacks/ui-theme
 
+## 7.1.0
+
+### Minor Changes
+
+- d6f8bcd: Move color mode types to theme, moves color util to utils.
+
+### Patch Changes
+
+- d6f8bcd: Update text styles to work with color-modes
+
 ## 7.0.0
 
 ### Patch Changes

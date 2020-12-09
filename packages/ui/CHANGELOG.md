@@ -1,5 +1,19 @@
 # @stacks/ui
 
+## 7.2.0
+
+### Minor Changes
+
+- d6f8bcd: Adds controlled modal, updates colors throughout to work with color modes.
+- d6f8bcd: Move color mode types to theme, moves color util to utils.
+
+### Patch Changes
+
+- Updated dependencies [d6f8bcd]
+- Updated dependencies [d6f8bcd]
+  - @stacks/ui-theme@7.1.0
+  - @stacks/ui-utils@7.1.0
+
 ## 7.1.2
 
 ### Patch Changes
