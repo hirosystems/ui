@@ -12,7 +12,6 @@ export const Input: React.FC<InputProps> = React.forwardRef((props, ref) => {
     'aria-label': ariaLabel,
     'aria-describedby': ariaDescribedby,
     isReadOnly,
-    isFullWidth = true,
     isDisabled,
     isInvalid,
     isRequired,
@@ -38,6 +37,7 @@ export const Input: React.FC<InputProps> = React.forwardRef((props, ref) => {
       textStyle="body.small"
       style={{ WebkitAppearance: 'none', ...style }}
       {...(inputStyleProps as any)}
+      width="100%"
       {...rest}
     />
   );

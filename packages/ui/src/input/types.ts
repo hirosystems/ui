@@ -22,10 +22,6 @@ export interface InputPropsBase<T = HTMLInputElement> {
    */
   isRequired?: React.InputHTMLAttributes<T>['required'];
   /**
-   * If `true`, the input element will span the full width of it's parent
-   */
-  isFullWidth?: boolean;
-  /**
    * If `true`, prevents the value of the input from being edited.
    */
   isReadOnly?: React.InputHTMLAttributes<T>['readOnly'];
