@@ -1,7 +1,9 @@
 import { Theme } from '@stacks/ui-core';
-import { Color, ColorModeString, ColorModeTypes, ColorsStringLiteral } from './types';
+import { Color, ColorModeString, ColorModeTypes, ColorsStringLiteral } from '@stacks/ui-theme';
+import { color } from '@stacks/ui-utils';
 import { themeGet } from '@styled-system/theme-get';
 
+export { color };
 export const THEME_STORAGE_KEY = 'theme';
 
 const colors = {
@@ -57,8 +59,6 @@ const colorModeStyles = (props: { theme: Theme; colorMode: 'light' | 'dark' }): 
 
 const colorMap = (props: { theme: Theme; colorMode: 'light' | 'dark' }): ColorsStringLiteral[] =>
   Object.keys(colors[props.colorMode]) as ColorsStringLiteral[];
-
-export const color = (name: ColorsStringLiteral): string => `var(--colors-${name})`;
 
 export const generateCssVariables = (mode: 'light' | 'dark') => ({
   colorMode = mode,

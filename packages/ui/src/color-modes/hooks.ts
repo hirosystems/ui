@@ -4,7 +4,7 @@
 
 import React, { useCallback, useEffect } from 'react';
 import { handleSetColorMode, initColorMode } from './utils';
-import { ColorModeString } from './types';
+import { ColorModeString } from '@stacks/ui-theme';
 import { useMediaQuery } from '../hooks';
 
 export const useColorModeState = (defaultMode?: ColorModeString) => {
