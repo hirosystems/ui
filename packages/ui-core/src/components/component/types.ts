@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { ThemeUICSSProperties } from '../../css/types';
-import { SpaceProps, TextStyleProp, ColorProps } from '../../css/custom-types';
+import { ColorProps, SpaceProps, TextStyleProp } from '../../css/custom-types';
 
 type Aliases = SpaceProps & ColorProps & TextStyleProp;
 type BoxCSSProps = ThemeUICSSProperties & Aliases;
 
-export interface PseudoProps {
+export interface PseudoProps extends BoxCSSProps {
   _after?: BoxCSSProps;
   _before?: BoxCSSProps;
   _focus?: BoxCSSProps;
@@ -29,12 +29,9 @@ export interface PseudoProps {
   _notFirst?: BoxCSSProps;
   _notLast?: BoxCSSProps;
   _placeholder?: BoxCSSProps;
-}
-
-export interface SxProp {
   sx?: BoxCSSProps;
   css?: BoxCSSProps;
   style?: React.CSSProperties;
 }
 
-export type BoxProps = PseudoProps & BoxCSSProps & SxProp & React.HTMLAttributes<any>;
+export type BoxProps = PseudoProps & React.HTMLAttributes<any>;
