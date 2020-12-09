@@ -1,5 +1,11 @@
 # @stacks/ui
 
+## 7.3.0
+
+### Minor Changes
+
+- a6118a9: Fix circular dep
+
 ## 7.2.0
 
 ### Minor Changes
