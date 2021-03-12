@@ -1,5 +1,11 @@
 # @stacks/ui-theme
 
+## 7.4.0
+
+### Minor Changes
+
+- [#89](https://github.com/blockstack/ui/pull/89) [`9b63293`](https://github.com/blockstack/ui/commit/9b632939351b59517d07c41eaba4dc66385dcaa2) Thanks [@aulneau](https://github.com/aulneau)! - Improved types output.
+
 ## 7.3.0
 
 ### Minor Changes
