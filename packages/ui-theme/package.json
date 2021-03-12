@@ -40,7 +40,7 @@
     "typecheck:watch": "npm run typecheck -- --watch"
   },
   "sideEffects": false,
-  "typings": "dist/index.d.ts",
+  "typings": "dist/ui-theme/src/index.d.ts",
   "umd:main": "dist/ui-theme.umd.production.js",
   "unpkg": "dist/ui-theme.cjs.production.min.js"
 }
