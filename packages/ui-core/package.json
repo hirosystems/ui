@@ -39,14 +39,15 @@
   "prettier": "@blockstack/prettier-config",
   "private": false,
   "scripts": {
-    "build": "tsdx build",
+    "build": "tsdx build --tsconfig tsconfig.json && yarn types",
+    "types": "tsc --project tsconfig.json",
     "lint": "tsdx lint",
     "prepublishOnly": "yarn build",
     "start": "tsdx watch --verbose --noClean --onSuccess yalc publish --push",
     "test": "tsdx test --passWithNoTests"
   },
   "sideEffects": false,
-  "typings": "dist/index.d.ts",
+  "typings": "dist/types/index.d.ts",
   "umd:main": "dist/ui-core.umd.production.js",
   "unpkg": "dist/ui-core.cjs.production.min.js",
   "publishConfig": {

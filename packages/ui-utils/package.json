@@ -32,7 +32,8 @@
   },
   "repository": "https://github.com/blockstack/ux/tree/master/packages/ui",
   "scripts": {
-    "build": "tsdx build",
+    "build": "tsdx build --tsconfig tsconfig.json && yarn types",
+    "types": "tsc --project tsconfig.json",
     "dev": "yarn start",
     "lint": "yarn lint:eslint && yarn lint:prettier",
     "lint:eslint": "eslint \"src/**/*.{ts,tsx}\" -f unix",
@@ -45,7 +46,7 @@
     "typecheck:watch": "npm run typecheck -- --watch"
   },
   "sideEffects": false,
-  "typings": "dist/ui-utils/src/index.d.ts",
+  "typings": "dist/types/index.d.ts",
   "umd:main": "dist/ui-utils.umd.production.js",
   "unpkg": "dist/ui-utils.cjs.production.min.js"
 }

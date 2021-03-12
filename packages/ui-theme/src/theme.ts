@@ -1,7 +1,6 @@
 import { colors } from './colors';
 import { sizes } from './sizes';
 import { typography } from './typography';
-import { Theme } from '@stacks/ui-core';
 
 const space = sizes;
 
@@ -31,7 +30,7 @@ breakpoints.md = breakpoints[1];
 breakpoints.lg = breakpoints[2];
 breakpoints.xl = breakpoints[3];
 
-const zIndices: Theme['zIndices'] = {
+const zIndices = {
   hide: -1,
   auto: 'auto',
   '0': 0,
@@ -69,7 +68,7 @@ const borders = {
   '4px': '4px solid',
 };
 
-const theme: Theme = {
+const theme = {
   breakpoints,
   zIndices,
   radii,

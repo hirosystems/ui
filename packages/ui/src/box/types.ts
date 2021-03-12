@@ -1,5 +1,5 @@
 import { BoxProps as SystemProps, ResponsiveStyleValue } from '@stacks/ui-core';
-import { Colors, Spacing, TextStyles } from '@stacks/ui-theme';
+import type { Colors, Spacing, TextStyles } from '@stacks/ui-theme';
 
 export interface ColorProps {
   bg?: ResponsiveStyleValue<Colors> & SystemProps['bg'];

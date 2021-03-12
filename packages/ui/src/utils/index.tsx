@@ -197,6 +197,7 @@ export const getColorInTheme = (theme: any, color: string) => {
 export const __DEV__ = process.env.NODE_ENV !== 'production';
 
 export function runIfFn<T, U>(valueOrFn: T | ((...args: U[]) => T), ...args: U[]): T {
+  // @ts-ignore
   return isFunction(valueOrFn) ? valueOrFn(...args) : valueOrFn;
 }
 
