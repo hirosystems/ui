@@ -1,5 +1,16 @@
 # @stacks/ui-utils
 
+## 7.2.0
+
+### Minor Changes
+
+- [#83](https://github.com/blockstack/ui/pull/83) [`38d6dd6`](https://github.com/blockstack/ui/commit/38d6dd6f585678e5055cf20821353c4aad45bc91) Thanks [@aulneau](https://github.com/aulneau)! - Fix peer deps and typings for ui-theme and ui-core.
+
+### Patch Changes
+
+- Updated dependencies [[`38d6dd6`](https://github.com/blockstack/ui/commit/38d6dd6f585678e5055cf20821353c4aad45bc91)]:
+  - @stacks/ui-theme@7.2.0
+
 ## 7.1.0
 
 ### Minor Changes
