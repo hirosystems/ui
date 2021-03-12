@@ -1,0 +1,31 @@
+sections:
+  - pages:
+      - path: /installation
+      - path: /patterns-and-principles
+      - path: /responsive-styles
+      - path: /contributing
+  - title: Core
+    slug: core
+    pages:
+      - path: /system-props
+      - path: /theme
+      - path: /colors
+      - path: /space
+      - path: /typography
+  - title: Components
+    slug: components
+    pages:
+      - path: /box
+      - path: /grid
+      - path: /flex
+      - path: /text
+      - path: /stack
+      - path: /button
+      - path: /codeblock
+      - path: /icons
+      - path: /color-modes
+      - path: /css-reset
+  - title: Hooks
+    slug: hooks
+    pages:
+      - path: /use-theme
