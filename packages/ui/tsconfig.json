@@ -1,8 +1,7 @@
 {
   "include": [
     "src",
-    "types",
-    "../ui-*/src"
+    "types"
   ],
   "compilerOptions": {
     "module": "esnext",
@@ -11,8 +10,9 @@
       "esnext"
     ],
     "importHelpers": true,
-    "composite": true,
     "declaration": true,
+    "emitDeclarationOnly": true,
+    "composite": true,
     "sourceMap": true,
     "strict": true,
     "noImplicitReturns": true,
@@ -25,16 +25,29 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
+    "rootDir": "./src",
+    "outDir": "./dist/types",
     "paths": {
-      "@stacks/ui-theme": [
-        "../ui-theme/src"
-      ],
       "@stacks/ui-core": [
         "../ui-core/src"
+      ],
+      "@stacks/ui-theme": [
+        "../ui-theme/src"
       ],
       "@stacks/ui-utils": [
         "../ui-utils/src"
       ]
     }
-  }
+  },
+  "references": [
+    {
+      "path": "../ui-theme"
+    },
+    {
+      "path": "../ui-utils"
+    },
+    {
+      "path": "../ui-core"
+    }
+  ]
 }

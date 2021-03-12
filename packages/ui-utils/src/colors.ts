@@ -1,4 +1,4 @@
-import { ColorsStringLiteral } from '@stacks/ui-theme';
+import type { ColorsStringLiteral } from '@stacks/ui-theme';
 
 /**
  * generateHash

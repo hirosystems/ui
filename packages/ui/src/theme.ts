@@ -4,10 +4,8 @@ export {
   namedSpacingUnits,
   shadows,
   sizes,
-  space,
   textStyles,
   theme,
-  themeColor,
   transition,
   typography,
 } from '@stacks/ui-theme';
