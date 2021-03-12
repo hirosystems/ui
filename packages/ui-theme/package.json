@@ -1,7 +1,7 @@
 {
   "name": "@stacks/ui-theme",
   "description": "System UI spec theme for Stacks related projects",
-  "version": "7.4.0",
+  "version": "7.5.0",
   "author": "Blockstack <engineering@blockstack.com> (https://blockstack.org/)",
   "dependencies": {
     "type-fest": "^0.21.3",
