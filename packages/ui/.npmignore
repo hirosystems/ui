@@ -10,3 +10,4 @@ stories
 *.log
 .idea
 .github
+tsconfig.tsbuildinfo

@@ -278,6 +278,7 @@ const transforms = [
 const responsive = (styles: Exclude<ThemeUIStyleObject, ThemeDerivedStyles>) => (theme?: Theme) => {
   const next: Exclude<ThemeUIStyleObject, ThemeDerivedStyles> = {};
   const breakpoints = (theme && (theme.breakpoints as string[])) || defaultBreakpoints;
+  // @ts-ignore
   const mediaQueries = [null, ...breakpoints.map(n => `@media screen and (min-width: ${n})`)];
 
   for (const k in styles) {
