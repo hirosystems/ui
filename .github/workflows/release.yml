@@ -20,10 +20,10 @@ jobs:
           node-version: 15.x
 
       - name: Install Dependencies
-      - uses: bahmutov/npm-install@HEAD
+        uses: bahmutov/npm-install@HEAD
         with:
           install-command: yarn --frozen-lockfile --silent
-      - run: npm t
+        run: npm t
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
