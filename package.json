@@ -37,6 +37,10 @@
   "prettier": "@blockstack/prettier-config",
   "private": true,
   "resolutions": {
+    "@changesets/apply-release-plan": "^4.2.0",
+    "@changesets/changelog-github": "^0.3.0",
+    "@changesets/cli": "^2.14.1",
+    "@changesets/git": "1.1.0",
     "typescript": "^4.2.3",
     "ts-jest": "^26.5.3"
   },
