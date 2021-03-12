@@ -26,7 +26,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "rootDir": "./src",
-    "outDir": "./dist/types",
+    "outDir": "./dist",
     "paths": {
       "@stacks/ui-core": [
         "../ui-core/src"
