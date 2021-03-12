@@ -1,5 +1,11 @@
 # @stacks/ui-utils
 
+## 7.2.1
+
+### Patch Changes
+
+- [`e3a1d53`](https://github.com/blockstack/ui/commit/e3a1d53bd32d4c6159443bc8fe4c72f691891abc) Thanks [@aulneau](https://github.com/aulneau)! - Fixed: isPendingTx should use `MempoolTransaction` type because `Transaction`'s are by default no longer pending.
+
 ## 7.2.0
 
 ### Minor Changes
