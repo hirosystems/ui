@@ -7,13 +7,13 @@ import { getPersistedColorMode } from './utils';
 export * from './utils';
 export * from './styles';
 
-export {
+export type {
   Color,
+  Colors,
   ColorModeString,
   ColorModeState,
   ColorModesInterface,
   ColorModeTypes,
-  Colors,
   ColorsStringLiteral,
   ThemeColorsStringLiteral,
 } from '@stacks/ui-theme';

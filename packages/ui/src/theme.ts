@@ -1,7 +1,4 @@
 export {
-  Colors,
-  Spacing,
-  TextStyles,
   baseSizes,
   colors,
   namedSpacingUnits,
@@ -14,3 +11,5 @@ export {
   transition,
   typography,
 } from '@stacks/ui-theme';
+
+export type { Colors, Spacing, TextStyles } from '@stacks/ui-theme';
