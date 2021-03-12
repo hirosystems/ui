@@ -1,11 +1,11 @@
 {
   "name": "@stacks/ui-utils",
   "description": "UI utilities for Stacks UI based projects.",
-  "version": "7.2.1",
+  "version": "7.3.0",
   "author": "Blockstack <engineering@blockstack.com> (https://blockstack.org/)",
   "dependencies": {
     "@blockstack/stacks-blockchain-api-types": "^0.53.1",
-    "@stacks/ui-theme": "^7.2.0",
+    "@stacks/ui-theme": "^7.3.0",
     "@types/big.js": "^6.0.2",
     "big.js": "^6.0.3",
     "c32check": "^1.1.2",

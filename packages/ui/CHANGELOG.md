@@ -1,5 +1,18 @@
 # @stacks/ui
 
+## 7.5.0
+
+### Minor Changes
+
+- [#87](https://github.com/blockstack/ui/pull/87) [`c7ec28d`](https://github.com/blockstack/ui/commit/c7ec28d470854fb581e34e988460a41ea81f1667) Thanks [@aulneau](https://github.com/aulneau)! - Replaces the built in compiler tsdx from `rollup-plugin-typescript2` to use `rollup-plugin-esbuild`. esbuild is amazing.
+
+### Patch Changes
+
+- Updated dependencies [[`c7ec28d`](https://github.com/blockstack/ui/commit/c7ec28d470854fb581e34e988460a41ea81f1667)]:
+  - @stacks/ui-core@7.1.0
+  - @stacks/ui-theme@7.3.0
+  - @stacks/ui-utils@7.3.0
+
 ## 7.4.0
 
 ### Minor Changes
