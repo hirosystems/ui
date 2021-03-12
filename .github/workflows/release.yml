@@ -2,7 +2,7 @@ name: Release
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   release:
     name: Release
@@ -24,7 +24,7 @@ jobs:
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
-        uses: changesets/action@master
+        uses: changesets/action@640c4a5d646991720131ef3b6e0e63220de5dddf
         with:
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: yarn release
