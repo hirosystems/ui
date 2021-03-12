@@ -57,9 +57,6 @@
     "react": "^17.x",
     "react-dom": "^17.x"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": "https://github.com/blockstack/ux/tree/master/packages/ui",
   "scripts": {
     "build": "tsdx build --tsconfig tsconfig.json && yarn types",
@@ -76,7 +73,10 @@
     "typecheck:watch": "npm run typecheck -- --watch"
   },
   "sideEffects": false,
-  "typings": "dist/index.d.ts",
+  "typings": "dist/types/index.d.ts",
   "umd:main": "dist/ui.umd.production.js",
-  "unpkg": "dist/ui.cjs.production.min.js"
+  "unpkg": "dist/ui.cjs.production.min.js",
+  "publishConfig": {
+    "access": "public"
+  }
 }

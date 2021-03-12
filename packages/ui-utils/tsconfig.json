@@ -26,7 +26,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "rootDir": "./src",
-    "outDir": "./dist",
+    "outDir": "./dist/types",
     "paths": {
       "@stacks/ui-theme": [
         "../ui-theme/src"

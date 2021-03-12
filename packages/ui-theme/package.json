@@ -22,9 +22,6 @@
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": "https://github.com/blockstack/ux/tree/master/packages/ui",
   "scripts": {
     "build": "tsdx build --tsconfig tsconfig.json && yarn types",
@@ -41,7 +38,10 @@
     "typecheck:watch": "npm run typecheck -- --watch"
   },
   "sideEffects": false,
-  "typings": "dist/index.d.ts",
+  "typings": "dist/types/index.d.ts",
   "umd:main": "dist/ui-theme.umd.production.js",
-  "unpkg": "dist/ui-theme.cjs.production.min.js"
+  "unpkg": "dist/ui-theme.cjs.production.min.js",
+  "publishConfig": {
+    "access": "public"
+  }
 }
