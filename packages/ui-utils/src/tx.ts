@@ -1,4 +1,4 @@
-import type { Transaction } from '@blockstack/stacks-blockchain-api-types';
+import type { MempoolTransaction, Transaction } from '@blockstack/stacks-blockchain-api-types';
 import { truncateMiddle } from './strings';
 import { toHumanReadableStx } from './units';
 
@@ -105,7 +105,7 @@ export function getFunctionName(tx: Transaction): string | null {
   return tx.contract_call.function_name;
 }
 
-export function isPendingTx(tx: Transaction): boolean {
+export function isPendingTx(tx: MempoolTransaction): boolean {
   return tx.tx_status === 'pending';
 }
 
