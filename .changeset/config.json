@@ -1,6 +1,6 @@
 {
-  "$schema": "https://unpkg.com/@changesets/config@1.4.0/schema.json",
-  "changelog": "@changesets/cli/changelog",
+  "$schema": "https://unpkg.com/@changesets/config@1.5.0/schema.json",
+  "changelog": ["@changesets/changelog-github", { "repo": "blockstack/ui" }],
   "commit": false,
   "linked": [],
   "access": "public",
