@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { ColorModeState } from '@stacks/ui-theme';
+import type { ColorModeState } from '@stacks/ui-theme';
 
 export const ColorModeContext = createContext<ColorModeState>({
   colorMode: undefined,

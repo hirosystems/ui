@@ -1,20 +1,16 @@
-const esbuild = require('rollup-plugin-esbuild')
-const path = require('path')
+const esbuild = require('rollup-plugin-esbuild');
+const path = require('path');
 
 module.exports = {
   rollup(config, options) {
     config.plugins = config.plugins.map(plugin => {
-      if (plugin && plugin.name === "rpt2") {
-
+      if (plugin && plugin.name === 'rpt2') {
         return esbuild({
-          // All options are optional
-
           minify: process.env.NODE_ENV === 'production',
           target: 'esnext',
           jsxFactory: 'React.createElement',
           jsxFragment: 'React.Fragment',
           tsconfig: path.resolve('./tsconfig.json'),
-
         });
       }
       return plugin;
