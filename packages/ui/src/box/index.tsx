@@ -1,6 +1,5 @@
-/** @jsx jsx */
 import * as React from 'react';
-import { jsx, css } from '@emotion/react';
+import { css } from '@emotion/react';
 import {
   useCss,
   forwardRefWithAs,
@@ -9,7 +8,6 @@ import {
   ForwardRefExoticComponentWithAs,
 } from '@stacks/ui-core';
 import { BoxProps } from './types';
-export { BoxProps };
 
 export const Box: ForwardRefExoticComponentWithAs<BoxProps, 'div'> = memoWithAs(
   forwardRefWithAs<BoxProps, 'div'>(({ as: Element = 'div', ...props }, ref) => {

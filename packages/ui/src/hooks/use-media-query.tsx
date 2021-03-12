@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useSafeLayoutEffect } from '../hooks';
+import { useSafeLayoutEffect } from '../hooks/use-safe-layout-effect';
 
 const isBrowser = typeof window !== 'undefined';
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Svg } from '../svg';
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 
 export const BlockstackIcon: React.FC<BoxProps> = props => (
   <Svg width="12" height="12" viewBox="0 0 12 12" fill="none" {...props}>

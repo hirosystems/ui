@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Svg } from '../svg';
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 
 export const ExclamationMarkIcon: React.FC<BoxProps> = ({ ...rest }) => (
   <Svg width="12" height="12" fill="none" viewBox="0 0 12 12" {...rest}>

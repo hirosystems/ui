@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Svg } from '../svg';
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 
 export const CheckmarkIcon: React.FC<BoxProps> = ({ size = 72, ...props }) => (
   <Svg width={size} height={size} fill="none" viewBox="0 0 72 72" {...props}>

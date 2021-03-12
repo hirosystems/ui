@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Box, BoxProps } from '../box';
+import { Box } from '../box';
+import type { ButtonProps } from './types';
 import { Flex } from '../flex';
 import { transition } from '@stacks/ui-theme';
 import { color } from '@stacks/ui-utils';
@@ -11,16 +12,6 @@ import { Spinner } from '../spinner';
 export const blue = (alpha = 1, darker = false) =>
   `rgba(${darker ? '70,55,255' : '85,70,255'},${alpha})`;
 export const focusBlue = (alpha = 1) => `rgba(170, 179, 255,${alpha})`;
-
-export interface ButtonProps extends Omit<BoxProps, 'size'> {
-  variant?: 'link' | 'solid';
-  mode?: 'primary' | 'secondary' | 'tertiary';
-  isDisabled?: boolean;
-  loadingText?: string;
-  isLoading?: boolean;
-  type?: 'button' | 'reset' | 'submit';
-  size?: 'sm' | 'md' | 'lg';
-}
 
 const modeStyles = (mode: ButtonProps['mode'], variant: ButtonProps['variant'] = 'solid') => {
   if (variant === 'solid') {

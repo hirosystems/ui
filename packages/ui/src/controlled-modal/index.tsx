@@ -9,7 +9,7 @@ import {
   forwardRefWithAs,
   MemoExoticComponentWithAs,
 } from '@stacks/ui-core';
-import { useMergeRefs } from '../hooks';
+import { useMergeRefs } from '../hooks/use-merge-refs';
 
 const ModalUnderlay: React.FC<{ isOpen?: boolean; noAnimation?: boolean }> = React.memo(
   ({ isOpen, noAnimation }) => (

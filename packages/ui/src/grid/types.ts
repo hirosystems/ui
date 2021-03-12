@@ -1,4 +1,4 @@
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 
 interface GridPropsBase {
   templateColumns?: BoxProps['gridTemplateColumns'];

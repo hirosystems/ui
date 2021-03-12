@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Svg } from '../svg';
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 
 export const PrivateIcon: React.FC<BoxProps> = props => (
   <Svg width="18" height="24" viewBox="0 0 18 24" fill="none" {...props}>

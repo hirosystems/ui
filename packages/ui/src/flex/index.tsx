@@ -8,4 +8,4 @@ export const Flex: ForwardRefExoticComponentWithAs<FlexProps, 'div'> = forwardRe
   'div'
 >((props, ref) => <Box display="flex" ref={ref} {...props} />);
 
-export { FlexProps };
+export type { FlexProps };

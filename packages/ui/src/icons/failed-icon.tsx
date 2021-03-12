@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Svg } from '../svg';
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 
 export const FailedIcon: React.FC<BoxProps> = ({ size = 64, ...props }) => (
   <Svg width={size} height={size} viewBox="0 0 64 64" fill="none" {...props}>

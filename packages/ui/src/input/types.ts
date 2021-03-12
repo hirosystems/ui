@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BoxProps } from '../box';
+import { BoxProps } from '../box/types';
 import { Omit } from '../common-types';
 
 export type InputVariant = 'outline' | 'unstyled' | 'flushed' | 'filled';

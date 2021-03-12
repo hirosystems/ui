@@ -1,6 +1,7 @@
 import React from 'react';
 import { Svg } from '../svg';
-import { Box, BoxProps } from '../box';
+import { Box } from '../box';
+import type { BoxProps } from '../box/types';
 
 export const CloseIcon: React.FC<BoxProps> = props => (
   <Box {...props}>

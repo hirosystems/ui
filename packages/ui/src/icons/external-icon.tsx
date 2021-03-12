@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Svg } from '../svg';
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 
 export const ExternalIcon = (props: BoxProps) => (
   <Svg width="8" height="9" viewBox="0 0 8 9" fill="none" {...props}>

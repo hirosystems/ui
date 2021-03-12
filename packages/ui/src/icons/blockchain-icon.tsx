@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Svg } from '../svg';
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 
 export const BlockchainIcon: React.FC<BoxProps> = props => (
   <Svg {...props}>

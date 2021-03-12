@@ -3,7 +3,8 @@ import { jsx, keyframes } from '@emotion/react';
 import { ForwardRefExoticComponentWithAs, forwardRefWithAs } from '@stacks/ui-core';
 import { LiteralUnion } from 'type-fest';
 
-import { Box, BoxProps } from './box';
+import { Box } from './box';
+import type { BoxProps } from './box/types';
 import { VisuallyHidden } from './visually-hidden';
 
 export enum SpinnerSizes {

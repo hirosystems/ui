@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 import { FlexProps } from '../flex';
 
 interface IconProps extends Omit<BoxProps, 'color'> {

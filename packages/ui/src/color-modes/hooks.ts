@@ -5,7 +5,7 @@
 import React, { useCallback, useEffect } from 'react';
 import { handleSetColorMode, initColorMode } from './utils';
 import { ColorModeString } from '@stacks/ui-theme';
-import { useMediaQuery } from '../hooks';
+import { useMediaQuery } from '../hooks/use-media-query';
 
 export const useColorModeState = (defaultMode?: ColorModeString) => {
   const [darkmode] = useMediaQuery('(prefers-color-scheme: dark)');

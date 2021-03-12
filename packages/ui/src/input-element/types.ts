@@ -1,6 +1,6 @@
 import { InputSize } from '../input';
 import * as React from 'react';
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 import { Omit } from '../common-types';
 
 interface InputElementPropsBase {
