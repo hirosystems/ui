@@ -1,4 +1,4 @@
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 
 export interface FlexPropsBase {
   /**

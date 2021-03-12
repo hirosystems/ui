@@ -1,5 +1,5 @@
-import { ButtonSizes, ButtonVariants } from '../button';
-import { BoxProps } from '../box';
+import type { ButtonSizes, ButtonVariants } from '../button/types';
+import type { BoxProps } from '../box/types';
 
 export interface ButtonGroupProps extends Omit<BoxProps, 'size'> {
   size?: ButtonSizes;

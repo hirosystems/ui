@@ -2,7 +2,7 @@ import { createContext, isBrowser, __DEV__ } from '../utils';
 import * as React from 'react';
 import { createPortal } from 'react-dom';
 import { usePortalManager } from './manager';
-import { useSafeLayoutEffect } from '../hooks';
+import { useSafeLayoutEffect } from '../hooks/use-safe-layout-effect';
 
 type PortalContext = HTMLDivElement | null;
 

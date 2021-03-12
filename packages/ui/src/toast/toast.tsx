@@ -5,12 +5,13 @@ import { useId } from '@reach/auto-id';
 
 import { Transition } from '../transition';
 import { Stack } from '../stack';
-import { Box, BoxProps } from '../box';
+import { Box } from '../box';
+import type { BoxProps } from '../box/types';
 import { Flex } from '../flex';
 import { Text } from '../text';
 import { ExclamationMarkCircleIcon, CheckmarkCircleIcon, CloseIcon } from '../icons';
 
-import { useTimeout } from '../hooks';
+import { useTimeout } from '../hooks/use-timeout';
 
 import { ActionProps, ToastAction, ToastProps } from './types';
 import { useHover, useFocus } from 'use-events';

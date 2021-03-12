@@ -3,7 +3,8 @@ import { useHover } from 'use-events';
 import { forwardRefWithAs, MemoExoticComponentWithAs, memoWithAs } from '@stacks/ui-core';
 import { transition } from '@stacks/ui-theme';
 
-import { Box, BoxProps } from './box';
+import { Box } from './box';
+import type { BoxProps } from './box/types';
 import { Grid } from './grid';
 import { color } from './color-modes';
 

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { createContext, __DEV__ } from '../utils';
-import { useSafeLayoutEffect, useForceUpdate } from '../hooks';
+import { useSafeLayoutEffect } from '../hooks/use-safe-layout-effect';
+import { useForceUpdate } from '../hooks/use-force-update';
 interface PortalManagerContext {
   node: HTMLElement;
   zIndex?: number;

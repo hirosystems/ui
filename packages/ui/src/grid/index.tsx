@@ -8,4 +8,4 @@ export const Grid: ForwardRefExoticComponentWithAs<GridProps, 'div'> = forwardRe
   'div'
 >((props, ref) => <Box display="grid" ref={ref} {...props} />);
 
-export { GridProps };
+export type { GridProps };

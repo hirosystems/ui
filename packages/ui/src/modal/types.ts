@@ -1,5 +1,5 @@
 import React from 'react';
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 
 export interface ModalContextTypes {
   isOpen: boolean;

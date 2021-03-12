@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Box, BoxProps } from '../box';
+import { Box } from '../box';
+import { BoxProps } from '../box/types';
 import { ForwardRefExoticComponentWithAs, forwardRefWithAs } from '@stacks/ui-core';
 
 export const StxNexus: ForwardRefExoticComponentWithAs<BoxProps, 'svg'> = forwardRefWithAs<

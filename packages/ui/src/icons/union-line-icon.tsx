@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Svg } from '../svg';
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 
 export const UnionLineIcon: React.FC<BoxProps> = props => (
   <Svg width="32" height="7" fill="none" viewBox="0 0 32 7" {...props}>

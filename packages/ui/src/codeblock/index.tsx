@@ -1,6 +1,7 @@
 import React from 'react';
 import { Highlighter, HighlighterProps } from '../highlighter';
-import { Box, BoxProps } from '../box';
+import { Box } from '../box';
+import type { BoxProps } from '../box/types';
 
 export type CodeBlockProps = HighlighterProps & BoxProps;
 

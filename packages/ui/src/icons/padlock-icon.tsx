@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Svg } from '../svg';
-import { BoxProps } from '../box';
+import type { BoxProps } from '../box/types';
 
 export const PadlockIcon: React.FC<BoxProps> = props => (
   <Svg width="64" height="64" fill="none" viewBox="0 0 64 64" {...props}>
