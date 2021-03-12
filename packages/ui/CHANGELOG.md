@@ -1,5 +1,11 @@
 # @stacks/ui
 
+## 7.8.0
+
+### Minor Changes
+
+- [#92](https://github.com/blockstack/ui/pull/92) [`b5ce509`](https://github.com/blockstack/ui/commit/b5ce509b2083c2cca2af2a4d9f86dc6ab2477631) Thanks [@aulneau](https://github.com/aulneau)! - Export BoxProps and ButtonProps.
+
 ## 7.7.0
 
 ### Minor Changes
