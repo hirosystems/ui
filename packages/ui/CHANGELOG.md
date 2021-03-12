@@ -1,5 +1,11 @@
 # @stacks/ui
 
+## 7.3.1
+
+### Patch Changes
+
+- cc3b64f: This change improves the button component in a few ways: it fixes the sizes to match the figma, updates the hover states, variants, and refactors the component to be easier to understand.
+
 ## 7.3.0
 
 ### Minor Changes
