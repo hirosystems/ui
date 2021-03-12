@@ -25,7 +25,7 @@ export const DarkMode = (
   />
 );
 
-export const Base = (
+export const BaseStyles = (
   <Global
     styles={css`
       * {
@@ -69,6 +69,6 @@ export const ColorModes: React.FC = React.memo(() => (
       dangerouslySetInnerHTML={{ __html: LightMode.props.styles.styles }}
       media="(prefers-color-scheme: light)"
     />
-    {Base}
+    {BaseStyles}
   </>
 ));
