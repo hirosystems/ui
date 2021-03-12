@@ -1,5 +1,16 @@
 # @stacks/ui-utils
 
+## 7.5.0
+
+### Minor Changes
+
+- [`b768fb1`](https://github.com/blockstack/ui/commit/b768fb1fb6eba8a2b62249ffba4b7a26057de391) Thanks [@aulneau](https://github.com/aulneau)! - Fix: types output to /dist/type folder.
+
+### Patch Changes
+
+- Updated dependencies [[`b768fb1`](https://github.com/blockstack/ui/commit/b768fb1fb6eba8a2b62249ffba4b7a26057de391)]:
+  - @stacks/ui-theme@7.5.0
+
 ## 7.4.0
 
 ### Minor Changes

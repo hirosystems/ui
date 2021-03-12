@@ -1,5 +1,11 @@
 # @stacks/ui-core
 
+## 7.3.0
+
+### Minor Changes
+
+- [`b768fb1`](https://github.com/blockstack/ui/commit/b768fb1fb6eba8a2b62249ffba4b7a26057de391) Thanks [@aulneau](https://github.com/aulneau)! - Fix: types output to /dist/type folder.
+
 ## 7.2.0
 
 ### Minor Changes

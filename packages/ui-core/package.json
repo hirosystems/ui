@@ -1,6 +1,6 @@
 {
   "name": "@stacks/ui-core",
-  "version": "7.2.0",
+  "version": "7.3.0",
   "author": "Thomas Osmonson",
   "dependencies": {
     "@styled-system/should-forward-prop": "^5.1.5",
