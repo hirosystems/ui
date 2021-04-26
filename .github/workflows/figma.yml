@@ -1,0 +1,45 @@
+##
+## Auto-opens a PR to update the figma.json file.
+##
+
+name: Open Figma PR
+
+env:
+  COMMIT_USER: Hiro DevOps
+  COMMIT_EMAIL: 45208873+blockstack-devops@users.noreply.github.com
+on:
+  schedule:
+    - cron:  '0 */3 * * *'
+  workflow_dispatch:
+
+jobs:      
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout UI
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          ref: main
+
+      - name: Update Figma JSON
+        id: figma
+        run: |
+          curl -s -H 'X-Master-Key: ${{ secrets.FIGMA_API_KEY }}' 'https://api.jsonbin.io/v3/b/608023f5027da70c476dcd52/latest' | jq -r > packages/ui-theme/src/figma.json
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          commit-message: 'chore: update figma.json'
+          committer: ${{ env.COMMIT_USER }} <${{ env.COMMIT_EMAIL }}>
+          author: ${{ env.COMMIT_USER }} <${{ env.COMMIT_EMAIL }}>
+          branch: auto/figma-update
+          title: "figma json update"
+          delete-branch: true
+          body: |
+            :robot: This is an automated pull request created from the [figma](https://github.com/blockstack/ui/blob/main/.github/workflows/figma.yml) workflow.
+
+            Updates the figma.json.
+          assignees: aulneau
+          reviewers: aulneau
