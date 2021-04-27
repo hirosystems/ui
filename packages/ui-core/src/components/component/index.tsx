@@ -1,10 +1,8 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/react';
-import { As, PropsWithAs } from '../..';
-import { useCss } from '../../hooks/use-css';
-// @ts-ignore
+import { css } from '@emotion/react';
+import { useCss, allPossibleProps } from '../../hooks/use-css';
 import { createShouldForwardProp } from '@styled-system/should-forward-prop';
-import { allPossibleProps } from '../..';
+
+import type { As, PropsWithAs } from '../../common/forward-ref/types';
 
 export const shouldForwardProp = createShouldForwardProp([...allPossibleProps]);
 

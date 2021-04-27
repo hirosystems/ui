@@ -1,23 +1,26 @@
 {
-  "name": "@stacks/ui-example",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "name": "example",
+  "version": "0.0.0",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
   },
-  "alias": {
-    "@stacks/ui": "../packages/ui",
-    "@stacks/ui-core": "../packages/ui-core",
-    "@stacks/ui-theme": "../packages/ui-theme",
-    "react": "../node_modules/react",
-    "react-dom": "../node_modules/react-dom/profiling"
+  "dependencies": {
+    "@stacks/ui": "^7.8.0",
+    "@stacks/ui-core": "^7.3.0",
+    "@stacks/ui-theme": "^7.5.0",
+    "jotai": "^0.16.2",
+    "modern-normalize": "^1.0.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "tinycolor2": "^1.4.2"
   },
   "devDependencies": {
-    "@types/react": "^16.9.11",
-    "@types/react-dom": "^16.8.4",
-    "parcel": "^1.12.3",
-    "typescript": "^3.4.5"
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@vitejs/plugin-react-refresh": "^1.3.1",
+    "typescript": "^4.1.2",
+    "vite": "^2.1.5"
   }
 }

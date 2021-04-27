@@ -1,3 +1,5 @@
+/// <reference types="@emotion/react/types/css-prop" />
+
 export * from './components/component';
 export * from './components/component/types';
 export * from './hooks/use-css';

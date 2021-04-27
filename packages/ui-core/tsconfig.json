@@ -9,9 +9,9 @@
       "dom",
       "esnext"
     ],
+    "jsxImportSource": "@emotion/react",
     "importHelpers": true,
     "declaration": true,
-    "emitDeclarationOnly": true,
     "composite": true,
     "sourceMap": true,
     "strict": true,
@@ -25,7 +25,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
-    "rootDir": "./src",
-    "outDir": "./dist/types"
+    "rootDir": "."
   }
 }
