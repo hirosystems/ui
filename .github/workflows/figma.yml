@@ -26,7 +26,10 @@ jobs:
         id: figma
         run: |
           curl -s -H 'X-Master-Key: ${{ secrets.FIGMA_API_KEY }}' 'https://api.jsonbin.io/v3/b/608023f5027da70c476dcd52/latest' | jq -r > packages/ui-theme/src/figma.json
-          echo -e "---\n'@stacks/ui-theme': patch\n---\n\nUpdate figma.json\n" > .changeset/figma-update.md
+          FILE_CHANGED=$(git status --porcelain)
+          if [[ -n "${FILE_CHANGED}" ]]; then
+            echo -e "---\n'@stacks/ui-theme': patch\n---\n\nUpdate figma.json\n" > .changeset/figma-update.md
+          fi
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
