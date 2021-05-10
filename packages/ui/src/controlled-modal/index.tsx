@@ -96,7 +96,7 @@ export const ControlledModal: MemoExoticComponentWithAs<ModalProps, 'dialog'> = 
     const { children, isOpen = false, handleClose, noAnimation = false, ...rest } = props;
     const onCloseHandler = isOpen ? handleClose : () => null;
 
-    useOnClickOutside(_ref, isOpen ? onCloseHandler : null);
+    useOnClickOutside(_ref, onCloseHandler);
     useHotkeys('esc', onCloseHandler, [onCloseHandler]);
 
     return (
