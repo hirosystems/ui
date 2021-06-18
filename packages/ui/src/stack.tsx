@@ -1,4 +1,4 @@
-import React, { isValidElement, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import { ForwardRefExoticComponentWithAs, forwardRefWithAs, get, Theme } from '@stacks/ui-core';
 
 import { Flex, FlexProps } from './flex';
@@ -24,7 +24,7 @@ export function getValidChildren(children: React.ReactNode) {
   ) as React.ReactElement[];
 }
 
-export const selector = '& > *:not(style) ~ *:not(style)';
+export const selector = '& > *:not(:last-child)';
 
 export const Stack: ForwardRefExoticComponentWithAs<StackProps, 'div'> = forwardRefWithAs<
   StackProps,
@@ -38,7 +38,7 @@ export const Stack: ForwardRefExoticComponentWithAs<StackProps, 'div'> = forward
     justifyContent,
     spacing = 'tight',
     shouldWrapChildren,
-    divider,
+    divider = null,
     ...rest
   } = props;
   const validChildren = getValidChildren(children);
@@ -46,7 +46,14 @@ export const Stack: ForwardRefExoticComponentWithAs<StackProps, 'div'> = forward
   const spacingProps = useCallback(
     (theme: Theme) => {
       const value = get(theme, 'space')[spacing as string];
-      return isInline ? { marginLeft: value } : { marginTop: value };
+      return isInline
+        ? {
+            marginTop: 0,
+            marginInlineEnd: value,
+            marginBottom: 0,
+            marginInlineStart: 0,
+          }
+        : { marginBottom: value };
     },
     [spacing]
   );
@@ -65,21 +72,18 @@ export const Stack: ForwardRefExoticComponentWithAs<StackProps, 'div'> = forward
       {...rest}
     >
       {validChildren.map((child, index) => {
-        if (!isValidElement(child) || !Array.isArray(children)) return null;
         const isLastChild = validChildren.length === index + 1;
-        const Divider = divider || null;
-
         if (shouldWrapChildren)
           return (
             <React.Fragment key={index}>
               <Box display="inline-block">{child}</Box>
-              {!isLastChild ? Divider : null}
+              {!isLastChild ? divider : null}
             </React.Fragment>
           );
         return (
           <React.Fragment key={index}>
             {child}
-            {!isLastChild ? Divider : null}
+            {!isLastChild && divider ? divider : null}
           </React.Fragment>
         );
       })}
