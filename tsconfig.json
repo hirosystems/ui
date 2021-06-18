@@ -1,10 +1,20 @@
 {
   "extends": "./tsconfig.build.json",
-  "include": ["packages", "types"],
-  "exclude": ["node_modules", "packages/**/dist"],
+  "include": [
+    "packages",
+    "types"
+  ],
+  "exclude": [
+    "node_modules",
+    "packages/**/dist"
+  ],
   "compilerOptions": {
     "allowJs": false,
+    "resolveJsonModule": true,
     "baseUrl": ".",
-    "typeRoots": ["./node_modules/@types", "./types"]
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ]
   }
 }

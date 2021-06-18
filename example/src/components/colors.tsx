@@ -82,15 +82,14 @@ async function fetchJson() {
       'X-Master-Key': '$2b$10$KqRnsk1hFnOI4O1NprBYZ.dTHACp8onua.k.IJz5DM/up9LblaTmK',
     },
   });
-  const data: {
-    record: typeof FIGMA;
-  } = await res.json();
-  const { light, dark, ...palette } = data.record.values.options.colors;
+  const data = await res.json();
+  console.log(data);
+
   return {
-    light,
-    dark,
-    palette,
-    color_pallete: getPalette(palette),
+    light: data.record.light.colors,
+    dark: data.record.dark.colors,
+    // palette,
+    // color_pallete: getPalette(palette),
   };
 }
 
