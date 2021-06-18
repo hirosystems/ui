@@ -1,4 +1,5 @@
 import React from 'react';
+import { themeGet } from '@styled-system/theme-get';
 
 let _window: Window | undefined = undefined;
 
@@ -378,3 +379,6 @@ export function mapResponsive(prop: any, mapper: (val: any) => any) {
 
 export const startPad = (n: number, z = 2, s = '0') =>
   (n + '').length <= z ? ['', '-'][+(n < 0)] + (s.repeat(z) + Math.abs(n)).slice(-1 * z) : n + '';
+
+export const spacingGet = (path: string, fallback?: string): ((props: any) => any) =>
+  themeGet('spacing.' + path, fallback);

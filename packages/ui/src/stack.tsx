@@ -1,5 +1,5 @@
-import React, { Children, cloneElement, isValidElement } from 'react';
-import { ForwardRefExoticComponentWithAs, forwardRefWithAs } from '@stacks/ui-core';
+import React, { isValidElement, useCallback } from 'react';
+import { ForwardRefExoticComponentWithAs, forwardRefWithAs, get, Theme } from '@stacks/ui-core';
 
 import { Flex, FlexProps } from './flex';
 import { Box } from './box';
@@ -12,6 +12,20 @@ export interface StackProps extends FlexProps {
   shouldWrapChildren?: boolean;
 }
 
+/**
+ * Gets only the valid children of a component,
+ * and ignores any nullish or falsy child.
+ *
+ * @param children the children
+ */
+export function getValidChildren(children: React.ReactNode) {
+  return React.Children.toArray(children).filter(child =>
+    React.isValidElement(child)
+  ) as React.ReactElement[];
+}
+
+export const selector = '& > *:not(style) ~ *:not(style)';
+
 export const Stack: ForwardRefExoticComponentWithAs<StackProps, 'div'> = forwardRefWithAs<
   StackProps,
   'div'
@@ -20,59 +34,57 @@ export const Stack: ForwardRefExoticComponentWithAs<StackProps, 'div'> = forward
     isInline,
     as,
     children,
-    align,
-    justify,
+    alignItems,
+    justifyContent,
     spacing = 'tight',
     shouldWrapChildren,
     divider,
     ...rest
   } = props;
-  const validChildren = Array.isArray(children) ? children.filter(isValidElement) : [];
+  const validChildren = getValidChildren(children);
 
-  return (
+  const spacingProps = useCallback(
+    (theme: Theme) => {
+      const value = get(theme, 'space')[spacing as string];
+      return isInline ? { marginLeft: value } : { marginTop: value };
+    },
+    [spacing]
+  );
+  const cssStyles = useCallback((theme: Theme) => ({ [selector]: spacingProps(theme) }), [
+    spacingProps,
+  ]);
+
+  return validChildren?.length ? (
     <Flex
-      align={align}
-      justify={justify}
+      alignItems={alignItems}
+      justifyContent={justifyContent}
       flexDirection={isInline ? 'row' : 'column'}
       as={as}
       ref={ref}
+      css={cssStyles}
       {...rest}
     >
-      {validChildren?.length
-        ? Children.map(validChildren, (child, index) => {
-            if (!isValidElement(child)) {
-              return null;
-            }
-            if (!Array.isArray(children)) {
-              return null;
-            }
-            const isLastChild = validChildren.length === index + 1;
-            const spacingProps = isInline
-              ? { mr: isLastChild ? undefined : spacing }
-              : { mb: isLastChild ? undefined : spacing };
+      {validChildren.map((child, index) => {
+        if (!isValidElement(child) || !Array.isArray(children)) return null;
+        const isLastChild = validChildren.length === index + 1;
+        const Divider = divider || null;
 
-            const Divider = divider ? cloneElement(divider, spacingProps) : null;
-
-            if (shouldWrapChildren) {
-              return (
-                <>
-                  <Box display="inline-block" {...spacingProps}>
-                    {child}
-                  </Box>
-                  {!isLastChild ? Divider : null}
-                </>
-              );
-            }
-            return (
-              <>
-                {cloneElement(child, spacingProps)}
-                {!isLastChild ? Divider : null}
-              </>
-            );
-          })
-        : children}
+        if (shouldWrapChildren)
+          return (
+            <React.Fragment key={index}>
+              <Box display="inline-block">{child}</Box>
+              {!isLastChild ? Divider : null}
+            </React.Fragment>
+          );
+        return (
+          <React.Fragment key={index}>
+            {child}
+            {!isLastChild ? Divider : null}
+          </React.Fragment>
+        );
+      })}
     </Flex>
-  );
+  ) : null;
 });
 
 Stack.displayName = 'Stack';
