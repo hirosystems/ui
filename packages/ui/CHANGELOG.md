@@ -1,5 +1,11 @@
 # @stacks/ui
 
+## 7.9.0
+
+### Minor Changes
+
+- [#117](https://github.com/blockstack/ui/pull/117) [`979f3c1`](https://github.com/blockstack/ui/commit/979f3c1502f9619ca7ed7aec43c3204cc96c1514) Thanks [@aulneau](https://github.com/aulneau)! - This update improves the internal workings of the <Stack> component to no longer pass margin props to its children, but instead rely on css to space its children.
+
 ## 7.8.0
 
 ### Minor Changes
