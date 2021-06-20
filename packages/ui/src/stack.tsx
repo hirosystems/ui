@@ -24,7 +24,7 @@ export function getValidChildren(children: React.ReactNode) {
   ) as React.ReactElement[];
 }
 
-export const selector = '& > *:not(:last-child)';
+export const selector = '& > *:not(style):not(:last-child)';
 
 export const Stack: ForwardRefExoticComponentWithAs<StackProps, 'div'> = forwardRefWithAs<
   StackProps,
