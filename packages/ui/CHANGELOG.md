@@ -1,5 +1,11 @@
 # @stacks/ui
 
+## 7.10.0
+
+### Minor Changes
+
+- [`f931545`](https://github.com/blockstack/ui/commit/f93154594f10cc5b782171f6dcb3d8e30f6d0ced) Thanks [@aulneau](https://github.com/aulneau)! - This fixes a bug where if a pixel or other non named value was passes to Stack, it would not apply.
+
 ## 7.9.0
 
 ### Minor Changes
