@@ -45,7 +45,7 @@ export const Stack: ForwardRefExoticComponentWithAs<StackProps, 'div'> = forward
 
   const spacingProps = useCallback(
     (theme: Theme) => {
-      const value = get(theme, 'space')[spacing as string];
+      const value = get(theme, 'space')[spacing as string] || spacing; // if get returns undefined, pass the spacing value (could be a pixel value);
       return isInline
         ? {
             marginTop: 0,
