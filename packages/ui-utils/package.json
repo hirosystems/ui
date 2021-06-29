@@ -4,21 +4,19 @@
   "version": "7.5.0",
   "author": "Blockstack <engineering@blockstack.com> (https://blockstack.org/)",
   "dependencies": {
-    "@blockstack/stacks-blockchain-api-types": "^0.53.1",
-    "@stacks/ui-theme": "^7.5.0",
-    "@types/big.js": "^6.0.2",
-    "big.js": "^6.0.3",
-    "c32check": "^1.1.2",
-    "type-fest": "^0.21.3",
-    "typescript": "^4.1.2"
+    "@blockstack/stacks-blockchain-api-types": "0.55.3",
+    "@stacks/ui-theme": "7.5.0",
+    "@types/big.js": "6.1.1",
+    "big.js": "6.1.1",
+    "c32check": "1.1.2",
+    "type-fest": "1.2.1",
+    "typescript": "4.3.4"
   },
   "devDependencies": {
-    "@blockstack/prettier-config": "^0.0.6",
-    "husky": "^4.2.5",
-    "prettier": "^2.2.1",
-    "tsdx": "^0.14.1",
-    "tslib": "^2.0.1",
-    "typescript": "^4.1.2"
+    "@blockstack/prettier-config": "0.0.6",
+    "tsdx": "0.14.1",
+    "tslib": "2.3.0",
+    "typescript": "4.3.4"
   },
   "files": [
     "dist"
