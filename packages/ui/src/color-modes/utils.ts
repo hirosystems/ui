@@ -60,13 +60,12 @@ const colorModeStyles = (props: { theme: Theme; colorMode: 'light' | 'dark' }): 
 const colorMap = (props: { theme: Theme; colorMode: 'light' | 'dark' }): ColorsStringLiteral[] =>
   Object.keys(colors[props.colorMode]) as ColorsStringLiteral[];
 
-export const generateCssVariables = (mode: 'light' | 'dark') => ({
-  colorMode = mode,
-  ...rest
-}: any) =>
-  colorMap({ colorMode, ...rest }).map((key: ColorsStringLiteral) => {
-    return `--colors-${key}: ${colorModeStyles({ colorMode, ...rest })[key]};`;
-  });
+export const generateCssVariables =
+  (mode: 'light' | 'dark') =>
+  ({ colorMode = mode, ...rest }: any) =>
+    colorMap({ colorMode, ...rest }).map((key: ColorsStringLiteral) => {
+      return `--colors-${key}: ${colorModeStyles({ colorMode, ...rest })[key]};`;
+    });
 
 export const getInvertedValue = (string: ColorModeString) =>
   string === 'light' ? 'dark' : 'light';

@@ -10,7 +10,7 @@ import {
 export function forwardRefWithAs<Props, ComponentType extends As = 'div'>(
   render: ForwardRefWithAsRenderFunction<Props, ComponentType>
 ) {
-  return (React.forwardRef(render) as unknown) as ForwardRefExoticComponentWithAs<
+  return React.forwardRef(render) as unknown as ForwardRefExoticComponentWithAs<
     Props,
     ComponentType
   >;

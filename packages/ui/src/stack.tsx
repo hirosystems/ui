@@ -57,9 +57,10 @@ export const Stack: ForwardRefExoticComponentWithAs<StackProps, 'div'> = forward
     },
     [spacing]
   );
-  const cssStyles = useCallback((theme: Theme) => ({ [selector]: spacingProps(theme) }), [
-    spacingProps,
-  ]);
+  const cssStyles = useCallback(
+    (theme: Theme) => ({ [selector]: spacingProps(theme) }),
+    [spacingProps]
+  );
 
   return validChildren?.length ? (
     <Flex

@@ -310,56 +310,58 @@ const responsive = (styles: Exclude<ThemeUIStyleObject, ThemeDerivedStyles>) => 
 
 type CssPropsArgument = { theme: Theme } | Theme;
 
-export const css = (args: ThemeUIStyleObject = {}) => (props: CssPropsArgument = {}): CSSObject => {
-  const theme: Theme = {
-    ...defaultTheme,
-    ...('theme' in props ? props.theme : props),
-  };
-  let result: CSSObject = {};
-  const obj = typeof args === 'function' ? args(theme) : args;
-  const styles = responsive(obj)(theme);
+export const css =
+  (args: ThemeUIStyleObject = {}) =>
+  (props: CssPropsArgument = {}): CSSObject => {
+    const theme: Theme = {
+      ...defaultTheme,
+      ...('theme' in props ? props.theme : props),
+    };
+    let result: CSSObject = {};
+    const obj = typeof args === 'function' ? args(theme) : args;
+    const styles = responsive(obj)(theme);
 
-  for (const key in styles) {
-    const x = styles[key as keyof typeof styles];
-    const val = typeof x === 'function' ? x(theme) : x;
+    for (const key in styles) {
+      const x = styles[key as keyof typeof styles];
+      const val = typeof x === 'function' ? x(theme) : x;
 
-    if (key === 'variant') {
-      const variant = css(get(theme, val as string))(theme);
-      result = { ...result, ...variant };
-      continue;
-    }
-
-    if (val && typeof val === 'object') {
-      const _val = css(val as ThemeUICSSObject)(theme);
-      result[key] = _val;
-      continue;
-    }
-
-    const prop = key in aliases ? aliases[key as keyof Aliases] : key;
-
-    const scaleName = prop in scales ? scales[prop as keyof Scales] : undefined;
-    const scale = get(theme, scaleName as any, get(theme, prop, {}));
-    const transform: any = get(transforms, prop, get);
-    const value = transform(scale, val, val);
-
-    if (prop in multiples) {
-      const dirs = multiples[prop as keyof typeof multiples];
-
-      for (let i = 0; i < dirs.length; i++) {
-        result[dirs[i]] = value;
+      if (key === 'variant') {
+        const variant = css(get(theme, val as string))(theme);
+        result = { ...result, ...variant };
+        continue;
       }
-    } else if (
-      ['textStyle', 'colorStyle', 'buttonStyle'].find(v => v === prop) &&
-      typeof result === 'object'
-    ) {
-      result = {
-        ...result,
-        ...value,
-      };
-    } else {
-      result[prop] = String(value);
-    }
-  }
 
-  return result;
-};
+      if (val && typeof val === 'object') {
+        const _val = css(val as ThemeUICSSObject)(theme);
+        result[key] = _val;
+        continue;
+      }
+
+      const prop = key in aliases ? aliases[key as keyof Aliases] : key;
+
+      const scaleName = prop in scales ? scales[prop as keyof Scales] : undefined;
+      const scale = get(theme, scaleName as any, get(theme, prop, {}));
+      const transform: any = get(transforms, prop, get);
+      const value = transform(scale, val, val);
+
+      if (prop in multiples) {
+        const dirs = multiples[prop as keyof typeof multiples];
+
+        for (let i = 0; i < dirs.length; i++) {
+          result[dirs[i]] = value;
+        }
+      } else if (
+        ['textStyle', 'colorStyle', 'buttonStyle'].find(v => v === prop) &&
+        typeof result === 'object'
+      ) {
+        result = {
+          ...result,
+          ...value,
+        };
+      } else {
+        result[prop] = String(value);
+      }
+    }
+
+    return result;
+  };
