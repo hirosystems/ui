@@ -1,5 +1,12 @@
 # @stacks/ui-utils
 
+## 7.5.1
+
+### Patch Changes
+
+- Updated dependencies [[`06dd54e`](https://github.com/blockstack/ui/commit/06dd54e0283fe0863861a3a9747a1845b028000c)]:
+  - @stacks/ui-theme@7.6.0
+
 ## 7.5.0
 
 ### Minor Changes

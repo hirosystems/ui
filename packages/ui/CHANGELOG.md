@@ -1,5 +1,18 @@
 # @stacks/ui
 
+## 7.11.0
+
+### Minor Changes
+
+- [#115](https://github.com/blockstack/ui/pull/115) [`06dd54e`](https://github.com/blockstack/ui/commit/06dd54e0283fe0863861a3a9747a1845b028000c) Thanks [@fbwoolf](https://github.com/fbwoolf)! - This adds storybook to the ui library!
+
+### Patch Changes
+
+- Updated dependencies [[`06dd54e`](https://github.com/blockstack/ui/commit/06dd54e0283fe0863861a3a9747a1845b028000c)]:
+  - @stacks/ui-core@7.4.0
+  - @stacks/ui-theme@7.6.0
+  - @stacks/ui-utils@7.5.1
+
 ## 7.10.0
 
 ### Minor Changes
