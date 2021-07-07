@@ -1,5 +1,11 @@
 # @stacks/ui-core
 
+## 7.4.0
+
+### Minor Changes
+
+- [#115](https://github.com/blockstack/ui/pull/115) [`06dd54e`](https://github.com/blockstack/ui/commit/06dd54e0283fe0863861a3a9747a1845b028000c) Thanks [@fbwoolf](https://github.com/fbwoolf)! - This adds storybook to the ui library!
+
 ## 7.3.0
 
 ### Minor Changes
