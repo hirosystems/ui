@@ -12,4 +12,4 @@ This project is a monorepo for all of our Stacks UI related projects.
 This project uses Lerna, yarn workspaces, changesets, and tsdx for bundling. 
 
 - Clone the repo
-- Install deps via `yarn`
+- Install deps via `yarn` 
