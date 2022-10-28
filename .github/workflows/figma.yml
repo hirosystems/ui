@@ -15,11 +15,13 @@ on:
 jobs:      
   run:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout UI
         uses: actions/checkout@v2
         with:
-          token: ${{ secrets.GH_TOKEN }}
           ref: main
 
       - name: Update Figma JSON
@@ -34,7 +36,6 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.GH_TOKEN }}
           commit-message: 'chore: update figma.json'
           committer: ${{ env.COMMIT_USER }} <${{ env.COMMIT_EMAIL }}>
           author: ${{ env.COMMIT_USER }} <${{ env.COMMIT_EMAIL }}>
